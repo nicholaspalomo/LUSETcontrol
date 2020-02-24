@@ -1,0 +1,249 @@
+\hypertarget{indeltypes_8h}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/indeltypes.h File Reference}
+\label{indeltypes_8h}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/indeltypes.\+h@{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/indeltypes.\+h}}
+
+
+Not yet described.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+Include dependency graph for indeltypes.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=244pt]{indeltypes_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{indeltypes_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{indeltypes_8h_a555bfdbda495f13eee178636428b095c}{U\+LL}(number)~number \#\# U\+I64
+\item 
+\#define \hyperlink{indeltypes_8h_ad636547d84c568f6472a34ea31dd86e0}{LL}(number)~number \#\# I64
+\item 
+\#define \hyperlink{indeltypes_8h_a8b0eb8c7522b945921251178487cf272}{L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT}~\char`\"{}I64\char`\"{}
+\item 
+\#define \hyperlink{indeltypes_8h_ac99ec3f1036620727a68aa8c25a8963c}{strcasecmp}~\+\_\+stricmp
+\item 
+\#define \hyperlink{indeltypes_8h_aba00036f71bb67f8600b239a39cf5ec9}{strncasecmp}~\+\_\+strnicmp
+\item 
+\#define \hyperlink{indeltypes_8h_aa367b75c5aed883fef5befbdf04835a4}{snprintf}~\+\_\+snprintf
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}
+\item 
+typedef signed char \hyperlink{indeltypes_8h_a1b956fe1df85f3c132b21edb4e116458}{int8}
+\item 
+typedef unsigned short \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16}
+\item 
+typedef signed short \hyperlink{indeltypes_8h_a259fa4834387bd68627ddf37bb3ebdb9}{int16}
+\item 
+typedef unsigned long \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}
+\item 
+typedef signed long \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}
+\item 
+typedef unsigned \+\_\+\+\_\+int64 \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64}
+\item 
+typedef signed \+\_\+\+\_\+int64 \hyperlink{indeltypes_8h_a0a83e07c3711cb033e7a116fb04c7d3f}{int64}
+\item 
+typedef \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} \hyperlink{indeltypes_8h_adb4a1283ff9f4206cf6e92e03a77362f}{intptr}
+\item 
+typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} \hyperlink{indeltypes_8h_a90edca57331df76ff61d931bd8f0b52c}{uintptr}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Not yet described. 
+
+\begin{DoxyAuthor}{Author}
+Raphael Zulliger, \copyright{} I\+N\+D\+EL AG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+1.\+00 \begin{DoxyVerb}2322, 2007-12-18 09:15:36 +0100 (Di, 18 Dez 2007), zulliger
+! Many many changes. Too much to list in detail. But: A lot of
+  McINCOFrame adjustments (especially regarding little/big-endian), a lot
+  of cleanups in library structure, etc.
+
+2323, 2007-12-18 10:49:05 +0100 (Di, 18 Dez 2007), zulliger
+- Removed obsolete definitions from file
+
+2427, 2008-01-04 11:28:37 +0100 (Fr, 04 Jan 2008), zulliger
+- Removed error-clause if neither INDEL_WINDOWS nor INDEL_LINUX is defined.
+
+2474, 2008-02-04 15:29:26 +0100 (Mo, 04 Feb 2008), zulliger
++ Added some commonly useful defs
+
+3995, 2010-02-23 10:21:17 +0100 (Tue, 23 Feb 2010), fabi
+! Adjusted to generate java classes with swig.
+
+4292, 2010-07-01 16:49:46 +0200 (Do, 01 Jul 2010), tjericke
+Added support for 64bit systems
+
+4294, 2010-07-02 07:32:07 +0200 (Fr, 02 Jul 2010), tjericke
+! Don't define ptr_t types for windows projects, they are already defined.
+
+4295, 2010-07-02 09:16:47 +0200 (Fr, 02 Jul 2010), tjericke
+! Changed intptr_t and uintptr_t to intptr and uintptr
+
+4296, 2010-07-02 09:42:39 +0200 (Fri, 02 Jul 2010), walther
+! Defining macro UL instead of ULL in r4292 was a typo. (We use the same
+  definition for both the 32 bit and 64 bit cases to stay true to the name
+  of the macro, I guess on an LP64 system using the resulting long long
+  constant in a long (int64) context should work fine.)
+
+4383, 2010-07-27 15:00:12 +0200 (Tue, 27 Jul 2010), tjericke
+! Changed defines of uint32 and int32 to use int instead of long. On windows the INDEL_NOLONG define 
+  has to be set (for backwards compatibility). Otherwise the old definition is used.
+
+4649, 2010-11-15 09:21:07 +0100 (Mo, 15 Nov 2010), zulliger
+! Fixed the Linux 64Bit definition of ULL and UL. The error popped up
+  because the unittests are now compiled by default when using ibuild.py
+
+4688, 2010-11-26 10:15:36 +0100 (Fr, 26 Nov 2010), fabi
+- Removed VC6 workaround.
+
+4987, 2011-10-19 16:13:42 +0200 (Wed, 19 Oct 2011), walther
++ Port libindel to Mac OS X and iOS. Not all parts are implemented, but
+  enough to get libinco_32 to work (using TCP). Missing in particular:
+  global semaphores, shared-memory communication, network interface
+  functions. Linux implementation files that are also used on Mac OS X are
+  moved from src/src/linux to src/src/shared. Building for Mac OS X works
+  using ibuild.py like on Linux. For iOS, an Xcode project is provided. It
+  requires wxWidgets-2.9.2 (unmodified source distribution), placed
+  relative to the project as specified by the WXROOT build setting.
+
+5993, 2014-03-10 10:11:42 +0100 (Mon, 10 Mar 2014), zulliger
+! Changed inclusion of C++ header file to C header file. This allows using
+  the header file for C-only compilers, such as used by Matlab/Simulink to
+  access C-DLLs
+
+$LastChangedRevision: 6646 $ $Date: 2016-07-12 10:17:15 +0200 (Tue, 12 Jul 2016) $ $Author: walther $
+! Don't define snprintf as _snprintf on MSVC14, which now has a standards-
+  compliant implementation. (Using _snprintf as snprintf seems questionable
+  anyway, as it behaves differently from what is expected of a snprintf.)
+
+$Comment$
+
+u = unreleased
++ = new feature
+! = change, bugfix
+- = removed\end{DoxyVerb}
+
+\end{DoxyVersion}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}project         : IndelLib
+language        : C++ (Gnu, Visual C++)
+system          : Linux, Windows
+\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{indeltypes_8h_ad636547d84c568f6472a34ea31dd86e0}\label{indeltypes_8h_ad636547d84c568f6472a34ea31dd86e0}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!LL@{LL}}
+\index{LL@{LL}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{LL}{LL}}
+{\footnotesize\ttfamily \#define LL(\begin{DoxyParamCaption}\item[{}]{number }\end{DoxyParamCaption})~number \#\# I64}
+
+\mbox{\Hypertarget{indeltypes_8h_a8b0eb8c7522b945921251178487cf272}\label{indeltypes_8h_a8b0eb8c7522b945921251178487cf272}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT@{L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT}}
+\index{L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT@{L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT}{LONGLONGFORMAT}}
+{\footnotesize\ttfamily \#define L\+O\+N\+G\+L\+O\+N\+G\+F\+O\+R\+M\+AT~\char`\"{}I64\char`\"{}}
+
+\mbox{\Hypertarget{indeltypes_8h_aa367b75c5aed883fef5befbdf04835a4}\label{indeltypes_8h_aa367b75c5aed883fef5befbdf04835a4}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!snprintf@{snprintf}}
+\index{snprintf@{snprintf}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{snprintf}{snprintf}}
+{\footnotesize\ttfamily \#define snprintf~\+\_\+snprintf}
+
+\mbox{\Hypertarget{indeltypes_8h_ac99ec3f1036620727a68aa8c25a8963c}\label{indeltypes_8h_ac99ec3f1036620727a68aa8c25a8963c}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!strcasecmp@{strcasecmp}}
+\index{strcasecmp@{strcasecmp}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{strcasecmp}{strcasecmp}}
+{\footnotesize\ttfamily \#define strcasecmp~\+\_\+stricmp}
+
+\mbox{\Hypertarget{indeltypes_8h_aba00036f71bb67f8600b239a39cf5ec9}\label{indeltypes_8h_aba00036f71bb67f8600b239a39cf5ec9}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!strncasecmp@{strncasecmp}}
+\index{strncasecmp@{strncasecmp}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{strncasecmp}{strncasecmp}}
+{\footnotesize\ttfamily \#define strncasecmp~\+\_\+strnicmp}
+
+\mbox{\Hypertarget{indeltypes_8h_a555bfdbda495f13eee178636428b095c}\label{indeltypes_8h_a555bfdbda495f13eee178636428b095c}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!U\+LL@{U\+LL}}
+\index{U\+LL@{U\+LL}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{U\+LL}{ULL}}
+{\footnotesize\ttfamily \#define U\+LL(\begin{DoxyParamCaption}\item[{}]{number }\end{DoxyParamCaption})~number \#\# U\+I64}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{indeltypes_8h_a259fa4834387bd68627ddf37bb3ebdb9}\label{indeltypes_8h_a259fa4834387bd68627ddf37bb3ebdb9}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!int16@{int16}}
+\index{int16@{int16}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{int16}{int16}}
+{\footnotesize\ttfamily typedef signed short \hyperlink{indeltypes_8h_a259fa4834387bd68627ddf37bb3ebdb9}{int16}}
+
+\mbox{\Hypertarget{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}\label{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!int32@{int32}}
+\index{int32@{int32}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{int32}{int32}}
+{\footnotesize\ttfamily typedef signed long \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}
+
+\mbox{\Hypertarget{indeltypes_8h_a0a83e07c3711cb033e7a116fb04c7d3f}\label{indeltypes_8h_a0a83e07c3711cb033e7a116fb04c7d3f}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!int64@{int64}}
+\index{int64@{int64}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{int64}{int64}}
+{\footnotesize\ttfamily typedef signed \+\_\+\+\_\+int64 \hyperlink{indeltypes_8h_a0a83e07c3711cb033e7a116fb04c7d3f}{int64}}
+
+\mbox{\Hypertarget{indeltypes_8h_a1b956fe1df85f3c132b21edb4e116458}\label{indeltypes_8h_a1b956fe1df85f3c132b21edb4e116458}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!int8@{int8}}
+\index{int8@{int8}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{int8}{int8}}
+{\footnotesize\ttfamily typedef signed char \hyperlink{indeltypes_8h_a1b956fe1df85f3c132b21edb4e116458}{int8}}
+
+\mbox{\Hypertarget{indeltypes_8h_adb4a1283ff9f4206cf6e92e03a77362f}\label{indeltypes_8h_adb4a1283ff9f4206cf6e92e03a77362f}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!intptr@{intptr}}
+\index{intptr@{intptr}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{intptr}{intptr}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} \hyperlink{indeltypes_8h_adb4a1283ff9f4206cf6e92e03a77362f}{intptr}}
+
+\mbox{\Hypertarget{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}\label{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!uint16@{uint16}}
+\index{uint16@{uint16}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{uint16}{uint16}}
+{\footnotesize\ttfamily typedef unsigned short \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16}}
+
+\mbox{\Hypertarget{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}\label{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!uint32@{uint32}}
+\index{uint32@{uint32}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{uint32}{uint32}}
+{\footnotesize\ttfamily typedef unsigned long \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}
+
+\mbox{\Hypertarget{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}\label{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!uint64@{uint64}}
+\index{uint64@{uint64}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{uint64}{uint64}}
+{\footnotesize\ttfamily typedef unsigned \+\_\+\+\_\+int64 \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64}}
+
+\mbox{\Hypertarget{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}\label{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!uint8@{uint8}}
+\index{uint8@{uint8}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{uint8}{uint8}}
+{\footnotesize\ttfamily typedef unsigned char \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}
+
+\mbox{\Hypertarget{indeltypes_8h_a90edca57331df76ff61d931bd8f0b52c}\label{indeltypes_8h_a90edca57331df76ff61d931bd8f0b52c}} 
+\index{indeltypes.\+h@{indeltypes.\+h}!uintptr@{uintptr}}
+\index{uintptr@{uintptr}!indeltypes.\+h@{indeltypes.\+h}}
+\subsubsection{\texorpdfstring{uintptr}{uintptr}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} \hyperlink{indeltypes_8h_a90edca57331df76ff61d931bd8f0b52c}{uintptr}}
+

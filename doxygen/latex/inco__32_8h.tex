@@ -1,0 +1,1453 @@
+\hypertarget{inco__32_8h}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/inco\+\_\+32.h File Reference}
+\label{inco__32_8h}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/inco\+\_\+32.\+h@{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/inco\+\_\+32.\+h}}
+
+
+Interface functions for the libinco\+\_\+32 dll/so.  
+
+
+{\ttfamily \#include $<$inco\+\_\+32/indeltypes.\+h$>$}\newline
+{\ttfamily \#include $<$inco\+\_\+32/indeldefs.\+h$>$}\newline
+{\ttfamily \#include $<$inco\+\_\+32/errinco.\+h$>$}\newline
+{\ttfamily \#include $<$windows.\+h$>$}\newline
+Include dependency graph for inco\+\_\+32.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inco__32_8h__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inco__32_8h__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT}~\+\_\+\+\_\+declspec(dllimport)
+\item 
+\#define \hyperlink{inco__32_8h_a751b0d6e0dbe97b2dfe601e4351840fd}{D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP}~\char`\"{}S\+O\+F\+T\+W\+A\+R\+E\textbackslash{}\textbackslash{}\+Indel\char`\"{}
+\item 
+\#define \hyperlink{inco__32_8h_a7f4622a02facee9dd19b833b296bbabf}{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR}~32
+\item 
+\#define \hyperlink{inco__32_8h_adf810ad67814631165612f65d7785d0a}{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR}~32
+\item 
+\#define \hyperlink{inco__32_8h_a92190b5b7ec9e231a07798750e3de0b1}{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR}~8
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{Indent}\textbf{ I\+N\+CO variable reading and writing}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga5a35fc7cdfb6037cb755ed8409a8f300}{Get\+Variable} (const char $\ast$Target\+Path, const char $\ast$Item\+Path, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\begin{DoxyCompactList}\small\item\em Remote I\+N\+CO variable read. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gac50fba25dcc47ea6f6f54c0141e34563}{Put\+Variable} (const char $\ast$Target\+Path, const char $\ast$Item\+Path, const void $\ast$Value, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\begin{DoxyCompactList}\small\item\em Remote I\+N\+CO variable write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Remote I\+N\+CO procedure call (R\+PC)}\par
+{\em (see also syncasync) }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure} (const char $\ast$Target\+Path, const char $\ast$Call\+Procedure, double $\ast$Result)
+\begin{DoxyCompactList}\small\item\em Remote procedure call. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex} (const char $\ast$Target\+Path, const char $\ast$\hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure}, double $\ast$Sync\+Result)
+\begin{DoxyCompactList}\small\item\em Remote procedure call (extended). \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}{Call\+Procedure\+Ex\+Sync} (const char $\ast$Target\+Path, const char $\ast$\hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure}, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Type\+Flags)
+\begin{DoxyCompactList}\small\item\em Remote procedure call (extended). If the procedure has an asynchronous part, the function will wait for it to complete. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Timeout\+Ms)
+\begin{DoxyCompactList}\small\item\em Wait for the asynchronous part of a remote procedure call (Call\+Procedure\+Ex) to finish (optionally with timeout). \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Type\+Flags, char $\ast$Result\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Result\+Name\+Buf\+Size)
+\begin{DoxyCompactList}\small\item\em Get the next asynchronous result (or application error) of a remote procedure call (Call\+Procedure\+Ex). \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}{Call\+Procedure\+Ex\+Result\+By\+Name} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, const char $\ast$Result\+Name, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Type\+Flags)
+\begin{DoxyCompactList}\small\item\em Get the next asynchronous named result (or application error) of a remote procedure call (Call\+Procedure\+Ex). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Raw target memory access functions}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}{Put\+Block8} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 8 byte chunks to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}{Get\+Block8} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Reads raw data in 8 byte chunks from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gae156a8a2456bc41746e3452c609ee2fd}{Get\+Block8\+Real} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em For Indel internal use\+: Read 8 byte chunks of data from target by resolving breakpoints. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga385128fec8e3c887078779f2d8deb0fb}{Put\+Block16} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 16 bytes chungs to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gae507b3a868c5004a2142190a48958d79}{Get\+Block16} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Read raw data in 16 bytes chungs from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga51c1743c005a868b73e6af8e96eb9d4e}{Put\+Block32} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 32 bytes chungs to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga25d9fc255f93000f56d0414339ac53e6}{Get\+Block32} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Read raw data in 32 bytes chungs from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gaa67eff1b4ca61c6c9f1587bafa6e0a54}{Put\+Block64} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 64 bytes chungs to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga0dd1bf74ec3dd28ae6d784db54339802}{Get\+Block64} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Read raw data in 64 bytes chungs from the target. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ I\+N\+CO error information}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}{Get\+Error\+Description} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Error, char $\ast$Description, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\begin{DoxyCompactList}\small\item\em Convert an I\+N\+CO error (see also incoreturn\+\_\+inco\+\_\+errors) to human readable string. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gae35d1b67b8052ac2411a9c899141854f}{Get\+Mc\+Message} (const char $\ast$Target\+Path, const char $\ast$Message\+Handler\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Error, char $\ast$Message, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ I\+N\+C\+O32 version information}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gaae80abf7f7bc82fa98428b67da68a366}{Get\+Revisions} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Server\+Revision, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Dll\+Revision)
+\begin{DoxyCompactList}\small\item\em Function to get the I\+N\+C\+O\+Server and libinco\+\_\+32 revisions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Database functions (for Indel internal use)}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a1cb03b74d464f1550394843cf7199283}{Create\+Table} (const char $\ast$Target\+Path, const char $\ast$Table\+Name, const char $\ast$Database\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number\+Records, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Record\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Flags)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a40d41d06d78b22fe59b86148b6892d33}{Delete\+Table} (const char $\ast$Target\+Path, const char $\ast$Table\+Name)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a203a38d0771e315d0f89aad8451eab9a}{Put\+Record} (const char $\ast$Target\+Path, const char $\ast$Table\+Name, const char $\ast$Record, void $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Size)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aa0e9d2065b1b6402b6e25f0362264bb8}{Get\+Record} (const char $\ast$Target\+Path, const char $\ast$Table\+Name, const char $\ast$Record, void $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Size)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Target\+Path debugging functionality (for Indel internal use)}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_af34af3141e14ab0549b1ba44e1f0892d}{Dbg\+Os\+Prepare\+Load} (const char $\ast$Target\+Path)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ad1f06dea244943176d0d98dbc003ead8}{Dbg\+Os\+Reset} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Flags)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ae78dfd6c87f4227b40a9a42df9984011}{Dbg\+Tasks\+List} (const char $\ast$Target\+Path, void $\ast$a\+Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_afce3373c2e1911343767b453ca6d1d0c}{Dbg\+Tasks\+State} (const char $\ast$Target\+Path, void $\ast$a\+Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a2a7045977dbb92ddcd3fce232515e894}{Dbg\+Task\+Get\+Id} (const char $\ast$Target\+Path, const char $\ast$a\+Task\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$a\+Task\+Id)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ad4628b0c16f0bbaad767fdb910ea4449}{Dbg\+Task\+Set\+Breakpoint} (const char $\ast$Target\+Path, const char $\ast$a\+Task\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Address)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ad01a7dd197ffcdffc68f8abd11b5c600}{Dbg\+Task\+Clr\+Breakpoint} (const char $\ast$Target\+Path, const char $\ast$a\+Task\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Address)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a9732c1cdd1052d9e08466fe1cfe40f21}{Dbg\+Task\+Get\+Breakpoint} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, void $\ast$a\+Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a7e3c86c108b3b5c8c940a84d109c93c4}{Dbg\+Task\+Get\+Name} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, char $\ast$a\+Task\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ae623f14cd8536909d776f831e37e0c06}{Dbg\+Task\+Halt} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a1ff670a770219174c76034b37e03b0ed}{Dbg\+Task\+Run} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aada24dbbf9c30e3d79cca5d29dc1e6f3}{Dbg\+Task\+Single\+Step} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_adf14fb123b066d4e52d0c41bf150a0aa}{Dbg\+Task\+Range\+Step} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+From, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+To)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aad05378d496c4e013b157334f5d80c9e}{Dbg\+Task\+Get\+G\+P\+Rs} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}($\ast$a\+Result)\mbox{[}\hyperlink{inco__32_8h_a7f4622a02facee9dd19b833b296bbabf}{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR}\mbox{]})
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a4a7fcfe75e3c5f6cf94c46dfcf99ec64}{Dbg\+Task\+Get\+F\+P\+Rs} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, double($\ast$a\+Result)\mbox{[}\hyperlink{inco__32_8h_adf810ad67814631165612f65d7785d0a}{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR}\mbox{]})
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a693cfbadfb9a692cbaff870720f721c2}{Dbg\+Task\+Get\+S\+P\+Rs} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}($\ast$a\+Result)\mbox{[}\hyperlink{inco__32_8h_a92190b5b7ec9e231a07798750e3de0b1}{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR}\mbox{]})
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a7f8e2516bd2936fc4e3392edb05cb33d}{Dbg\+Task\+Get\+G\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a9f97309065b9a45babfd5a631d3b6e6a}{Dbg\+Task\+Get\+F\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, double $\ast$a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aabd0c9322c6f15e0ff4cf174f673794c}{Dbg\+Task\+Get\+S\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a30e9a2a6631a488450181e32dbf7063e}{Dbg\+Task\+Put\+G\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ae5aa5559253be22f23ae5a090fbcb39f}{Dbg\+Task\+Put\+F\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, double a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a503940920fffec3f2ca580e4ad50f3db}{Dbg\+Task\+Put\+S\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aadf3cff89a7c86c152e7cd03cdf83e68}{Dbg\+Task\+Get\+Data} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Data\+Def, void $\ast$a\+Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ad127120315a2797bb94bf04886ce0629}{Dbg\+Task\+Put\+Data} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Data\+Def, void $\ast$a\+Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a75fc64e252c0532fd4136374c1e0ccc3}{Dbg\+Cpu\+Get\+S\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$a\+Result)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a0d9d7cdc7df20344a8e50a0d83af570b}{Dbg\+Cpu\+Put\+S\+PR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ad1bd14229e259161548a6029ebce8200}{Dbg\+Cpu\+Get\+D\+CR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$a\+Result)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a240fceb2151a880c78dcb5ab70a05df5}{Dbg\+Cpu\+Put\+D\+CR} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a8ad8a94e33e545389c3e813d7ad85e31}{Dbg\+Eme\+Comm\+Status} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Eme\+Comm\+Status)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_afbc6ae790e7a24a0e00f0c825a392167}{Dbg\+Os\+Continue} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Flags)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a1626ac2589ae0fb1beccde520e8aab72}{Dbg\+Task\+Get\+Reg} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Cookie, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Flags, void $\ast$ap\+Buffer, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Buffer\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a62547879476d6c476a85ff5206b3656d}{Dbg\+Set\+Watchpoint} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Address, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Flags, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Address, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Size)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_acd921a56a65f69db5afbe9c789624fa3}{Dbg\+Clr\+Watchpoint} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Address)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a9e562e9e518b0507bf4599e67090d99a}{Dbg\+Target\+Get\+Data\+Multi} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Cookie, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Flags, void $\ast$ap\+Buffer, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Buffer\+Length, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Remaining\+Data\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a470eab2b974686bebf234b87a57c17f4}{Dbg\+Task\+Get\+Data\+Multi} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Cookie, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Flags, void $\ast$ap\+Buffer, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Buffer\+Length, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Remaining\+Data\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a80705c014b81ac6f072d095ce5e44487}{Dbg\+Task\+Get\+Data\+From\+Cache} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Cookie, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Flags, void $\ast$ap\+Buffer, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Buffer\+Length, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Remaining\+Data\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a0734aa727c2b39617ebc07790cbd809f}{Dbg\+Task\+Put\+Gdb\+Reg} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Task\+Id, const \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Register, const void $\ast$ap\+Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Data\+Length)
+\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Synchronous Calling of Asynchronous Procedures -\/ Procedure Part (for Indel internal use)}\par
+{\em (see also syncasync) }\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{Checkout\+Async\+Call\+Ticket} (void)
+\begin{DoxyCompactList}\small\item\em Called by an asynchronous procedure when an asynchronous action starts. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_abcfb4fbee17e8ef6776d2167624e4828}{Procedure\+Ex\+Add\+Result} (\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, const void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Result\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Type, const char $\ast$Result\+Name)
+\begin{DoxyCompactList}\small\item\em Called by an asynchronous procedure to return a result value. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a65893c22aec79be2220bb68e54a7a102}{Procedure\+Ex\+Add\+App\+Error} (\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+App\+Error)
+\begin{DoxyCompactList}\small\item\em Called by an asynchronous procedure to return an application error. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}{Return\+Async\+Call\+Ticket} (\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket)
+\begin{DoxyCompactList}\small\item\em Called by an asynchronous procedure when an asynchronous action finishes. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished} (\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} ai\+My\+Ticket, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} ai\+Ticket\+To\+Wait\+For)
+\begin{DoxyCompactList}\small\item\em Called by an asynchronous procedure to declare an asynchronous action completed as soon as another asynchronous procedure finishes. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Synchronous Calling of Asynchronous Procedures (for Indel internal use)}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a8e9d1cb5a2068982766c54d57a6f6780}{Push\+Deferred\+Call\+Ticket} (\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket)
+\begin{DoxyCompactList}\small\item\em Called by a deferred Call\+Procedure handler to put a ticket back on libinco\+\_\+32\textquotesingle{}s stack. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a082620b223bcdbf308888446b4ac2cd5}{Pop\+Deferred\+Call\+Ticket} (void)
+\begin{DoxyCompactList}\small\item\em Called by a deferred Call\+Procedure handler to remove a ticket from libinco\+\_\+32\textquotesingle{}s stack. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\begin{Indent}\textbf{ Deprecated functions}\par
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a1504131612b1355aa5ae6121880c75f6}{Put\+Bit} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Address, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aee1b11833ce2bdcd48908da8fdb1ae47}{Get\+Bit} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Address, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a15a77a611117a0b26b4957d9f2b1b271}{Put\+Output} (const char $\ast$Target\+Path, const char $\ast$Output, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a275d70a1a2dd8bcaad6e1aef3dac4351}{Get\+Output} (const char $\ast$Target\+Path, const char $\ast$Output, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a425d2ffb40bd478626bc0c106f85e4a8}{Put\+Input} (const char $\ast$Target\+Path, const char $\ast$Input, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ac5f68e5a7b2dbfb78b22ed3aa065f2a5}{Get\+Input} (const char $\ast$Target\+Path, const char $\ast$Input, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a0f146a1235e28d6f86478c684345c784}{Put\+Flag} (const char $\ast$Target\+Path, const char $\ast$Flag, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a8b8010ed46b46eedd880b0138e3793e3}{Get\+Flag} (const char $\ast$Target\+Path, const char $\ast$Flag, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Value)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a312aaf4765ab374edf7d76e4e16688ed}{Get\+Error} (const char $\ast$Target\+Path)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_af6c872b4cffc5e0ed7d5cdd0779491af}{Get\+Server\+RevisionS} (\hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$a\+Server\+Version)
+\begin{DoxyCompactList}\small\item\em Function to get the I\+N\+C\+O\+Server revision. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\end{Indent}
+\subsection*{Data Transfer. Always prefer I\+N\+CO over data transfer unless}
+\label{_amgrpb5852941da8d0652957c69d51421b972}%
+you have a good reason to use the latter. Do only choose to use
+
+Data transfer is an alternative way of transferring data to and from a target. The key features of the data transfer technology are\+:
+
+
+\begin{DoxyItemize}
+\item Transfer of arbitrary sized data (e.\+g. 100\+M\+Byte) is supported
+\item Direct data channel to the target, without having an additional task switch to another process (e.\+g. I\+N\+C\+O\+Server). (Note that a data transfer may be performed by I\+N\+CO frames -\/ so that this statement is not always true)
+\end{DoxyItemize}
+
+Data transfers are always configured/setup by the target. The target defines all properties of the transfer, such as maximum allowed transfer size, timeouts, retries, etc. A target may offer \char`\"{}multiple data transfer\char`\"{} endpoints (e.\+g.\+: One for \char`\"{}\+Fast load\char`\"{}, one for \char`\"{}\+Customer log data\char`\"{}, etc.) and each endpoint may allow the data to be transferred by different technologies (such as U\+DP, P\+C\+Ie, I\+N\+CO, etc.)
+
+It\textquotesingle{}s the duty of the user of the libinco\+\_\+32 data transfer functions to choose the right endpoint. Libinco\+\_\+32 will then automatically choose the \char`\"{}best\char`\"{} transfer technology.
+
+The data transfer technology is {\itshape not} meant to be used just by chance... Instead\+: The decission to use data transfers must be done very conscious. Also the properties, such as retries, timeout, etc. must be choosen with care and must be well tested in long-\/durance tests.
+
+{\bfseries I\+M\+P\+O\+R\+T\+A\+NT \+:} To avoid lags or even deadlocks when transferring over unreliable channels such as U\+DP, it is mandatory to obey the following rule\+:
+
+After issuing a D\+T\+Receive call, Data Transfer clients must either immediately call D\+T\+Receive again or immediately shutdown the connection via D\+T\+Close. This implies that it is not allowed to perform a D\+T\+Send directly after a D\+T\+Receive within the same thread.
+
+To illustrate the necessity of this rule, consider the following scenario\+: The PC wants to receive data from the target by calling D\+T\+Receive. The target replies within the timeout, so D\+T\+Receive sends an acknowledgement to the target and returns the received data to the caller. If the acknowledgement is lost, the target will run into a timeout and retransmit its reply to the PC, assuming that the PC did not receive the first transmission. Now, if the PC is not listening via D\+T\+Receive, the retransmission will never be handled, leading to subsequent retransmissions issued by the target until all retries are exhausted. \begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{indeltypes_8h_a90edca57331df76ff61d931bd8f0b52c}{uintptr} \hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a103a59baf48d99d2129acb8c5bae4a09}{D\+T\+Open} (const char $\ast$Target\+Path, const char $\ast$Endpoint, \hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor} $\ast$File\+Descriptor)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a525b8bf6cfec0f1d4089d73571ea9aac}{D\+T\+Close} (\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor} File\+Descriptor)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a25061cc412b6fa3304744b073ee267da}{D\+T\+Send} (\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor} File\+Descriptor, const void $\ast$Data\+Buffer, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Data\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ab612349c47cee3228e835c5d2c661571}{D\+T\+Receive} (\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor} File\+Descriptor, void $\ast$Data\+Buffer, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Data\+Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Data\+Length, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Timeout\+Ms)
+\end{DoxyCompactItemize}
+\subsection*{Querying and modifying data transfer parameters}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{inco__32_8h_aeca82798385f9689f59cc50026dc63bb}{D\+T\+Ctl\+Request} \{ \hyperlink{inco__32_8h_aeca82798385f9689f59cc50026dc63bbabb15498dd62ad299c1fc7e559af23da4}{D\+T\+Ctl\+Force\+Connect}
+ \}\begin{DoxyCompactList}\small\item\em Request identifiers for \hyperlink{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}{Inco\+Control()}. \end{DoxyCompactList}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_adf4077c4c28cdcbb377adef4e4e04de7}{D\+T\+Control} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} ai\+Request, void $\ast$ap\+Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Data\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aec4a9a745000529b0162adce0c4e12a8}{D\+T\+Get\+Buffer\+Sizes} (\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor} File\+Descriptor, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Local\+Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Target\+Buffer\+Size)
+\end{DoxyCompactItemize}
+\subsection*{I\+N\+IX frame dispatching functionality (for Indel internal use)}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ \hyperlink{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}{frame\+Callback\+Fct}) (\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} ah\+Plugin, const char $\ast$a\+Inco\+Frame\+Stream, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length, char $\ast$ap\+Response\+Frame\+Stream, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Response\+Stream\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a117151843fc41ca8e2891b16d25dadb6}{Inco\+Initialize} (void)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a4628490e59ddd0dd76856d439f9c1a91}{Inco\+Uninitialize} (void)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a2d4895bf693bb747a22a92ea390584a5}{Register\+Dispatcher} (const char $\ast$ap\+Full\+Plugin\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Plugin\+Id, \hyperlink{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}{frame\+Callback\+Fct} a\+Process\+Frame\+Ptr)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_adfecb1b4ea88f115f73dea28523b11a5}{Unregister\+Dispatcher} (const char $\ast$ap\+Full\+Plugin\+Path)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a0f74007ff99eaf03a80c45761192554f}{Register\+Additional\+Dispatcher\+By\+Thread} (const char $\ast$ap\+Full\+Plugin\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} a\+Plugin\+Id, \hyperlink{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}{frame\+Callback\+Fct} a\+Process\+Frame\+Ptr)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a6825f8e7c35a06fa16231d8ab340d668}{Unregister\+Additional\+Dispatcher\+By\+Thread} (const char $\ast$ap\+Full\+Plugin\+Path)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_af53743caef807f07f685e5686f461cd3}{I\+N\+C\+O\+Set\+Thread\+Name} (const char $\ast$ap\+Thread\+Name)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a8c5505a20d51cc649d8772021740389c}{I\+N\+C\+O\+Get\+Thread\+Name} (char $\ast$ap\+Thread\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} ap\+Thread\+Name\+Buffer\+Length)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI \hyperlink{inco__32_8h_ab0d0d663c58feaca02994020e812bd1e}{I\+N\+C\+O\+Clear\+Thread\+Name} (void)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_aae392e6c9feb81d13008478629a4c9fd}{Handle\+I\+N\+C\+O\+Frame\+From\+Server} (\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} ai\+Timeout)
+\end{DoxyCompactItemize}
+\subsection*{Querying and modifying library parameters}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969}{Inco\+Ctl\+Request} \{ \hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969ac7da21e1ebc8ea441e04ce1b710595c9}{Inco\+Ctl\+Set\+Tcp\+Server\+Address}, 
+\hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969a788230723e3567338f5cbe0010a73198}{Inco\+Ctl\+Start\+Recorder}, 
+\hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969af95636518e017d3548df6c8afbc7c501}{Inco\+Ctl\+Stop\+Recorder}
+ \}\begin{DoxyCompactList}\small\item\em Request identifiers for \hyperlink{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}{Inco\+Control()}. \end{DoxyCompactList}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}{Inco\+Control} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} ai\+Request, void $\ast$ap\+Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Data\+Length)
+\begin{DoxyCompactList}\small\item\em Query and manipulate miscellaneous internal library state and settings. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Interface functions for the libinco\+\_\+32 dll/so. 
+
+\begin{DoxyAuthor}{Author}
+Raphael Zulliger, \copyright{} I\+N\+D\+EL AG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\begin{DoxyVerb}2.00    06.08.1997-CH: * Origin.
+2.01    21.02.2001-FC: - Removed obsolete calls.
+                       + Added inco types, characteristics, error codes.
+3.00    30.09.2003-RZ: + Added functions for (de-)initializing of the
+                         inco_32.dll. Needed for compatibility with 
+                         new inco_32.dll (version 3.0) for IncoServer 3.0.
+3.01    10.05.2004-FC: ! Deprecated DF_KEY_INDEL_PATH (read from IncoServer).
+                       + New error ER_INCO_SERVER_TOO_OLD.
+3.02    03.06.2004-RZ: + Added declspec(dllexport/dllimport) needed for 
+                         using this file for Windows CE (Pocket PC) programs
+                       ! Renamed ER_INCO_SUBDEVICE_UNKNOWN to ER_INCO_DEVICE_UNKNOWN
+                         and added ER_INCO_SUBDEVICE_UNKNOWN with a new error-number
+3.03.02 25.10.2004-RZ: + Due to the change of the version system, GetRevisions
+                         has been changed too.
+3.03.03 01.11.2004-RZ: ! Fixed 2 memory leaks in ProcessIncoFrame()
+3.03.04 15.11.2004-RZ: ! Changed char* to const char*.
+3.03.04 16.11.2004-RZ: ! PutVariable() and GetVariable() do now check the 
+                         Lenght-argument. Before the inco32.dll crashed if 
+                         those values were greater than 256 (which is the
+                         maximum amount of bytes the incoserver/inco32 3.x 
+                         supports. If the Length arg ist to high now, an
+                         ER_INCO_VAR_STRING_LENGTH error is returned by 
+                         PutVariable. GetVariable tries to perform the 
+                         INCOCall with the Maximum size (256) and if this
+                         is enough, it doesn't return an error, otherwise
+                         it does also return ER_INCO_VAR_STRING_LENGTH.
+3.03.05 04.01.2004-RZ: ! DbgTasksState, DbgTasksList: didn't return an error
+                         If the given buffer was too small (instead they 
+                         returned the amount of information fitting into
+                         the buffer - but didn't complain about the to small
+                         buffer. Now they behave like in the 2.x INCOServer.
+3.04.00 17.01.2005-RZ: ! The size of data has changed to 464 (from 256) in
+                         the libindel/defsw.h. Put/GetBlocks do still use
+                         256 bytes as max data size - because of 2 resons:
+                         1. The incoserver does use an array on stack with 
+                            256 Bytes for Put/GetBlocks from/to the DPR of 
+                            a PPC.
+                         2. The ACSr-6A does only have such a small buffer
+                            and would crash if we make PutBlocks greater
+                            than 256*2 (e.g. trans32 does that).
+3.04.01 25.01.2005-RZ: ! There are new XML config entries which allows the
+                         user to configure the maximum length of Put-/Get-
+                         Block's. Therefore a new List has been invented to 
+                         hold those setting (called CTargetOverride).
+                       ! PutBlock/GetBlock-max default-length has been 
+                         increased to 464 Bytes again - because now the size 
+                         is adjustable by the configurtin xml file (see above)
+3.04.04 24.02.2005-MS: ! Added #define for "Template" and "Edit" state.
+3.05.00 05.04.2005-RZ: ! PutBlock, GetBlock fixed wrong error code when data
+                         length where 0. Before an undefined error number was
+                         returned.
+                       + Added functions and calls, so that CallProcedure,
+                         PutVariable and GetVariable will recognise if an 
+                         INCO call has the target of the "own" process - and
+                         does therefore not send the frame to the server.
+3.05.01 20.04.2005-RZ: ! Fixed small bug in GetRevisions which affects only 
+                         person who are working with the INIXServer. Concrete:
+                         GetRevisions failed if performed with the dll not 
+                         matching the server (e.g. faile when inco_32.dll 
+                         accessed an INIXServer or vice versa).
+3.05.02 16.05.2005-RZ: ! Fixed crash that happened if a call was made to 
+                         target '.' and 0 dispatchers were registered.
+
+713, 2006-05-29 11:00:32 +0200 (Mo, 29 Mai 2006), fabi
++ New error codes ER_INCO_DBG_NO_DEVICE and ER_INCO_DBG_NO_SOFT_RESET.
+
+762, 2006-07-26 15:04:55 +0200 (Mi, 26 Jul 2006), fabi
++ Added ULL makros for unsigned long long constants.
+
+838, 2006-08-15 09:12:36 +0200 (Di, 15 Aug 2006), fabi
+! Fixed InternLog definition if logging is disabled.
+
+974, 2006-09-18 15:51:52 +0200 (Mo, 18 Sep 2006), walther
++ Copied ISMGetBlockXX() etc. functions from Ism_inco_32.dll
+  (https://indel.dyndns.org/private/sw/old/trunk/inco/Ism_inco_32/Ism_inco_32.cpp
+  r68) into libinix32, with small changes to remove Windows dependencies.
+  These functions are used in the memdump plugin, which can't use
+  Ism_inco_32.dll because of conflicts between libinix32 and inco_32.dll.
+
+975, 2006-09-19 08:30:58 +0200 (Di, 19 Sep 2006), walther
+! Changed Slave argument of ISM functions from char * to const char *.
+
+1043, 2006-11-08 16:59:12 +0100 (Mi, 08 Nov 2006), walther
++ Added a ticket system to allow synchronous calls of asynchronous
+  procedures within INIX (see documentation in inix32.h).
+
+1130, 2006-12-11 10:46:06 +0100 (Mo, 11 Dez 2006), walther
++ Added a facility for asynchronous procedures to return result values.
+
+1149, 2006-12-12 08:42:24 +0100 (Di, 12 Dez 2006), zulliger
+! Minor error code cleanups. No functional changes.
+
+1199, 2007-01-10 07:38:50 +0100 (Mi, 10 Jan 2007), zulliger
++ New errorcode "Async result lost"
+
+1223, 2007-01-22 14:19:42 +0100 (Mo, 22 Jan 2007), walther
+! Some documentation clarifications.
+- Removed unnecessary GetVariableSync() function (GetVariable() is already
+  synchronous).
+
+1326, 2007-02-27 14:55:39 +0100 (Di, 27 Feb 2007), fabi
++ New errors ER_INCO_RPC_MULTIDISPATCH, ER_INCO_RPC_ARG_FORMAT.
+
+1492, 2007-03-30 15:08:21 +0200 (Fr, 30 Mrz 2007), zulliger
+- Removed Get/PutVariableBlock functions. INIXServer 3.x apps are not 
+  allowed to use those functions anymore.
+
+1664, 2007-06-27 17:17:59 +0200 (Wed, 27 Jun 2007), walther
+! Fixed some more messed up changelogs.
+
+1716, 2007-07-06 17:31:52 +0200 (Fr, 06 Jul 2007), walther
++ Added LL macro for int64 constants.
+
+2324, 2007-12-18 11:09:33 +0100 (Di, 18 Dez 2007), zulliger
+! Set svn:keywords (why were these lost?).
+
+2370, 2007-12-20 10:09:47 +0100 (Do, 20 Dez 2007), zulliger
+- Removed ISM function defintions from header. Users of ISM functionality 
+  must include the ism_inco_32.h file.
+
+2398, 2007-12-24 16:07:03 +0100 (Mo, 24 Dez 2007), zulliger
++ Readded GetServerRevisionS
+! Better const correctness
+
+2428, 2008-01-04 11:28:45 +0100 (Fr, 04 Jan 2008), zulliger
+! If neither INDEL_WINDOWS nor INDEL_LINUX are defined, we assume 
+  INDEL_WINDOWS by default. This helps to be backward compatible with old
+  inco_32.h files.
+
+2434, 2008-01-09 08:07:19 +0100 (Wed, 09 Jan 2008), zulliger
++ Additional functions moved over from inix32.h
+
+2440, 2008-01-09 16:30:33 +0100 (Mi, 09 Jan 2008), zulliger
++ Added define when compiled on Linux
+
+2518, 2008-02-07 14:38:59 +0100 (Thu, 07 Feb 2008), zulliger
++ If INCO32_EXPORT is already defined, do not change its definition. Was
+  introduced for incoserver, where the define is set to nothing (neither
+  dll import, nor dll export)
+
+2546, 2008-02-08 13:25:34 +0100 (Fri, 08 Feb 2008), walther
+! Fixed compile issue on Linux boxes
+
+2618, 2008-02-27 15:46:42 +0100 (Wed, 27 Feb 2008), walther
+! Set svn:eol-style property where appropriate and svn:ignore a generated
+  file. [25 files]
+
+2629, 2008-02-29 15:30:15 +0100 (Fr, 29 Feb 2008), walther
+! Just noticed that I made a bit of a mess in the changelogs in r2618. Not
+  sure what happened - cleaning this up...
+
+3894, 2010-01-14 16:05:50 +0100 (Do, 14 Jan 2010), walther
++ Support for asynchronous calls to external targets. The API functions
+  taking asynchronous call tickets now also take a target name to
+  disambiguate the tickets. This breaks binary compatibility for
+  applications that use these functions (only INIX to my knowledge), hence
+  the version number bump by tagging the previous revision. Ticket
+  machineries now exist one per target, the one for target "." is special
+  in that it also generates tickets (handles both the caller and the target
+  side of asynchronous calls), while the others only manage foreign tickets
+  (only handle the caller side). There is no support for handling incoming
+  asynchronous calls from the server yet. Documentation is not updated yet.
+
+3962, 2010-02-08 15:06:25 +0100 (Mo, 08 Feb 2010), walther
++ Added function WaitForAsyncCallWithTimeout, like WaitForAsyncCallToFinish
+  but with timeout.
+
+3965, 2010-02-09 09:05:09 +0100 (Di, 09 Feb 2010), walther
+! Updated documentation for the recent API changes.
+
+3994, 2010-02-23 10:20:37 +0100 (Di, 23 Feb 2010), fabi
+! Adjusted to generate java classes with swig.
+
+3999, 2010-02-25 16:41:54 +0100 (Do, 25 Feb 2010), fabi
+! Exclude the 3.0 functions when generating the java interface as they are
+  not needed and pollute the interface.
+
+4186, 2010-06-10 16:37:37 +0200 (Do, 10 Jun 2010), zulliger
++ Added include required for the INCO-types (indeldefs.h)
++ Added include useful for customers to check for error returned by INCO
+  functions (errinco.h)
+
+4208, 2010-06-15 13:41:21 +0200 (Di, 15 Jun 2010), zulliger
++ Added API documentation for CallProcedureEx & friends. No interface 
+  changes
+
+4212, 2010-06-15 16:00:43 +0200 (Tue, 15 Jun 2010), walther
++ Added ProcedureExAddResult and ProcedureExAddAppError functions to
+  complete the new asynchronous procedure API.
+- Removed the previous asynchronous procedure API superseded by the
+  CallProcedureEx* functions, since due to the change in CallProcedure there
+  was no way to keep it backwards compatible.
+
+4227, 2010-06-16 09:05:18 +0200 (Mi, 16 Jun 2010), walther
+! Fixed Linux build ("error: 'NULL' was not declared in this scope").
+
+4228, 2010-06-16 16:56:42 +0200 (Mi, 16 Jun 2010), walther
+! Updated documentation for the added and removed functions from r4212 and
+  4214, and a lot of other small documentation tweaks.
+
+4248, 2010-06-24 11:38:29 +0200 (Do, 24 Jun 2010), walther
+! When a procedure that normally returns named results returns an
+  application error instead, the first attempt to get a result by name now
+  returns that application error instead of ER_INCO_RPC_UNKNOWN_TICKET, just
+  like the first attempt to get an unnamed result would.
+! It is now supported for both process-internal and inter-process calls to
+  return additional results after an application error (e.g. details about
+  the error). To enable consistent behavior among process-internal calls,
+  inter-process calls to inco_32 processes, and calls to INOS, it is now
+  specified that there may be at most one application error and it must come
+  before any other results. ProcedureExAddAppError() will now wipe out any
+  previously set results and app errors to enforce this.
+
+4481, 2010-08-11 15:27:59 +0200 (Mi, 11 Aug 2010), walther
++ Handle error ER_INCO_RPC_INTERRUPTED that occurs when the INCOServer
+  detects a target reset while an asynchronous procedure is in progress.
+  Caveat: CallProcedureExWait() returns ER_INCO_NO_ERROR in such a
+  situation, ER_INCO_RPC_INTERRUPTED is only returned from
+  CallProcedureExResult(). This was simpler to implement and seems
+  sufficient for now.
+
+4578, 2010-10-08 14:36:44 +0200 (Fri, 08 Oct 2010), fabi
+! Removed INDEL_JAVA def check to include everything in the java binding.
+
+4700, 2010-12-03 17:14:06 +0100 (Fr, 03 Dez 2010), zulliger
+! Adjusted Eclipse projects
+
+4770, 2011-02-17 14:23:07 +0100 (Do, 17 Feb 2011), zulliger
++ Added new interface functions: DbgEmeCommStatus and DbgOsContinue.
+
+4914, 2011-06-14 09:33:59 +0200 (Di, 14 Jun 2011), zulliger
+! Reworked inco_32.h in order to have better doxygen documentation. Thereby
+  adjusted argument names, ordering of functions, documentation itself,
+  etc. Other than documentation, nothing should have changed.
+
+4969, 2011-09-02 17:31:38 +0200 (Fri, 02 Sep 2011), walther
+! Clarify documentation regarding ER_INCO_RPC_NO_RETURN_VALUE and
+  ER_INCO_RPC_UNKNOWN_TICKET.
+
+4984, 2011-10-04 14:09:50 +0200 (Di, 04 Okt 2011), zulliger
++ Added support for new Dbg INCO command: DbgTaskGetReg. This command has
+  initially been introduced to support getting registers from P2020. At the
+  same time, the command has been designed to optimize getting taks
+  specific registers for all targets, in the way GDB requires them.
+  Therefore, this new command will help minimizing communication overhead
+  when debugging with Gdb/iDev.
+
+4996, 2011-10-21 15:30:28 +0200 (Fr, 21 Okt 2011), walther
++ Add a new interface function IncoControl() that provides a generic way of
+  querying and manipulating miscellaneous library state or settings. Its
+  one currently implemented function permits setting the address of the
+  INCOServer to connect to when using TCP.
+
+4997, 2011-10-21 16:09:33 +0200 (Fr, 21 Okt 2011), walther
++ Port libinco_32 to Mac OS X and iOS. Only TCP communication is supported
+  at this time. Building for Mac OS X works using ibuild.py like on Linux.
+  For iOS, an Xcode project is provided. It requires wxWidgets-2.9.2
+  (unmodified source distribution), placed relative to the project as
+  specified by the WXROOT build setting.
+
+5174, 2012-05-10 15:23:55 +0200 (Do, 10 Mai 2012), walther
+! Don't use __declspec(dllexport) in addition to specifying exported
+  symbols in libinco_32.def, as doing both results in warnings from the
+  Microsoft x64 linker. See http://support.microsoft.com/kb/835326/.
+  Removing it makes no difference in the produced binary.
+
+5218, 2012-06-07 18:28:02 +0200 (Do, 07 Jun 2012), zulliger
++ Added data transfer feature. "Data transfers" serves two major purposes:
+  The first is to send huge amount of data from PC to target and vice versa
+  by getting the most out from the transfer technology (e.g. use 1500 byte
+  for each ethernet frame) and second do this "directly" (i.e. not by using
+  the INCOServer process).
+
+5354, 2012-10-29 09:07:05 +0100 (Mon, 29 Oct 2012), walther
+! Fix some mistakes and omissions from when syntax documentation was copied
+  from inixdev/doc/user/syntax.dox (r4914).
+
+5386, 2012-11-19 15:05:26 +0100 (Mon, 19 Nov 2012), zulliger
++ Added support for watchpoints
+
+5497, 2013-02-07 15:35:38 +0100 (Thu, 07 Feb 2013), tjericke
++ Added DTClose and DTGetBufferSizes functions.
+! Made DataChannels (DT) available for pure C.
+
+5556, 2013-03-20 14:33:17 +0100 (Wed, 20 Mar 2013), pauli
+! Fixed documentation: Renamed INCO_ERROR_NO_ERROR to ER_INCO_NO_ERROR.
+
+5703, 2013-06-18 09:19:36 +0200 (Di, 18 Jun 2013), zulliger
++ Added new INCO functions: DbgTaskRangeStep, DbgTargetGetDataMulti,
+  DbgTaskGetDataMulti, DbgTaskGetDataFromCache to speed up debugging with
+  iDev.
+
+5740, 2013-07-22 08:45:29 +0200 (Mon, 22 Jul 2013), walther
+! Fix syntax error that confused JNAerator.
+
+5773, 2013-09-23 17:37:29 +0200 (Mon, 23. Sep 2013), zulliger
++ Added new INCO function: DbgTaskPutGdbReg. It has initially been
+  introduced to support new ARM CPUs. This function passes the register
+  setting string, produced by GDB, down to the INOS. Those string look like
+  "40=00001580" where the "40" is the register number and the rest is the
+  hex encoded register value. This function has been added to simplify the
+  gdb stub so that it does not need to know which register is meant by
+  "40".
+
+5960, 2014-02-19 10:37:05 +0100 (Mi, 19 Feb 2014), zulliger
++ Added new API call: GetMessage. This function can be used to resolve an
+  error code (e.g. received by CallProcedureExSync) to a McRobot message.
+! Fixed compiler warnings when including this header in a .c file using
+  a C-compiler (had to add 'void' to function with empty argument list)
+
+5971, 2014-02-20 08:42:09 +0100 (Do, 20 Feb 2014), zulliger
+! Fixed C-function name conflict: GetMessage is part of the Windows C-API.
+  Therefore, renamed GetMessage into GetMcMessage
+
+5978, 2014-02-24 16:01:16 +0100 (Mo, 24 Feb 2014), pauli
++ Added comment stating Data Transfer usage rule to avoid deadlocks 
+  when dealing with unreliable channels.
+
+5989, 2014-03-03 10:42:42 +0100 (Mo, 03 Mrz 2014), pauli
+! DT documentation review by zulliger.
+
+6181, 2014-08-06 17:05:08 +0200 (Wed, 06 Aug 2014), pauli
++ Added new INIX frame dispatching functions (Indel internal use):
+  Register-/UnregisterAdditionalDispatcherByThread. These functions allow
+  to register a INCO frame handler specific to the calling thread so that
+  multiple top-level dispatchers ("") can exist per process. This
+  functionality is required by the INIX mapwatch plugin which needs to
+  register a dispatcher per crash target besides the dispatcher for the
+  INIX application.
+
+6534, 2015-11-12 00:51:52 +0100 (Don, 12 Nov 2015), zulliger
+! Slightly doxygen doc (no functional changes). Namely: explicitly mention
+  that CallProcedureExWait does NOT return application errors and that
+  CallProcedureExResult has to be used for that.
+
+6539, 2015-12-11 09:54:24 +0100 (Fr, 11 Dez 2015), pauli
++ Added INCO recording feature. It can be used to log INCO calls to a file
+  for analysis. The file contains timing information, so the calls can be
+  replayed to e.g. simulate an HMI. The recorder can be started/stopped via
+  the IncoControl call using commands IncoCtlStartRecorder and
+  IncoCtlStopRecorder. Currently, only CallProcedures and data transfers
+  are recorded.
+
+$LastChangedRevision: 6633 $ $Date: 2016-06-17 09:34:39 +0200 (Fri, 17 Jun 2016) $ $Author: zulliger $
+! Slightly clarified the handling of the 'timeout' parameter of DTRecive.
+  No functional changes.
+
+$Comment$
+
+
+u = unreleased
++ = new feature
+! = change, bugfix
+- = removed\end{DoxyVerb}
+
+\end{DoxyVersion}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}project         : Inco32 Version 3
+language        : C++ (Gnu, Visual C++)
+system          : Linux, Windows
+\end{DoxyVerb}
+
+\end{DoxyRemark}
+All dll/so function provided by this project (the interface) are defined and implemented here. 
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inco__32_8h_a751b0d6e0dbe97b2dfe601e4351840fd}\label{inco__32_8h_a751b0d6e0dbe97b2dfe601e4351840fd}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP@{D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP}}
+\index{D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP@{D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP}{DF\_KEY\_INDEL\_PATH\_DEP}}
+{\footnotesize\ttfamily \#define D\+F\+\_\+\+K\+E\+Y\+\_\+\+I\+N\+D\+E\+L\+\_\+\+P\+A\+T\+H\+\_\+\+D\+EP~\char`\"{}S\+O\+F\+T\+W\+A\+R\+E\textbackslash{}\textbackslash{}\+Indel\char`\"{}}
+
+\mbox{\Hypertarget{inco__32_8h_adf810ad67814631165612f65d7785d0a}\label{inco__32_8h_adf810ad67814631165612f65d7785d0a}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR@{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR}}
+\index{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR@{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR}{DF\_TASK\_NUMBER\_OF\_FPR}}
+{\footnotesize\ttfamily \#define D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+PR~32}
+
+\mbox{\Hypertarget{inco__32_8h_a7f4622a02facee9dd19b833b296bbabf}\label{inco__32_8h_a7f4622a02facee9dd19b833b296bbabf}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR@{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR}}
+\index{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR@{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR}{DF\_TASK\_NUMBER\_OF\_GPR}}
+{\footnotesize\ttfamily \#define D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+PR~32}
+
+\mbox{\Hypertarget{inco__32_8h_a92190b5b7ec9e231a07798750e3de0b1}\label{inco__32_8h_a92190b5b7ec9e231a07798750e3de0b1}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR@{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR}}
+\index{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR@{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR}{DF\_TASK\_NUMBER\_OF\_SPR}}
+{\footnotesize\ttfamily \#define D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+PR~8}
+
+\mbox{\Hypertarget{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}\label{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT@{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT}}
+\index{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT@{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT}{INCO32\_EXPORT}}
+{\footnotesize\ttfamily \#define I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT~\+\_\+\+\_\+declspec(dllimport)}
+
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}\label{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!frame\+Callback\+Fct@{frame\+Callback\+Fct}}
+\index{frame\+Callback\+Fct@{frame\+Callback\+Fct}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{frame\+Callback\+Fct}{frameCallbackFct}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ frame\+Callback\+Fct) (\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} ah\+Plugin, const char $\ast$a\+Inco\+Frame\+Stream, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length, char $\ast$ap\+Response\+Frame\+Stream, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$ap\+Response\+Stream\+Length)}
+
+\mbox{\Hypertarget{inco__32_8h_a82fe55987b308935c942cb731638baee}\label{inco__32_8h_a82fe55987b308935c942cb731638baee}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!t\+L\+D\+T\+File\+Descriptor@{t\+L\+D\+T\+File\+Descriptor}}
+\index{t\+L\+D\+T\+File\+Descriptor@{t\+L\+D\+T\+File\+Descriptor}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{t\+L\+D\+T\+File\+Descriptor}{tLDTFileDescriptor}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_a90edca57331df76ff61d931bd8f0b52c}{uintptr} \hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor}}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{inco__32_8h_aeca82798385f9689f59cc50026dc63bb}\label{inco__32_8h_aeca82798385f9689f59cc50026dc63bb}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Ctl\+Request@{D\+T\+Ctl\+Request}}
+\index{D\+T\+Ctl\+Request@{D\+T\+Ctl\+Request}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Ctl\+Request}{DTCtlRequest}}
+{\footnotesize\ttfamily enum \hyperlink{inco__32_8h_aeca82798385f9689f59cc50026dc63bb}{D\+T\+Ctl\+Request}}
+
+
+
+Request identifiers for \hyperlink{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}{Inco\+Control()}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{D\+T\+Ctl\+Force\+Connect@{D\+T\+Ctl\+Force\+Connect}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Ctl\+Force\+Connect@{D\+T\+Ctl\+Force\+Connect}}}\mbox{\Hypertarget{inco__32_8h_aeca82798385f9689f59cc50026dc63bbabb15498dd62ad299c1fc7e559af23da4}\label{inco__32_8h_aeca82798385f9689f59cc50026dc63bbabb15498dd62ad299c1fc7e559af23da4}} 
+D\+T\+Ctl\+Force\+Connect&! e.\+g. D\+T\+Control(\char`\"{}\+S\+U\+T\char`\"{}, D\+T\+Ctl\+Force\+Connect, \char`\"{}\+Data\+Transfer.\+Endpoints.\+Test\+Util\+Endpoint\char`\"{}, strlen(\char`\"{}\+Data\+Transfer.\+Endpoints.\+Test\+Util\+Endpoint\char`\"{})+1); \\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inco__32_8h_acd08f72a8a861d13451dacf440ef7969}\label{inco__32_8h_acd08f72a8a861d13451dacf440ef7969}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Ctl\+Request@{Inco\+Ctl\+Request}}
+\index{Inco\+Ctl\+Request@{Inco\+Ctl\+Request}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Inco\+Ctl\+Request}{IncoCtlRequest}}
+{\footnotesize\ttfamily enum \hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969}{Inco\+Ctl\+Request}}
+
+
+
+Request identifiers for \hyperlink{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}{Inco\+Control()}. 
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inco\+Ctl\+Set\+Tcp\+Server\+Address@{Inco\+Ctl\+Set\+Tcp\+Server\+Address}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Ctl\+Set\+Tcp\+Server\+Address@{Inco\+Ctl\+Set\+Tcp\+Server\+Address}}}\mbox{\Hypertarget{inco__32_8h_acd08f72a8a861d13451dacf440ef7969ac7da21e1ebc8ea441e04ce1b710595c9}\label{inco__32_8h_acd08f72a8a861d13451dacf440ef7969ac7da21e1ebc8ea441e04ce1b710595c9}} 
+Inco\+Ctl\+Set\+Tcp\+Server\+Address&Set the IP address or hostname of the I\+N\+C\+O\+Server when T\+CP communication is used. Arguments\+:
+\begin{DoxyItemize}
+\item {\itshape Target\+Path\+:} ignored
+\item {\itshape ap\+Data\+:} {\ttfamily const char $\ast$}; pointer to a null-\/terminated string, or N\+U\+LL
+\item {\itshape au\+Data\+Length\+:} ignored
+\end{DoxyItemize}
+
+Return value\+: always \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR}
+
+Changing the server address affects all I\+N\+CO calls done afterwards from any thread. Be careful when changing the address after doing asynchronous I\+N\+CO calls\+: disconnecting from the server will make it impossible to receive their completion notification or results, and waiting for them afterwards may block forever.
+
+The default server address before calling this for the first time or after calling it with a N\+U\+LL or empty string argument is {\itshape 127.\+0.\+0.\+1}.
+
+This request always succeeds as it only stores the passed value. The connection to the server is only opened at the first subsequent I\+N\+CO call using T\+CP, and any errors in address resolution or connection to the server will be reported at that time by returning an appropriate error code (e.\+g. \hyperlink{errinco_8h_a9c3f72a26b08eb2f71643e4f0da46aa2}{E\+R\+\_\+\+T\+A\+R\+G\+E\+T\+\_\+\+R\+E\+M\+O\+T\+E\+\_\+\+S\+R\+V\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND}). \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inco\+Ctl\+Start\+Recorder@{Inco\+Ctl\+Start\+Recorder}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Ctl\+Start\+Recorder@{Inco\+Ctl\+Start\+Recorder}}}\mbox{\Hypertarget{inco__32_8h_acd08f72a8a861d13451dacf440ef7969a788230723e3567338f5cbe0010a73198}\label{inco__32_8h_acd08f72a8a861d13451dacf440ef7969a788230723e3567338f5cbe0010a73198}} 
+Inco\+Ctl\+Start\+Recorder&Start recording I\+N\+CO calls into a file for later replay. Arguments\+:
+\begin{DoxyItemize}
+\item {\itshape Target\+Path\+:} ignored
+\item {\itshape ap\+Data\+:} {\ttfamily const char $\ast$}; output file path
+\item {\itshape au\+Data\+Length\+:} ignored
+\end{DoxyItemize}
+
+Return value\+: \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Inco\+Ctl\+Stop\+Recorder@{Inco\+Ctl\+Stop\+Recorder}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Ctl\+Stop\+Recorder@{Inco\+Ctl\+Stop\+Recorder}}}\mbox{\Hypertarget{inco__32_8h_acd08f72a8a861d13451dacf440ef7969af95636518e017d3548df6c8afbc7c501}\label{inco__32_8h_acd08f72a8a861d13451dacf440ef7969af95636518e017d3548df6c8afbc7c501}} 
+Inco\+Ctl\+Stop\+Recorder&Stops the current recording of I\+N\+CO calls. Arguments\+:
+\begin{DoxyItemize}
+\item {\itshape Target\+Path\+:} ignored
+\item {\itshape ap\+Data\+:} ignored
+\item {\itshape au\+Data\+Length\+:} ignored
+\end{DoxyItemize}
+
+Return value\+: always \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}\label{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Checkout\+Async\+Call\+Ticket@{Checkout\+Async\+Call\+Ticket}}
+\index{Checkout\+Async\+Call\+Ticket@{Checkout\+Async\+Call\+Ticket}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Checkout\+Async\+Call\+Ticket()}{CheckoutAsyncCallTicket()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI Checkout\+Async\+Call\+Ticket (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Called by an asynchronous procedure when an asynchronous action starts. 
+
+During its synchronous part, a procedure calls this function to tell libinco\+\_\+32 that it is about to start an asynchronous part. It must make sure that the returned ticket is eventually returned to libinco\+\_\+32 using \hyperlink{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}{Return\+Async\+Call\+Ticket()} (when the asynchronous part finishes) or \hyperlink{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished()}. May be called multiple times, but each one must be balanced by a call to \hyperlink{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}{Return\+Async\+Call\+Ticket()} or \hyperlink{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished()}.
+
+See also syncasyncdetails in syncasync \mbox{\Hypertarget{inco__32_8h_a1cb03b74d464f1550394843cf7199283}\label{inco__32_8h_a1cb03b74d464f1550394843cf7199283}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Create\+Table@{Create\+Table}}
+\index{Create\+Table@{Create\+Table}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Create\+Table()}{CreateTable()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Create\+Table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Table\+Name,  }\item[{const char $\ast$}]{Database\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number\+Records,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Record\+Size,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Flags }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_acd921a56a65f69db5afbe9c789624fa3}\label{inco__32_8h_acd921a56a65f69db5afbe9c789624fa3}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Clr\+Watchpoint@{Dbg\+Clr\+Watchpoint}}
+\index{Dbg\+Clr\+Watchpoint@{Dbg\+Clr\+Watchpoint}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Clr\+Watchpoint()}{DbgClrWatchpoint()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Clr\+Watchpoint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Address }\end{DoxyParamCaption})}
+
+Clears the watchpoint at address au\+Address. 
+\begin{DoxyParams}{Parameters}
+{\em au\+Address} & The address of the watchpoint that should be cleared. The address must be within the watched range. Means\+: it doesn\textquotesingle{}t necessarily need to be the same value as returned by Dbg\+Set\+Watchpoint (ap\+Address), as long as the address lies within the watched memory region.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+As of this writing, all I\+N\+OS targets only support 1 watchpoint. These implementation do not even check au\+Address. Instead, they always just remove the watchpoint if one is set. 
+\end{DoxyNote}
+\mbox{\Hypertarget{inco__32_8h_ad1bd14229e259161548a6029ebce8200}\label{inco__32_8h_ad1bd14229e259161548a6029ebce8200}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Cpu\+Get\+D\+CR@{Dbg\+Cpu\+Get\+D\+CR}}
+\index{Dbg\+Cpu\+Get\+D\+CR@{Dbg\+Cpu\+Get\+D\+CR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Cpu\+Get\+D\+C\+R()}{DbgCpuGetDCR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Cpu\+Get\+D\+CR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{a\+Result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a75fc64e252c0532fd4136374c1e0ccc3}\label{inco__32_8h_a75fc64e252c0532fd4136374c1e0ccc3}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Cpu\+Get\+S\+PR@{Dbg\+Cpu\+Get\+S\+PR}}
+\index{Dbg\+Cpu\+Get\+S\+PR@{Dbg\+Cpu\+Get\+S\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Cpu\+Get\+S\+P\+R()}{DbgCpuGetSPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Cpu\+Get\+S\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{a\+Result }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a240fceb2151a880c78dcb5ab70a05df5}\label{inco__32_8h_a240fceb2151a880c78dcb5ab70a05df5}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Cpu\+Put\+D\+CR@{Dbg\+Cpu\+Put\+D\+CR}}
+\index{Dbg\+Cpu\+Put\+D\+CR@{Dbg\+Cpu\+Put\+D\+CR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Cpu\+Put\+D\+C\+R()}{DbgCpuPutDCR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Cpu\+Put\+D\+CR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a0d9d7cdc7df20344a8e50a0d83af570b}\label{inco__32_8h_a0d9d7cdc7df20344a8e50a0d83af570b}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Cpu\+Put\+S\+PR@{Dbg\+Cpu\+Put\+S\+PR}}
+\index{Dbg\+Cpu\+Put\+S\+PR@{Dbg\+Cpu\+Put\+S\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Cpu\+Put\+S\+P\+R()}{DbgCpuPutSPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Cpu\+Put\+S\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a8ad8a94e33e545389c3e813d7ad85e31}\label{inco__32_8h_a8ad8a94e33e545389c3e813d7ad85e31}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Eme\+Comm\+Status@{Dbg\+Eme\+Comm\+Status}}
+\index{Dbg\+Eme\+Comm\+Status@{Dbg\+Eme\+Comm\+Status}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Eme\+Comm\+Status()}{DbgEmeCommStatus()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Eme\+Comm\+Status (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Eme\+Comm\+Status }\end{DoxyParamCaption})}
+
+Get status about \textquotesingle{}emergency I\+N\+CO communication\textquotesingle{} of target {\itshape Target\+Path}. Value at {\itshape ap\+Eme\+Comm\+Status} will be set to 0 if the emergency system is not running. It\textquotesingle{}ll be set to 1 if it is running. \mbox{\Hypertarget{inco__32_8h_afbc6ae790e7a24a0e00f0c825a392167}\label{inco__32_8h_afbc6ae790e7a24a0e00f0c825a392167}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Os\+Continue@{Dbg\+Os\+Continue}}
+\index{Dbg\+Os\+Continue@{Dbg\+Os\+Continue}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Os\+Continue()}{DbgOsContinue()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Os\+Continue (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Flags }\end{DoxyParamCaption})}
+
+Continue execution of OS. If au\+Flags is 0 and the \textquotesingle{}emergency I\+N\+CO communication\textquotesingle{} is running, this emergency communication will be left and \char`\"{}normal\char`\"{} OS execution will be continued. \mbox{\Hypertarget{inco__32_8h_af34af3141e14ab0549b1ba44e1f0892d}\label{inco__32_8h_af34af3141e14ab0549b1ba44e1f0892d}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Os\+Prepare\+Load@{Dbg\+Os\+Prepare\+Load}}
+\index{Dbg\+Os\+Prepare\+Load@{Dbg\+Os\+Prepare\+Load}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Os\+Prepare\+Load()}{DbgOsPrepareLoad()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Os\+Prepare\+Load (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ad1f06dea244943176d0d98dbc003ead8}\label{inco__32_8h_ad1f06dea244943176d0d98dbc003ead8}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Os\+Reset@{Dbg\+Os\+Reset}}
+\index{Dbg\+Os\+Reset@{Dbg\+Os\+Reset}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Os\+Reset()}{DbgOsReset()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Os\+Reset (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Flags }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a62547879476d6c476a85ff5206b3656d}\label{inco__32_8h_a62547879476d6c476a85ff5206b3656d}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Set\+Watchpoint@{Dbg\+Set\+Watchpoint}}
+\index{Dbg\+Set\+Watchpoint@{Dbg\+Set\+Watchpoint}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Set\+Watchpoint()}{DbgSetWatchpoint()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Set\+Watchpoint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Address,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Size,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Flags,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Address,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Size }\end{DoxyParamCaption})}
+
+Set a watchpoint on address au\+Address with au\+Address and au\+Flags. 
+\begin{DoxyParams}{Parameters}
+{\em au\+Address} & The desired address of the watchpoint. \\
+\hline
+{\em au\+Size} & The desired size of the watchpoint \\
+\hline
+{\em au\+Flags} & 1\+: read acces, 2\+: write access, 3\+: read \& write access \\
+\hline
+{\em ap\+Address} & The effective watchpoint address, which may differ from au\+Address because certain C\+PU have certain watchpoint constraints (such as the I\+BM 750, which may only cover addresses which are 8\+Byte aligned). \\
+\hline
+{\em au\+Size} & The effetive watchpoint size, which may differ from au\+Size because certain C\+PU have certain watchpoint constraints (such as the I\+BM 750, which may only cover 8\+Bytes of data). \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{inco__32_8h_a9e562e9e518b0507bf4599e67090d99a}\label{inco__32_8h_a9e562e9e518b0507bf4599e67090d99a}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Target\+Get\+Data\+Multi@{Dbg\+Target\+Get\+Data\+Multi}}
+\index{Dbg\+Target\+Get\+Data\+Multi@{Dbg\+Target\+Get\+Data\+Multi}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Target\+Get\+Data\+Multi()}{DbgTargetGetDataMulti()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Target\+Get\+Data\+Multi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Cookie,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Flags,  }\item[{void $\ast$}]{ap\+Buffer,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Buffer\+Length,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Remaining\+Data\+Length }\end{DoxyParamCaption})}
+
+Get all kind of target specific data, such as\+: task list, their state and tbentries, breakpoint/watchpoint/testpoint list, etc. The caller decides which data to be read by $\ast$ap\+Flags. I\+N\+OS reports which data were actually sent back by $\ast$ap\+Flags. Each version of I\+N\+OS may support different kind of data. Therefore, check the I\+N\+OS sources for a list of supported flags. If the data don\textquotesingle{}t fit into a single I\+N\+CO A\+CK frame, then $\ast$ap\+Cookie will be set to !=0, ap\+Remaining\+Data\+Length will be set to the count of bytes of additionally available data. The caller can invoke this function again, passing $\ast$ap\+Cookie to get the remainig data. may pass that cookie to the next \mbox{\Hypertarget{inco__32_8h_ad01a7dd197ffcdffc68f8abd11b5c600}\label{inco__32_8h_ad01a7dd197ffcdffc68f8abd11b5c600}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Clr\+Breakpoint@{Dbg\+Task\+Clr\+Breakpoint}}
+\index{Dbg\+Task\+Clr\+Breakpoint@{Dbg\+Task\+Clr\+Breakpoint}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Clr\+Breakpoint()}{DbgTaskClrBreakpoint()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Clr\+Breakpoint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{a\+Task\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a9732c1cdd1052d9e08466fe1cfe40f21}\label{inco__32_8h_a9732c1cdd1052d9e08466fe1cfe40f21}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Breakpoint@{Dbg\+Task\+Get\+Breakpoint}}
+\index{Dbg\+Task\+Get\+Breakpoint@{Dbg\+Task\+Get\+Breakpoint}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Breakpoint()}{DbgTaskGetBreakpoint()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Breakpoint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{void $\ast$}]{a\+Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_aadf3cff89a7c86c152e7cd03cdf83e68}\label{inco__32_8h_aadf3cff89a7c86c152e7cd03cdf83e68}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Data@{Dbg\+Task\+Get\+Data}}
+\index{Dbg\+Task\+Get\+Data@{Dbg\+Task\+Get\+Data}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Data()}{DbgTaskGetData()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Data\+Def,  }\item[{void $\ast$}]{a\+Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a80705c014b81ac6f072d095ce5e44487}\label{inco__32_8h_a80705c014b81ac6f072d095ce5e44487}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Data\+From\+Cache@{Dbg\+Task\+Get\+Data\+From\+Cache}}
+\index{Dbg\+Task\+Get\+Data\+From\+Cache@{Dbg\+Task\+Get\+Data\+From\+Cache}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Data\+From\+Cache()}{DbgTaskGetDataFromCache()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Data\+From\+Cache (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Cookie,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Flags,  }\item[{void $\ast$}]{ap\+Buffer,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Buffer\+Length,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Remaining\+Data\+Length }\end{DoxyParamCaption})}
+
+For certain I\+N\+CO calls (i.\+e. Single\+Step, Range\+Step, Halt), new I\+N\+OS versions return task state data in the A\+CK frame to optimize the amount of frames to be exchanged between the PC and I\+N\+OS during debugging. These data are stored within libinco\+\_\+32 and can be get by this function. The format of the data and the way to get possibly \char`\"{}remaining data\char`\"{} is the same as for Dbg\+Target\+Get\+Data\+Multi. \mbox{\Hypertarget{inco__32_8h_a470eab2b974686bebf234b87a57c17f4}\label{inco__32_8h_a470eab2b974686bebf234b87a57c17f4}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Data\+Multi@{Dbg\+Task\+Get\+Data\+Multi}}
+\index{Dbg\+Task\+Get\+Data\+Multi@{Dbg\+Task\+Get\+Data\+Multi}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Data\+Multi()}{DbgTaskGetDataMulti()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Data\+Multi (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Cookie,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Flags,  }\item[{void $\ast$}]{ap\+Buffer,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Buffer\+Length,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Remaining\+Data\+Length }\end{DoxyParamCaption})}
+
+Get all kind of task specific data, such as\+: task state, trap number, registers values, tb entries, etc. This function works the same way as Dbg\+Target\+Get\+Data\+Multi. \mbox{\Hypertarget{inco__32_8h_a9f97309065b9a45babfd5a631d3b6e6a}\label{inco__32_8h_a9f97309065b9a45babfd5a631d3b6e6a}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+F\+PR@{Dbg\+Task\+Get\+F\+PR}}
+\index{Dbg\+Task\+Get\+F\+PR@{Dbg\+Task\+Get\+F\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+F\+P\+R()}{DbgTaskGetFPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+F\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{double $\ast$}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a4a7fcfe75e3c5f6cf94c46dfcf99ec64}\label{inco__32_8h_a4a7fcfe75e3c5f6cf94c46dfcf99ec64}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+F\+P\+Rs@{Dbg\+Task\+Get\+F\+P\+Rs}}
+\index{Dbg\+Task\+Get\+F\+P\+Rs@{Dbg\+Task\+Get\+F\+P\+Rs}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+F\+P\+Rs()}{DbgTaskGetFPRs()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+F\+P\+Rs (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{double($\ast$)}]{a\+Result\mbox{[}\+D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+F\+P\+R\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a7f8e2516bd2936fc4e3392edb05cb33d}\label{inco__32_8h_a7f8e2516bd2936fc4e3392edb05cb33d}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+G\+PR@{Dbg\+Task\+Get\+G\+PR}}
+\index{Dbg\+Task\+Get\+G\+PR@{Dbg\+Task\+Get\+G\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+G\+P\+R()}{DbgTaskGetGPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+G\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_aad05378d496c4e013b157334f5d80c9e}\label{inco__32_8h_aad05378d496c4e013b157334f5d80c9e}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+G\+P\+Rs@{Dbg\+Task\+Get\+G\+P\+Rs}}
+\index{Dbg\+Task\+Get\+G\+P\+Rs@{Dbg\+Task\+Get\+G\+P\+Rs}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+G\+P\+Rs()}{DbgTaskGetGPRs()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+G\+P\+Rs (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}($\ast$)}]{a\+Result\mbox{[}\+D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+G\+P\+R\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a2a7045977dbb92ddcd3fce232515e894}\label{inco__32_8h_a2a7045977dbb92ddcd3fce232515e894}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Id@{Dbg\+Task\+Get\+Id}}
+\index{Dbg\+Task\+Get\+Id@{Dbg\+Task\+Get\+Id}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Id()}{DbgTaskGetId()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Id (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{a\+Task\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{a\+Task\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a7e3c86c108b3b5c8c940a84d109c93c4}\label{inco__32_8h_a7e3c86c108b3b5c8c940a84d109c93c4}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Name@{Dbg\+Task\+Get\+Name}}
+\index{Dbg\+Task\+Get\+Name@{Dbg\+Task\+Get\+Name}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Name()}{DbgTaskGetName()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{char $\ast$}]{a\+Task\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a1626ac2589ae0fb1beccde520e8aab72}\label{inco__32_8h_a1626ac2589ae0fb1beccde520e8aab72}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+Reg@{Dbg\+Task\+Get\+Reg}}
+\index{Dbg\+Task\+Get\+Reg@{Dbg\+Task\+Get\+Reg}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+Reg()}{DbgTaskGetReg()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+Reg (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Cookie,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Flags,  }\item[{void $\ast$}]{ap\+Buffer,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{ap\+Buffer\+Length }\end{DoxyParamCaption})}
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000001}{Deprecated}]This function has been replaced by the more powerful Dbg\+Task\+Get\+Data\+Multi. \end{DoxyRefDesc}
+\mbox{\Hypertarget{inco__32_8h_aabd0c9322c6f15e0ff4cf174f673794c}\label{inco__32_8h_aabd0c9322c6f15e0ff4cf174f673794c}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+S\+PR@{Dbg\+Task\+Get\+S\+PR}}
+\index{Dbg\+Task\+Get\+S\+PR@{Dbg\+Task\+Get\+S\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+S\+P\+R()}{DbgTaskGetSPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+S\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a693cfbadfb9a692cbaff870720f721c2}\label{inco__32_8h_a693cfbadfb9a692cbaff870720f721c2}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Get\+S\+P\+Rs@{Dbg\+Task\+Get\+S\+P\+Rs}}
+\index{Dbg\+Task\+Get\+S\+P\+Rs@{Dbg\+Task\+Get\+S\+P\+Rs}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Get\+S\+P\+Rs()}{DbgTaskGetSPRs()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Get\+S\+P\+Rs (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}($\ast$)}]{a\+Result\mbox{[}\+D\+F\+\_\+\+T\+A\+S\+K\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+O\+F\+\_\+\+S\+P\+R\mbox{]} }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ae623f14cd8536909d776f831e37e0c06}\label{inco__32_8h_ae623f14cd8536909d776f831e37e0c06}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Halt@{Dbg\+Task\+Halt}}
+\index{Dbg\+Task\+Halt@{Dbg\+Task\+Halt}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Halt()}{DbgTaskHalt()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Halt (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ad127120315a2797bb94bf04886ce0629}\label{inco__32_8h_ad127120315a2797bb94bf04886ce0629}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Put\+Data@{Dbg\+Task\+Put\+Data}}
+\index{Dbg\+Task\+Put\+Data@{Dbg\+Task\+Put\+Data}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Put\+Data()}{DbgTaskPutData()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Put\+Data (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Data\+Def,  }\item[{void $\ast$}]{a\+Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ae5aa5559253be22f23ae5a090fbcb39f}\label{inco__32_8h_ae5aa5559253be22f23ae5a090fbcb39f}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Put\+F\+PR@{Dbg\+Task\+Put\+F\+PR}}
+\index{Dbg\+Task\+Put\+F\+PR@{Dbg\+Task\+Put\+F\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Put\+F\+P\+R()}{DbgTaskPutFPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Put\+F\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{double}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a0734aa727c2b39617ebc07790cbd809f}\label{inco__32_8h_a0734aa727c2b39617ebc07790cbd809f}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Put\+Gdb\+Reg@{Dbg\+Task\+Put\+Gdb\+Reg}}
+\index{Dbg\+Task\+Put\+Gdb\+Reg@{Dbg\+Task\+Put\+Gdb\+Reg}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Put\+Gdb\+Reg()}{DbgTaskPutGdbReg()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Put\+Gdb\+Reg (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{const \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Register,  }\item[{const void $\ast$}]{ap\+Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Data\+Length }\end{DoxyParamCaption})}
+
+Set a register at the target in \textquotesingle{}G\+DB style\textquotesingle{} syntax. This syntax is defined by G\+DB\textquotesingle{}s serial remote protocol and looks like this\+: \char`\"{}\+Reg\+Num=\+Reg\+Value\char`\"{} So for example, to set the value of the PC on a P\+P\+C603, you\textquotesingle{}d have a string like that\+: \char`\"{}40=deadbeef\char`\"{} Initially, this function has been introduced to support targets with A\+RM C\+P\+Us (i.\+e. C\+O\+P-\/\+M\+A\+S2). Thereby, we adjusted the G\+DB stub so that it doesn\textquotesingle{}t need to know anything about register numbers anymore (means\+: doesn\textquotesingle{}t need to know that register number 40 is the PC). Thereby, we moved that know how to I\+N\+OS, thus this new function. \mbox{\Hypertarget{inco__32_8h_a30e9a2a6631a488450181e32dbf7063e}\label{inco__32_8h_a30e9a2a6631a488450181e32dbf7063e}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Put\+G\+PR@{Dbg\+Task\+Put\+G\+PR}}
+\index{Dbg\+Task\+Put\+G\+PR@{Dbg\+Task\+Put\+G\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Put\+G\+P\+R()}{DbgTaskPutGPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Put\+G\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a503940920fffec3f2ca580e4ad50f3db}\label{inco__32_8h_a503940920fffec3f2ca580e4ad50f3db}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Put\+S\+PR@{Dbg\+Task\+Put\+S\+PR}}
+\index{Dbg\+Task\+Put\+S\+PR@{Dbg\+Task\+Put\+S\+PR}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Put\+S\+P\+R()}{DbgTaskPutSPR()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Put\+S\+PR (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_adf14fb123b066d4e52d0c41bf150a0aa}\label{inco__32_8h_adf14fb123b066d4e52d0c41bf150a0aa}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Range\+Step@{Dbg\+Task\+Range\+Step}}
+\index{Dbg\+Task\+Range\+Step@{Dbg\+Task\+Range\+Step}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Range\+Step()}{DbgTaskRangeStep()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Range\+Step (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+From,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+To }\end{DoxyParamCaption})}
+
+Performs at least one task single-\/steps. Performs more task single-\/steps as long as the task PC is $>$= au\+From and $<$ au\+To. This function is a pure debug performance optimization, as the same functionality can be get by issuing several Dbg\+Task\+Single\+Step from the PC side. \mbox{\Hypertarget{inco__32_8h_a1ff670a770219174c76034b37e03b0ed}\label{inco__32_8h_a1ff670a770219174c76034b37e03b0ed}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Run@{Dbg\+Task\+Run}}
+\index{Dbg\+Task\+Run@{Dbg\+Task\+Run}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Run()}{DbgTaskRun()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Run (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ad4628b0c16f0bbaad767fdb910ea4449}\label{inco__32_8h_ad4628b0c16f0bbaad767fdb910ea4449}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Set\+Breakpoint@{Dbg\+Task\+Set\+Breakpoint}}
+\index{Dbg\+Task\+Set\+Breakpoint@{Dbg\+Task\+Set\+Breakpoint}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Set\+Breakpoint()}{DbgTaskSetBreakpoint()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Set\+Breakpoint (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{a\+Task\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Address }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_aada24dbbf9c30e3d79cca5d29dc1e6f3}\label{inco__32_8h_aada24dbbf9c30e3d79cca5d29dc1e6f3}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Task\+Single\+Step@{Dbg\+Task\+Single\+Step}}
+\index{Dbg\+Task\+Single\+Step@{Dbg\+Task\+Single\+Step}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Task\+Single\+Step()}{DbgTaskSingleStep()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Task\+Single\+Step (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Task\+Id }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ae78dfd6c87f4227b40a9a42df9984011}\label{inco__32_8h_ae78dfd6c87f4227b40a9a42df9984011}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Tasks\+List@{Dbg\+Tasks\+List}}
+\index{Dbg\+Tasks\+List@{Dbg\+Tasks\+List}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Tasks\+List()}{DbgTasksList()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Tasks\+List (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{void $\ast$}]{a\+Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_afce3373c2e1911343767b453ca6d1d0c}\label{inco__32_8h_afce3373c2e1911343767b453ca6d1d0c}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Dbg\+Tasks\+State@{Dbg\+Tasks\+State}}
+\index{Dbg\+Tasks\+State@{Dbg\+Tasks\+State}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Dbg\+Tasks\+State()}{DbgTasksState()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Dbg\+Tasks\+State (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{void $\ast$}]{a\+Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a40d41d06d78b22fe59b86148b6892d33}\label{inco__32_8h_a40d41d06d78b22fe59b86148b6892d33}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Delete\+Table@{Delete\+Table}}
+\index{Delete\+Table@{Delete\+Table}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Delete\+Table()}{DeleteTable()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Delete\+Table (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Table\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a525b8bf6cfec0f1d4089d73571ea9aac}\label{inco__32_8h_a525b8bf6cfec0f1d4089d73571ea9aac}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Close@{D\+T\+Close}}
+\index{D\+T\+Close@{D\+T\+Close}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Close()}{DTClose()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI D\+T\+Close (\begin{DoxyParamCaption}\item[{\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor}}]{File\+Descriptor }\end{DoxyParamCaption})}
+
+Closes a data transfer connection 
+\begin{DoxyParams}{Parameters}
+{\em File\+Descriptor} & The file descriptor that was set by D\+T\+Open \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{inco__32_8h_adf4077c4c28cdcbb377adef4e4e04de7}\label{inco__32_8h_adf4077c4c28cdcbb377adef4e4e04de7}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Control@{D\+T\+Control}}
+\index{D\+T\+Control@{D\+T\+Control}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Control()}{DTControl()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI D\+T\+Control (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{ai\+Request,  }\item[{void $\ast$}]{ap\+Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Data\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_aec4a9a745000529b0162adce0c4e12a8}\label{inco__32_8h_aec4a9a745000529b0162adce0c4e12a8}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Get\+Buffer\+Sizes@{D\+T\+Get\+Buffer\+Sizes}}
+\index{D\+T\+Get\+Buffer\+Sizes@{D\+T\+Get\+Buffer\+Sizes}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Get\+Buffer\+Sizes()}{DTGetBufferSizes()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI D\+T\+Get\+Buffer\+Sizes (\begin{DoxyParamCaption}\item[{\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor}}]{File\+Descriptor,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Local\+Buffer\+Size,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Target\+Buffer\+Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a103a59baf48d99d2129acb8c5bae4a09}\label{inco__32_8h_a103a59baf48d99d2129acb8c5bae4a09}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Open@{D\+T\+Open}}
+\index{D\+T\+Open@{D\+T\+Open}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Open()}{DTOpen()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI D\+T\+Open (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Endpoint,  }\item[{\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor} $\ast$}]{File\+Descriptor }\end{DoxyParamCaption})}
+
+Opens a data transfer. This function tries to establish a connection to the endpoint on the target. 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Endpoint} & A zero-\/terminated string of the I\+N\+CO path of the endpoint to which the connection should be established \\
+\hline
+{\em File\+Descriptor} & Pointer to a t\+L\+D\+T\+File\+Descriptor. If the function succeeds, the file descriptor will be set to a valid value that must be passed to every call of D\+T\+Close, D\+T\+Send and D\+T\+Receive \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success. 
+
+\hyperlink{errinco_8h_abd36fb997fb328d99f19f6a8af2f98d8}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+D\+T\+\_\+\+A\+L\+R\+E\+A\+D\+Y\+\_\+\+C\+O\+N\+N\+E\+C\+T\+ED} if the target reports that a connection is already established. If it is desired t re-\/establish the connection, the D\+T\+Control can be called using D\+T\+Ctl\+Force\+Connect followed by another attempt to D\+T\+Open. 
+
+A request-\/specific error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inco__32_8h_ab612349c47cee3228e835c5d2c661571}\label{inco__32_8h_ab612349c47cee3228e835c5d2c661571}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Receive@{D\+T\+Receive}}
+\index{D\+T\+Receive@{D\+T\+Receive}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Receive()}{DTReceive()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI D\+T\+Receive (\begin{DoxyParamCaption}\item[{\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor}}]{File\+Descriptor,  }\item[{void $\ast$}]{Data\+Buffer,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Data\+Buffer\+Size,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Data\+Length,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Timeout\+Ms }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em File\+Descriptor} & The file descriptor that was set by D\+T\+Open \\
+\hline
+{\em Data\+Buffer} & Pointer to the buffer where this function puts received data into \\
+\hline
+{\em Data\+Buffer\+Size} & Buffer size in bytes. The buffer size {\itshape must} be big enough to take the maximum configured data transfer size as specified by the target. \\
+\hline
+{\em Data\+Length} & Output parameter that\textquotesingle{}ll contain the number of received bytes. \\
+\hline
+{\em Timeout\+Ms} & Maximum time to wait for a data transfer to start. Moreover, if a data transfer is big enough so that it requires multiple \char`\"{}sub-\/data transfers\char`\"{} (i.\+e. multiple U\+DP frames) then the timeout is also used to wait for every sub-\/data transfer. Therefore\+: If sub-\/data transfers are required, the overall time spent in this function may be significantly higher than Timeout\+Ms. More technically spoken\+: This timeout is used for each attempt of reading one U\+D\+P/\+Ethernet frame. This also implies that, assuming you transfer 15\textquotesingle{}000 Bytes (= 10 Ethernet frames in case of a Data\+Transfer), the underlying code needs 10 times to read a U\+DP frame and thus the timeout is applied on every read attempt. Therefore, if only one of these 10 frames would not arrive within Timeout\+Ms, the whole transfer would be aborted with a timeout error, whether some frames were received successfully or not. The very same holds true for transfer technologies other than U\+DP, just that the \textquotesingle{}frame sizes\textquotesingle{} are different from 1500 Bytes. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success. 
+
+A request-\/specific error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inco__32_8h_a25061cc412b6fa3304744b073ee267da}\label{inco__32_8h_a25061cc412b6fa3304744b073ee267da}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!D\+T\+Send@{D\+T\+Send}}
+\index{D\+T\+Send@{D\+T\+Send}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{D\+T\+Send()}{DTSend()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI D\+T\+Send (\begin{DoxyParamCaption}\item[{\hyperlink{inco__32_8h_a82fe55987b308935c942cb731638baee}{t\+L\+D\+T\+File\+Descriptor}}]{File\+Descriptor,  }\item[{const void $\ast$}]{Data\+Buffer,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Data\+Length }\end{DoxyParamCaption})}
+
+Sends the data pointed to by Data\+Buffer to the target. This function returns when sending the data completed or failed. The function applies the timeout and retry properties as defined by the target. Therefore, the execution time of this function may significantly increase in case of transfer problems (e.\+g. U\+DP frame loss, etc.) 
+\begin{DoxyParams}{Parameters}
+{\em Data\+Buffer} & Pointer to the data that should be sent to the target \\
+\hline
+{\em Data\+Length} & Count of Bytes sent to the target. \\
+\hline
+{\em File\+Descriptor} & The file descriptor that was set by D\+T\+Open \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success. 
+
+A request-\/specific error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{inco__32_8h_aee1b11833ce2bdcd48908da8fdb1ae47}\label{inco__32_8h_aee1b11833ce2bdcd48908da8fdb1ae47}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Bit@{Get\+Bit}}
+\index{Get\+Bit@{Get\+Bit}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Bit()}{GetBit()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Bit (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Address,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a312aaf4765ab374edf7d76e4e16688ed}\label{inco__32_8h_a312aaf4765ab374edf7d76e4e16688ed}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Error@{Get\+Error}}
+\index{Get\+Error@{Get\+Error}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Error()}{GetError()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Error (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a8b8010ed46b46eedd880b0138e3793e3}\label{inco__32_8h_a8b8010ed46b46eedd880b0138e3793e3}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Flag@{Get\+Flag}}
+\index{Get\+Flag@{Get\+Flag}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Flag()}{GetFlag()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Flag (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Flag,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ac5f68e5a7b2dbfb78b22ed3aa065f2a5}\label{inco__32_8h_ac5f68e5a7b2dbfb78b22ed3aa065f2a5}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Input@{Get\+Input}}
+\index{Get\+Input@{Get\+Input}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Input()}{GetInput()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Input (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Input,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a275d70a1a2dd8bcaad6e1aef3dac4351}\label{inco__32_8h_a275d70a1a2dd8bcaad6e1aef3dac4351}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Output@{Get\+Output}}
+\index{Get\+Output@{Get\+Output}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Output()}{GetOutput()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Output (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Output,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_aa0e9d2065b1b6402b6e25f0362264bb8}\label{inco__32_8h_aa0e9d2065b1b6402b6e25f0362264bb8}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Record@{Get\+Record}}
+\index{Get\+Record@{Get\+Record}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Record()}{GetRecord()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Record (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Table\+Name,  }\item[{const char $\ast$}]{Record,  }\item[{void $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_af6c872b4cffc5e0ed7d5cdd0779491af}\label{inco__32_8h_af6c872b4cffc5e0ed7d5cdd0779491af}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Get\+Server\+RevisionS@{Get\+Server\+RevisionS}}
+\index{Get\+Server\+RevisionS@{Get\+Server\+RevisionS}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Get\+Server\+Revision\+S()}{GetServerRevisionS()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Server\+RevisionS (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$}]{a\+Server\+Version }\end{DoxyParamCaption})}
+
+
+
+Function to get the I\+N\+C\+O\+Server revision. 
+
+\begin{DoxyRefDesc}{Deprecated}
+\item[\hyperlink{deprecated__deprecated000002}{Deprecated}]\end{DoxyRefDesc}
+\mbox{\Hypertarget{inco__32_8h_aae392e6c9feb81d13008478629a4c9fd}\label{inco__32_8h_aae392e6c9feb81d13008478629a4c9fd}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Handle\+I\+N\+C\+O\+Frame\+From\+Server@{Handle\+I\+N\+C\+O\+Frame\+From\+Server}}
+\index{Handle\+I\+N\+C\+O\+Frame\+From\+Server@{Handle\+I\+N\+C\+O\+Frame\+From\+Server}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Handle\+I\+N\+C\+O\+Frame\+From\+Server()}{HandleINCOFrameFromServer()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Handle\+I\+N\+C\+O\+Frame\+From\+Server (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{ai\+Timeout }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_ab0d0d663c58feaca02994020e812bd1e}\label{inco__32_8h_ab0d0d663c58feaca02994020e812bd1e}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!I\+N\+C\+O\+Clear\+Thread\+Name@{I\+N\+C\+O\+Clear\+Thread\+Name}}
+\index{I\+N\+C\+O\+Clear\+Thread\+Name@{I\+N\+C\+O\+Clear\+Thread\+Name}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+C\+O\+Clear\+Thread\+Name()}{INCOClearThreadName()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI I\+N\+C\+O\+Clear\+Thread\+Name (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}\label{inco__32_8h_a106f32a0a06c9d0ac790ab66f8554ca0}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Control@{Inco\+Control}}
+\index{Inco\+Control@{Inco\+Control}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Inco\+Control()}{IncoControl()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Inco\+Control (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{ai\+Request,  }\item[{void $\ast$}]{ap\+Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Data\+Length }\end{DoxyParamCaption})}
+
+
+
+Query and manipulate miscellaneous internal library state and settings. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & if {\itshape ai\+Request} is target-\/specific, specifies the target (\hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path}). Ignored for non-\/target-\/specific requests. \\
+\hline
+{\em ai\+Request} & a constant from enum \hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969}{Inco\+Ctl\+Request}, determines the action to be performed. \\
+\hline
+{\em ap\+Data} & pointer to request-\/specific input and output parameters. \\
+\hline
+{\em au\+Data\+Length} & size of the structure or buffer pointed to by {\itshape ap\+Data}, request-\/specific.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success. 
+
+\hyperlink{errinco_8h_a1507ea7594a13dd875686eda0b772849}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+C\+T\+L\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+R\+E\+Q\+U\+E\+ST} if {\itshape ai\+Request} is invalid. 
+
+A request-\/specific error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors).
+\end{DoxyReturn}
+See documentation of individual actions in \hyperlink{inco__32_8h_acd08f72a8a861d13451dacf440ef7969}{Inco\+Ctl\+Request} for information about use and meaning of {\itshape Target\+Path}, {\itshape ap\+Data}, {\itshape au\+Data\+Length}, and possible return values. \mbox{\Hypertarget{inco__32_8h_a8c5505a20d51cc649d8772021740389c}\label{inco__32_8h_a8c5505a20d51cc649d8772021740389c}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!I\+N\+C\+O\+Get\+Thread\+Name@{I\+N\+C\+O\+Get\+Thread\+Name}}
+\index{I\+N\+C\+O\+Get\+Thread\+Name@{I\+N\+C\+O\+Get\+Thread\+Name}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+C\+O\+Get\+Thread\+Name()}{INCOGetThreadName()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI I\+N\+C\+O\+Get\+Thread\+Name (\begin{DoxyParamCaption}\item[{char $\ast$}]{ap\+Thread\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{ap\+Thread\+Name\+Buffer\+Length }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a117151843fc41ca8e2891b16d25dadb6}\label{inco__32_8h_a117151843fc41ca8e2891b16d25dadb6}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Initialize@{Inco\+Initialize}}
+\index{Inco\+Initialize@{Inco\+Initialize}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Inco\+Initialize()}{IncoInitialize()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Inco\+Initialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_af53743caef807f07f685e5686f461cd3}\label{inco__32_8h_af53743caef807f07f685e5686f461cd3}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!I\+N\+C\+O\+Set\+Thread\+Name@{I\+N\+C\+O\+Set\+Thread\+Name}}
+\index{I\+N\+C\+O\+Set\+Thread\+Name@{I\+N\+C\+O\+Set\+Thread\+Name}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+C\+O\+Set\+Thread\+Name()}{INCOSetThreadName()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI I\+N\+C\+O\+Set\+Thread\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ap\+Thread\+Name }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a4628490e59ddd0dd76856d439f9c1a91}\label{inco__32_8h_a4628490e59ddd0dd76856d439f9c1a91}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Inco\+Uninitialize@{Inco\+Uninitialize}}
+\index{Inco\+Uninitialize@{Inco\+Uninitialize}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Inco\+Uninitialize()}{IncoUninitialize()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Inco\+Uninitialize (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a082620b223bcdbf308888446b4ac2cd5}\label{inco__32_8h_a082620b223bcdbf308888446b4ac2cd5}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Pop\+Deferred\+Call\+Ticket@{Pop\+Deferred\+Call\+Ticket}}
+\index{Pop\+Deferred\+Call\+Ticket@{Pop\+Deferred\+Call\+Ticket}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Pop\+Deferred\+Call\+Ticket()}{PopDeferredCallTicket()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI Pop\+Deferred\+Call\+Ticket (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+Called by a deferred Call\+Procedure handler to remove a ticket from libinco\+\_\+32\textquotesingle{}s stack. 
+
+This function is used in the inner workings of syncasync and is not of general interest. See C\+Deferred\+Procedure\+Call\+Data\+::\+Perform() in libinix for an example of its use. \mbox{\Hypertarget{inco__32_8h_a65893c22aec79be2220bb68e54a7a102}\label{inco__32_8h_a65893c22aec79be2220bb68e54a7a102}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Procedure\+Ex\+Add\+App\+Error@{Procedure\+Ex\+Add\+App\+Error}}
+\index{Procedure\+Ex\+Add\+App\+Error@{Procedure\+Ex\+Add\+App\+Error}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Procedure\+Ex\+Add\+App\+Error()}{ProcedureExAddAppError()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Procedure\+Ex\+Add\+App\+Error (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+App\+Error }\end{DoxyParamCaption})}
+
+
+
+Called by an asynchronous procedure to return an application error. 
+
+When an asynchronous part of a procedure wants to return an application error (see incoreturn\+\_\+application\+\_\+erros), it calls this function before calling \hyperlink{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}{Return\+Async\+Call\+Ticket()}. Application errors differ from ordinary result values (as set by \hyperlink{inco__32_8h_abcfb4fbee17e8ef6776d2167624e4828}{Procedure\+Ex\+Add\+Result()}) in that they are retrieved as the return value of \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result()} rather that through its pointer arguments. For a given ticket, there is at most one application error and it always comes before any other results. Calling this function will wipe out any results previously added using \hyperlink{inco__32_8h_abcfb4fbee17e8ef6776d2167624e4828}{Procedure\+Ex\+Add\+Result()} and replace any previously set application error. You can, however, add more results after setting the application error, e.\+g. to give details about the error.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ticket} & The ticket that the synchronous part of the procedure got from \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{Checkout\+Async\+Call\+Ticket()}. \\
+\hline
+{\em au\+App\+Error} & The error code to be set. Should be in the range reserved for application errors, as defined in incoreturn\+\_\+application\+\_\+erros, however this is not enforced.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success 
+
+\hyperlink{errinco_8h_a087fb1f16ffdea96657a6dfe49e32a3d}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+N\+O\+T\+\_\+\+A\+\_\+\+T\+I\+C\+K\+ET} if {\itshape Ticket} is not a ticket (i.\+e. not negative)
+\end{DoxyReturn}
+See also syncasyncretval in syncasync \mbox{\Hypertarget{inco__32_8h_abcfb4fbee17e8ef6776d2167624e4828}\label{inco__32_8h_abcfb4fbee17e8ef6776d2167624e4828}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Procedure\+Ex\+Add\+Result@{Procedure\+Ex\+Add\+Result}}
+\index{Procedure\+Ex\+Add\+Result@{Procedure\+Ex\+Add\+Result}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Procedure\+Ex\+Add\+Result()}{ProcedureExAddResult()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Procedure\+Ex\+Add\+Result (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket,  }\item[{const void $\ast$}]{Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Result\+Size = {\ttfamily 8},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Type = {\ttfamily \hyperlink{indeldefs_8h_a80eed31d4b0b9e1af9df2494f5f74f76}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE}},  }\item[{const char $\ast$}]{Result\+Name = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Called by an asynchronous procedure to return a result value. 
+
+When an asynchronous part of a procedure wants to return one or more values, it calls this function before calling \hyperlink{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}{Return\+Async\+Call\+Ticket()}. If this function is called multiple times (or by multiple asynchronous parts), multiple results are stored in the order of the calls. The caller of the asynchronous procedure, if interested, can later fetch the returned values using \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result()} (this happens automatically in \hyperlink{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}{Call\+Procedure\+Ex\+Sync()}).
+
+
+\begin{DoxyParams}{Parameters}
+{\em Ticket} & The ticket that the synchronous part of the procedure got from \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{Checkout\+Async\+Call\+Ticket()}. \\
+\hline
+{\em Result} & Pointer to the value to be set, e.\+g. a {\ttfamily uint32$\ast$} or {\ttfamily double$\ast$} for typical numerical results or a {\ttfamily char$\ast$} for strings. \\
+\hline
+{\em au\+Result\+Size} & Size of the value stored at {\itshape Result} in bytes, e.\+g. {\ttfamily sizeof(uint32)} = 4 or {\ttfamily sizeof(double)} = 8 for typical numerical results or the string length plus one (for the terminating zero) for strings. \\
+\hline
+{\em au\+Type} & An I\+N\+CO type constant from $<$\hyperlink{indeldefs_8h}{inco\+\_\+32/indeldefs.\+h}$>$ such as \hyperlink{indeldefs_8h_ab795ee7b5ee70f13bd4c1a0ae12bf163}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T32}, \hyperlink{indeldefs_8h_a80eed31d4b0b9e1af9df2494f5f74f76}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+D\+O\+U\+B\+LE}, \hyperlink{indeldefs_8h_abfef8fe4f879bf521466a2d4f722f4ff}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+S\+T\+R\+I\+NG} etc., matching {\itshape Result} and {\itshape au\+Result\+Size}. \\
+\hline
+{\em Result\+Name} & A string specifying the name under which the result can later be retrieved using \hyperlink{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}{Call\+Procedure\+Ex\+Result\+By\+Name()}, if N\+U\+LL (the default) or empty, the result is anonymous.\\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} on success 
+
+\hyperlink{errinco_8h_a087fb1f16ffdea96657a6dfe49e32a3d}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+N\+O\+T\+\_\+\+A\+\_\+\+T\+I\+C\+K\+ET} if {\itshape Ticket} is not a ticket (i.\+e. not negative) 
+
+\hyperlink{errinco_8h_ab5b953eefe05fafee644e883efea54bf}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+\_\+\+S\+M\+A\+LL} if the specified result is too large to fit into the ring buffer for asynchronous results
+\end{DoxyReturn}
+See also syncasyncretval in syncasync \mbox{\Hypertarget{inco__32_8h_a8e9d1cb5a2068982766c54d57a6f6780}\label{inco__32_8h_a8e9d1cb5a2068982766c54d57a6f6780}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Push\+Deferred\+Call\+Ticket@{Push\+Deferred\+Call\+Ticket}}
+\index{Push\+Deferred\+Call\+Ticket@{Push\+Deferred\+Call\+Ticket}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Push\+Deferred\+Call\+Ticket()}{PushDeferredCallTicket()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI Push\+Deferred\+Call\+Ticket (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket }\end{DoxyParamCaption})}
+
+
+
+Called by a deferred Call\+Procedure handler to put a ticket back on libinco\+\_\+32\textquotesingle{}s stack. 
+
+This function is used in the inner workings of syncasync and is not of general interest. See C\+Deferred\+Procedure\+Call\+Data\+::\+Perform() in libinix for an example of its use. \mbox{\Hypertarget{inco__32_8h_a1504131612b1355aa5ae6121880c75f6}\label{inco__32_8h_a1504131612b1355aa5ae6121880c75f6}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Put\+Bit@{Put\+Bit}}
+\index{Put\+Bit@{Put\+Bit}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Put\+Bit()}{PutBit()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Bit (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Address,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a0f146a1235e28d6f86478c684345c784}\label{inco__32_8h_a0f146a1235e28d6f86478c684345c784}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Put\+Flag@{Put\+Flag}}
+\index{Put\+Flag@{Put\+Flag}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Put\+Flag()}{PutFlag()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Flag (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Flag,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a425d2ffb40bd478626bc0c106f85e4a8}\label{inco__32_8h_a425d2ffb40bd478626bc0c106f85e4a8}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Put\+Input@{Put\+Input}}
+\index{Put\+Input@{Put\+Input}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Put\+Input()}{PutInput()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Input (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Input,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a15a77a611117a0b26b4957d9f2b1b271}\label{inco__32_8h_a15a77a611117a0b26b4957d9f2b1b271}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Put\+Output@{Put\+Output}}
+\index{Put\+Output@{Put\+Output}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Put\+Output()}{PutOutput()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Output (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Output,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Value }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a203a38d0771e315d0f89aad8451eab9a}\label{inco__32_8h_a203a38d0771e315d0f89aad8451eab9a}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Put\+Record@{Put\+Record}}
+\index{Put\+Record@{Put\+Record}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Put\+Record()}{PutRecord()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Record (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Table\+Name,  }\item[{const char $\ast$}]{Record,  }\item[{void $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Size }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a0f74007ff99eaf03a80c45761192554f}\label{inco__32_8h_a0f74007ff99eaf03a80c45761192554f}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Register\+Additional\+Dispatcher\+By\+Thread@{Register\+Additional\+Dispatcher\+By\+Thread}}
+\index{Register\+Additional\+Dispatcher\+By\+Thread@{Register\+Additional\+Dispatcher\+By\+Thread}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Register\+Additional\+Dispatcher\+By\+Thread()}{RegisterAdditionalDispatcherByThread()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Register\+Additional\+Dispatcher\+By\+Thread (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ap\+Full\+Plugin\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Plugin\+Id,  }\item[{\hyperlink{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}{frame\+Callback\+Fct}}]{a\+Process\+Frame\+Ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a2d4895bf693bb747a22a92ea390584a5}\label{inco__32_8h_a2d4895bf693bb747a22a92ea390584a5}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Register\+Dispatcher@{Register\+Dispatcher}}
+\index{Register\+Dispatcher@{Register\+Dispatcher}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Register\+Dispatcher()}{RegisterDispatcher()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Register\+Dispatcher (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ap\+Full\+Plugin\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{a\+Plugin\+Id,  }\item[{\hyperlink{inco__32_8h_ab8b5388cc247391b8c8f17281010700c}{frame\+Callback\+Fct}}]{a\+Process\+Frame\+Ptr }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}\label{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Return\+Async\+Call\+Ticket@{Return\+Async\+Call\+Ticket}}
+\index{Return\+Async\+Call\+Ticket@{Return\+Async\+Call\+Ticket}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Return\+Async\+Call\+Ticket()}{ReturnAsyncCallTicket()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} void W\+I\+N\+A\+PI Return\+Async\+Call\+Ticket (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket }\end{DoxyParamCaption})}
+
+
+
+Called by an asynchronous procedure when an asynchronous action finishes. 
+
+When an asynchronous part of a procedure finishes, it calls this function to return the ticket that its invoker got from \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{Checkout\+Async\+Call\+Ticket()} to libinco\+\_\+32. Libinco\+\_\+32 considers a procedure finished when all checked out tickets have been returned.
+
+If {\itshape Ticket} is 0, this function does nothing. If it is called with any other non-\/ticket (i.\+e. positive) value, or if it is called too many times with the same ticket (more times than \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{Checkout\+Async\+Call\+Ticket()}), an assertion failure occurs.
+
+See also syncasyncdetails in syncasync \mbox{\Hypertarget{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}\label{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished@{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished}}
+\index{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished@{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished()}{ReturnAsyncCallTicketAfterCallHasFinished()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI Return\+Async\+Call\+Ticket\+After\+Call\+Has\+Finished (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{ai\+My\+Ticket,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{ai\+Ticket\+To\+Wait\+For }\end{DoxyParamCaption})}
+
+
+
+Called by an asynchronous procedure to declare an asynchronous action completed as soon as another asynchronous procedure finishes. 
+
+Used when an asynchronous procedure A calls another asynchronous procedure B, and A can only be considered finished when B is finished as well (in other words, the call to B is an asynchronous part of A). This function does not wait for B to finish, it merely instructs libinco\+\_\+32 to perform (the equivalent of) \hyperlink{inco__32_8h_a5bb37278b71c74b5a88c6e5bb9ba6cd8}{Return\+Async\+Call\+Ticket(}{\itshape ai\+My\+Ticket}) later and returns immediately.
+
+If {\itshape ai\+Ticket\+To\+Wait\+For} is not a ticket (negative) but a success/error code (zero/positive), {\itshape ai\+My\+Ticket} is immediately returned to libinco\+\_\+32 and this function returns the non-\/ticket {\itshape ai\+Ticket\+To\+Wait\+For}. Therefore, it can be used as a transparent wrapper around \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} as seen in this common idiom, which does the right thing whether or not ProcB is asynchronous and whether or not the call to it succeeds\+: \begin{DoxyParagraph}{}
+
+\begin{DoxyCode}
+\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} INCOProcA() \{
+    \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} err = \hyperlink{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}{ReturnAsyncCallTicketAfterCallHasFinished}(
+        \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{CheckoutAsyncCallTicket}(),
+        \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{CallProcedureEx}(\textcolor{stringliteral}{"."}, \textcolor{stringliteral}{"Cmd.ProcB(17:l)"})
+    );
+    \textcolor{keywordflow}{if} (err > 0) \{
+        yell(\textcolor{stringliteral}{"Error!"});
+        \textcolor{keywordflow}{return} 1;
+    \}
+    \textcolor{keywordflow}{else} \textcolor{keywordflow}{return} 0;
+\}
+\end{DoxyCode}
+
+\end{DoxyParagraph}
+\begin{DoxyReturn}{Returns}
+Zero on success, {\itshape ai\+Ticket\+To\+Wait\+For} if it is not a ticket.
+\end{DoxyReturn}
+See also syncasyncwithin in syncasync \mbox{\Hypertarget{inco__32_8h_a6825f8e7c35a06fa16231d8ab340d668}\label{inco__32_8h_a6825f8e7c35a06fa16231d8ab340d668}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Unregister\+Additional\+Dispatcher\+By\+Thread@{Unregister\+Additional\+Dispatcher\+By\+Thread}}
+\index{Unregister\+Additional\+Dispatcher\+By\+Thread@{Unregister\+Additional\+Dispatcher\+By\+Thread}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Unregister\+Additional\+Dispatcher\+By\+Thread()}{UnregisterAdditionalDispatcherByThread()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Unregister\+Additional\+Dispatcher\+By\+Thread (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ap\+Full\+Plugin\+Path }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{inco__32_8h_adfecb1b4ea88f115f73dea28523b11a5}\label{inco__32_8h_adfecb1b4ea88f115f73dea28523b11a5}} 
+\index{inco\+\_\+32.\+h@{inco\+\_\+32.\+h}!Unregister\+Dispatcher@{Unregister\+Dispatcher}}
+\index{Unregister\+Dispatcher@{Unregister\+Dispatcher}!inco\+\_\+32.\+h@{inco\+\_\+32.\+h}}
+\subsubsection{\texorpdfstring{Unregister\+Dispatcher()}{UnregisterDispatcher()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Unregister\+Dispatcher (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ap\+Full\+Plugin\+Path }\end{DoxyParamCaption})}
+

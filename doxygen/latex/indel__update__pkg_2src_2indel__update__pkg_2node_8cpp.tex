@@ -1,0 +1,39 @@
+\hypertarget{indel__update__pkg_2src_2indel__update__pkg_2node_8cpp}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.cpp File Reference}
+\label{indel__update__pkg_2src_2indel__update__pkg_2node_8cpp}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.\+cpp@{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.\+cpp}}
+{\ttfamily \#include \char`\"{}Indel\+Update.\+hpp\char`\"{}}\newline
+Include dependency graph for node.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{indel__update__pkg_2src_2indel__update__pkg_2node_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{indel__update__pkg_2src_2indel__update__pkg_2node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{indel__update__pkg_2src_2indel__update__pkg_2node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{indel__update__pkg_2src_2indel__update__pkg_2node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.\+cpp@{indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.\+cpp}!main@{main}}
+\index{main@{main}!indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.\+cpp@{indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/node.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+$<$ Must call ros\+::init() before using any other part of the R\+OS system
+
+$<$ Instantiate a R\+OS node handle
+
+$<$ Set the loop\+\_\+rate for processing the callbacks
+
+$<$ Instantiate Indel\+Update\+Pub object
+
+$<$ Infinite loop until the user shuts down the rosmaster with Ctrl + C
+
+$<$ Call functions to query data from low-\/level controller and to publish to /\+Indel\+Update topic
+
+$<$ ros\+::spin\+Once() processes our callbacks for a single thread; not necessary in this node since there are no subscriber callbacks but added in case functionality added in the future (e.\+g. sending data from other R\+OS topics to low-\/level controller).
+
+$<$ Sleep for the remainder of the loop once all callbacks have been processed. 

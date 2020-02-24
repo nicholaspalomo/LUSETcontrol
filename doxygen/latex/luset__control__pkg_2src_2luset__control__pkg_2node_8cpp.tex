@@ -1,0 +1,43 @@
+\hypertarget{luset__control__pkg_2src_2luset__control__pkg_2node_8cpp}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.cpp File Reference}
+\label{luset__control__pkg_2src_2luset__control__pkg_2node_8cpp}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.\+cpp@{/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.\+cpp}}
+{\ttfamily \#include \char`\"{}Luset\+Control.\+hpp\char`\"{}}\newline
+Include dependency graph for node.\+cpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{luset__control__pkg_2src_2luset__control__pkg_2node_8cpp__incl}
+\end{center}
+\end{figure}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{luset__control__pkg_2src_2luset__control__pkg_2node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{luset__control__pkg_2src_2luset__control__pkg_2node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}\label{luset__control__pkg_2src_2luset__control__pkg_2node_8cpp_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.\+cpp@{luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.\+cpp}!main@{main}}
+\index{main@{main}!luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.\+cpp@{luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/node.\+cpp}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+$<$ Must call ros\+::init() before using any other part of the R\+OS system
+
+$<$ Instantiate a R\+OS node handle
+
+$<$ Instantiate an Async\+Spinner object for the global callback queue (where we process the callback for /\+Luset\+State messages)
+
+$<$ Set the loop\+\_\+rate for processing the callbacks
+
+$<$ Instantiate Luset\+Collision object
+
+$<$ Infinite loop until the user shuts down the rosmaster with Ctrl + C
+
+$<$ Spin multithreaded spinners
+
+$<$ Spin the multithread spinner for the global callback queue
+
+$<$ Only process one callback from the global callback queue
+
+$<$ Sleep for the remainder of the loop once all callbacks have been processed. 

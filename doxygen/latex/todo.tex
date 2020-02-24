@@ -1,0 +1,13 @@
+
+\begin{DoxyRefList}
+\item[\label{todo__todo000001}%
+\Hypertarget{todo__todo000001}%
+Class \hyperlink{classlusetcontrolnamespace_1_1LusetControl}{lusetcontrolnamespace\+:\+:Luset\+Control} ]This class is responsible for computing control actions as axis/valve displacements and for passing them to the Indel\+Update node. This class has not yet been implemented. Several things must be included in this or other class definitions, including\+:
+\begin{DoxyItemize}
+\item The A matrix needs to be specified somewhere -\/ probably as arrays on the parameter server (i.\+e. in a Y\+A\+ML file)
+\item Need to also specify the relationships between the information coming from L\+U\+S\+ET State and the control variable definitons. From the current values of the control variables, use the A-\/matrix to compute the current actuator displacements
+\item Have a C\+Make flag that only includes the proper header corresponding to the test the user wishes to run such that the correct parameters are loaded to the R\+OS parameter server at runtime
+\item Use some sort of optimization to generate a trajectory; if you can\textquotesingle{}t finish this, have it generate linear trajectories as interpolations and have it pause issuing new commands if certain control variables are lagging
+\item Somewhere the location and orientation of the C\+OM of the yokes should be computed and published. 
+\end{DoxyItemize}
+\end{DoxyRefList}

@@ -1,0 +1,65 @@
+\hypertarget{IndelUpdate_8hpp}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/indel\+\_\+update\+\_\+pkg/\+Indel\+Update.hpp File Reference}
+\label{IndelUpdate_8hpp}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/indel\+\_\+update\+\_\+pkg/\+Indel\+Update.\+hpp@{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/indel\+\_\+update\+\_\+pkg/\+Indel\+Update.\+hpp}}
+
+
+This is the header file for the Indel\+Update class. This class handles communication with the low-\/level controller by calling functions from the Indel inco\+\_\+32.\+so shared library which returns an array of the sensor measurments. This class also publishes the data to the R\+OS topic, /\+Indel\+Update. See \href{https://google.github.io/styleguide/cppguide.html}{\tt https\+://google.\+github.\+io/styleguide/cppguide.\+html} for Google Style Guide for C++.  
+
+
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include $<$dlfcn.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}inco\+\_\+32/inco\+\_\+32.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}indel\+\_\+update\+\_\+pkg/\+Luset\+State\+Array.\+h\char`\"{}}\newline
+Include dependency graph for Indel\+Update.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IndelUpdate_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{IndelUpdate_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classindelupdatenamespace_1_1IndelUpdate}{indelupdatenamespace\+::\+Indel\+Update}
+\begin{DoxyCompactList}\small\item\em This class provides the interface between the low-\/level controller and the R\+OS control system. \end{DoxyCompactList}\item 
+class \hyperlink{classindelupdatepubnamespace_1_1IndelUpdatePub}{indelupdatepubnamespace\+::\+Indel\+Update\+Pub}
+\begin{DoxyCompactList}\small\item\em This class handles publishing to the /\+Indel\+Update topic data acquired from the low-\/level controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespaceindelupdatenamespace}{indelupdatenamespace}
+\item 
+ \hyperlink{namespaceindelupdatepubnamespace}{indelupdatepubnamespace}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This is the header file for the Indel\+Update class. This class handles communication with the low-\/level controller by calling functions from the Indel inco\+\_\+32.\+so shared library which returns an array of the sensor measurments. This class also publishes the data to the R\+OS topic, /\+Indel\+Update. See \href{https://google.github.io/styleguide/cppguide.html}{\tt https\+://google.\+github.\+io/styleguide/cppguide.\+html} for Google Style Guide for C++. 
+
+This is the header file for the Luset\+Control and Luset\+Collision classes. The Luset\+Collision class is responsible for subscribing to the /\+Luset\+State topic and for publishing the actuator strokes to the correct actuators in the Gazebo simulation. It also publishes a message to the /\+Luset\+Contacts topic if a collision between two components in the model is detected. The Luset\+Control class is not yet implemented, but in the future, it will handle the control algorithm (L\+QR, PI, M\+PC, etc.) that computes the axis/valve displacements to send to the low-\/level controller, which interfaces with the Indel\+Update class. See \href{https://google.github.io/styleguide/cppguide.html}{\tt https\+://google.\+github.\+io/styleguide/cppguide.\+html} for Google Style Guide for C++.
+
+\begin{DoxyAuthor}{Author}
+Nicholas José Palomo (\href{mailto:npalomo@student.ethz.ch}{\tt npalomo@student.\+ethz.\+ch}) 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+0.\+1 
+\end{DoxyVersion}
+\begin{DoxyDate}{Date}
+2020-\/02-\/23
+\end{DoxyDate}
+\begin{DoxyCopyright}{Copyright}
+Copyright (c) 2020 
+\end{DoxyCopyright}

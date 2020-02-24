@@ -1,0 +1,73 @@
+\hypertarget{classindelupdatenamespace_1_1IndelUpdate}{}\section{indelupdatenamespace\+:\+:Indel\+Update Class Reference}
+\label{classindelupdatenamespace_1_1IndelUpdate}\index{indelupdatenamespace\+::\+Indel\+Update@{indelupdatenamespace\+::\+Indel\+Update}}
+
+
+This class provides the interface between the low-\/level controller and the R\+OS control system.  
+
+
+
+
+{\ttfamily \#include $<$Indel\+Update.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{classindelupdatenamespace_1_1IndelUpdate_a090a97f692782ed532921bf2eeab8ae4}{update} (void)
+\begin{DoxyCompactList}\small\item\em This function calls the function from the inco\+\_\+32.\+so library that is linked to the indel\+\_\+update\+\_\+pkg\+\_\+node executable. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classindelupdatenamespace_1_1IndelUpdate_adb07f7b8d3c6aa7bde3e1d9c78aeb0d9}{Array\+Value} \{std\+::vector$<$double$>$(1000,0)\}
+\begin{DoxyCompactList}\small\item\em Member variable that holds a 1 x 1000 vector of the sensor data coming from the low-\/level controller. Published as an Array\+Value message to the /\+Indel\+Update topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class provides the interface between the low-\/level controller and the R\+OS control system. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classindelupdatenamespace_1_1IndelUpdate_a090a97f692782ed532921bf2eeab8ae4}\label{classindelupdatenamespace_1_1IndelUpdate_a090a97f692782ed532921bf2eeab8ae4}} 
+\index{indelupdatenamespace\+::\+Indel\+Update@{indelupdatenamespace\+::\+Indel\+Update}!update@{update}}
+\index{update@{update}!indelupdatenamespace\+::\+Indel\+Update@{indelupdatenamespace\+::\+Indel\+Update}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void indelupdatenamespace\+::\+Indel\+Update\+::update (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+This function calls the function from the inco\+\_\+32.\+so library that is linked to the indel\+\_\+update\+\_\+pkg\+\_\+node executable. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em void} & Called without inputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void No output 
+\end{DoxyReturn}
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in,out}  & {\em N/A} & No input-\/output variables \\
+\hline
+\end{DoxyParams}
+Call the Indel functions to populate Array\+Value ulong is the variable given to the indel error messages, specified in \hyperlink{errinco_8h}{errinco.\+h}; ulong = 0 corresponds to no error Comment out up to the lines after the memcpy() for routing simulation data to Gazebo model
+
+For simulation environment\+: populate the Array\+Value\mbox{[}\mbox{]} member variable with realistic values.
+
+$<$ Set the maximum cylinder stroke to 0.\+3 m, for example (can be changed via the M\+A\+X\+\_\+\+C\+Y\+L\+I\+N\+D\+E\+R\+\_\+\+S\+T\+R\+O\+KE property in the geometry xacro file) 
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classindelupdatenamespace_1_1IndelUpdate_adb07f7b8d3c6aa7bde3e1d9c78aeb0d9}\label{classindelupdatenamespace_1_1IndelUpdate_adb07f7b8d3c6aa7bde3e1d9c78aeb0d9}} 
+\index{indelupdatenamespace\+::\+Indel\+Update@{indelupdatenamespace\+::\+Indel\+Update}!Array\+Value@{Array\+Value}}
+\index{Array\+Value@{Array\+Value}!indelupdatenamespace\+::\+Indel\+Update@{indelupdatenamespace\+::\+Indel\+Update}}
+\subsubsection{\texorpdfstring{Array\+Value}{ArrayValue}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ indelupdatenamespace\+::\+Indel\+Update\+::\+Array\+Value \{std\+::vector$<$double$>$(1000,0)\}}
+
+
+
+Member variable that holds a 1 x 1000 vector of the sensor data coming from the low-\/level controller. Published as an Array\+Value message to the /\+Indel\+Update topic. 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/indel\+\_\+update\+\_\+pkg/\hyperlink{IndelUpdate_8hpp}{Indel\+Update.\+hpp}\item 
+/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/src/indel\+\_\+update\+\_\+pkg/\hyperlink{IndelUpdate_8cpp}{Indel\+Update.\+cpp}\end{DoxyCompactItemize}

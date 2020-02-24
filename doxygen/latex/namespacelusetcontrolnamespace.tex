@@ -1,0 +1,20 @@
+\hypertarget{namespacelusetcontrolnamespace}{}\section{lusetcontrolnamespace Namespace Reference}
+\label{namespacelusetcontrolnamespace}\index{lusetcontrolnamespace@{lusetcontrolnamespace}}
+
+
+$<$ Used as a stream of Input and Output.  
+
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlusetcontrolnamespace_1_1LusetCollision}{Luset\+Collision}
+\begin{DoxyCompactList}\small\item\em This class subscribes to /\+Luset\+State and publishes the cylinder strokes to the correct cylinders in the Gazebo simulation using information from the parameter server regarding which actuators are connected to the corresponding axes/valves. The values on the parameter server are loaded from /luset\+\_\+control\+\_\+pkg/config/luset\+\_\+valve\+\_\+config\+\_\+standard.yaml. This class also subscribes to the contact sensors in Gazebo publishing on the sensor\+\_\+state topics and only publishes a message to /\+Luset\+Contacts if two components actually collide in the simulation. \end{DoxyCompactList}\item 
+class \hyperlink{classlusetcontrolnamespace_1_1LusetControl}{Luset\+Control}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ Used as a stream of Input and Output. 
+
+$<$ Standard input-\/output header Perform string manipulation operations like strlen and strcpy Perform standard utility functions like dynamic memory allocation, using functions such as malloc() and calloc(). Perform mathematical operations like sqrt() and pow(). To obtain the square root and the power of a number respectively. Perform character type functions like isaplha() and isdigit(). To find whether the given character is an alphabet or a digit respectively. Perform functions related to date and time like setdate() and getdate(). To modify the system date and get the C\+PU time respectively. R\+OS A\+PI headers$<$ R\+OS A\+PI header R\+O\+S-\/\+Gazebo message definitions$<$ Joint\+State sensor message definition Contacts\+State sensor message definition (for determining if any actuators or yokes come in contact) Contact\+State sensor message definition (for determining if any actuators or yokes come in contact) Standard R\+OS definition for a message containing a single float Custom message definitions$<$ Custom message header file containing orientation vector for a cylinder Custom message header containing translation, rotation, force, and moment measurements for each yoke Custom message header containing the definition of the Luset\+State structure 

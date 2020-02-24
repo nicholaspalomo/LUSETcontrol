@@ -1,0 +1,102 @@
+\hypertarget{classlusetcontrolnamespace_1_1LusetCollision}{}\section{lusetcontrolnamespace\+:\+:Luset\+Collision Class Reference}
+\label{classlusetcontrolnamespace_1_1LusetCollision}\index{lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}}
+
+
+This class subscribes to /\+Luset\+State and publishes the cylinder strokes to the correct cylinders in the Gazebo simulation using information from the parameter server regarding which actuators are connected to the corresponding axes/valves. The values on the parameter server are loaded from /luset\+\_\+control\+\_\+pkg/config/luset\+\_\+valve\+\_\+config\+\_\+standard.yaml. This class also subscribes to the contact sensors in Gazebo publishing on the sensor\+\_\+state topics and only publishes a message to /\+Luset\+Contacts if two components actually collide in the simulation.  
+
+
+
+
+{\ttfamily \#include $<$Luset\+Control.\+hpp$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlusetcontrolnamespace_1_1LusetCollision_ad328e1562126f008d720283d46da46d1}{Luset\+Collision} (ros\+::\+Node\+Handle \&handle)
+\begin{DoxyCompactList}\small\item\em Construct a new Luset Collision object. \end{DoxyCompactList}\item 
+\hyperlink{classlusetcontrolnamespace_1_1LusetCollision_a4639f920509325c05cc1d27e6008366a}{$\sim$\+Luset\+Collision} ()
+\begin{DoxyCompactList}\small\item\em Destroy the Luset Collision object. Deallocates all objects instantiated via the keyword ``new\textquotesingle{}\textquotesingle{} in C++. \end{DoxyCompactList}\item 
+void \hyperlink{classlusetcontrolnamespace_1_1LusetCollision_a035907cd6d2820811a87c1f7945df287}{spin\+Multithread\+Spinners} ()
+\begin{DoxyCompactList}\small\item\em This method starts the Async spinner objects and executes one callback from their queues. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlusetcontrolnamespace_1_1LusetCollision_a1a34ac10d34617ed2df4ec2e7d6c12a8}{Luset\+Control}
+\begin{DoxyCompactList}\small\item\em \hyperlink{classlusetcontrolnamespace_1_1LusetControl}{Luset\+Control} may access the private members of \hyperlink{classlusetcontrolnamespace_1_1LusetCollision}{Luset\+Collision} (but not vice versa) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class subscribes to /\+Luset\+State and publishes the cylinder strokes to the correct cylinders in the Gazebo simulation using information from the parameter server regarding which actuators are connected to the corresponding axes/valves. The values on the parameter server are loaded from /luset\+\_\+control\+\_\+pkg/config/luset\+\_\+valve\+\_\+config\+\_\+standard.yaml. This class also subscribes to the contact sensors in Gazebo publishing on the sensor\+\_\+state topics and only publishes a message to /\+Luset\+Contacts if two components actually collide in the simulation. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlusetcontrolnamespace_1_1LusetCollision_ad328e1562126f008d720283d46da46d1}\label{classlusetcontrolnamespace_1_1LusetCollision_ad328e1562126f008d720283d46da46d1}} 
+\index{lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}!Luset\+Collision@{Luset\+Collision}}
+\index{Luset\+Collision@{Luset\+Collision}!lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}}
+\subsubsection{\texorpdfstring{Luset\+Collision()}{LusetCollision()}}
+{\footnotesize\ttfamily lusetcontrolnamespace\+::\+Luset\+Collision\+::\+Luset\+Collision (\begin{DoxyParamCaption}\item[{ros\+::\+Node\+Handle \&}]{handle }\end{DoxyParamCaption})}
+
+
+
+Construct a new Luset Collision object. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em handle} & ros\+::\+Node\+Handle\& reference to the handle for the /\+Luset\+Control node \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlusetcontrolnamespace_1_1LusetCollision_a4639f920509325c05cc1d27e6008366a}\label{classlusetcontrolnamespace_1_1LusetCollision_a4639f920509325c05cc1d27e6008366a}} 
+\index{lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}!````~Luset\+Collision@{$\sim$\+Luset\+Collision}}
+\index{````~Luset\+Collision@{$\sim$\+Luset\+Collision}!lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}}
+\subsubsection{\texorpdfstring{$\sim$\+Luset\+Collision()}{~LusetCollision()}}
+{\footnotesize\ttfamily lusetcontrolnamespace\+::\+Luset\+Collision\+::$\sim$\+Luset\+Collision (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroy the Luset Collision object. Deallocates all objects instantiated via the keyword ``new\textquotesingle{}\textquotesingle{} in C++. 
+
+Destroy all the variables that were created using the keyword ``new\textquotesingle{}\textquotesingle{}. When we use this keyword, we take responsibility from the compiler for managing this memory ourselves.
+
+$<$ Delete actuator\+\_\+topic\+\_\+stroke entry at the given iterator 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlusetcontrolnamespace_1_1LusetCollision_a035907cd6d2820811a87c1f7945df287}\label{classlusetcontrolnamespace_1_1LusetCollision_a035907cd6d2820811a87c1f7945df287}} 
+\index{lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}!spin\+Multithread\+Spinners@{spin\+Multithread\+Spinners}}
+\index{spin\+Multithread\+Spinners@{spin\+Multithread\+Spinners}!lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}}
+\subsubsection{\texorpdfstring{spin\+Multithread\+Spinners()}{spinMultithreadSpinners()}}
+{\footnotesize\ttfamily void lusetcontrolnamespace\+::\+Luset\+Collision\+::spin\+Multithread\+Spinners (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+This method starts the Async spinner objects and executes one callback from their queues. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em void} & Method takes no inputs \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void Method returns void 
+\end{DoxyReturn}
+Spin multithread Async spinners on each thread
+
+$<$ Spin
+
+$<$ Process only the oldest callback in the queue 
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{classlusetcontrolnamespace_1_1LusetCollision_a1a34ac10d34617ed2df4ec2e7d6c12a8}\label{classlusetcontrolnamespace_1_1LusetCollision_a1a34ac10d34617ed2df4ec2e7d6c12a8}} 
+\index{lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}!Luset\+Control@{Luset\+Control}}
+\index{Luset\+Control@{Luset\+Control}!lusetcontrolnamespace\+::\+Luset\+Collision@{lusetcontrolnamespace\+::\+Luset\+Collision}}
+\subsubsection{\texorpdfstring{Luset\+Control}{LusetControl}}
+{\footnotesize\ttfamily friend class \hyperlink{classlusetcontrolnamespace_1_1LusetControl}{Luset\+Control}\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+\hyperlink{classlusetcontrolnamespace_1_1LusetControl}{Luset\+Control} may access the private members of \hyperlink{classlusetcontrolnamespace_1_1LusetCollision}{Luset\+Collision} (but not vice versa) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/include/luset\+\_\+control\+\_\+pkg/\hyperlink{LusetControl_8hpp}{Luset\+Control.\+hpp}\item 
+/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/src/luset\+\_\+control\+\_\+pkg/\hyperlink{LusetCollision_8cpp}{Luset\+Collision.\+cpp}\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\hypertarget{incodefinitions_targetpath}{}\section{Definition of the Target\+Path}\label{incodefinitions_targetpath}
+\begin{DoxyVerb}<target path> = [("//" | "\\") <server name or address> ("/" | "\")] {<target name> ("/" | "\")}
+              | "."       //current process
+              | ".."      //parent of current process
+              | "..."     //current INCO server
+\end{DoxyVerb}
+
+
+The \char`\"{}normal\char`\"{} case\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} TargetPath[] = \textcolor{stringliteral}{"MyTarget"};
+\end{DoxyCode}
+ Accessing a target connected to a remote computer\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} TargetPath[] = \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)RemotePcName\(\backslash\)\(\backslash\)MyTarget"};
+\textcolor{keywordtype}{char} TargetPath[] = \textcolor{stringliteral}{"//RemotePcName/MyTarget"};
+\end{DoxyCode}
+ Accessing a slave (X\+Axis) of a target connected to a remote computer\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} TargetPath[] = \textcolor{stringliteral}{"\(\backslash\)\(\backslash\)\(\backslash\)\(\backslash\)RemotePcName\(\backslash\)\(\backslash\)MyTarget\(\backslash\)\(\backslash\)XAxis"};
+\textcolor{keywordtype}{char} TargetPath[] = \textcolor{stringliteral}{"//RemotePcName/MyTarget/XAxis"};
+\end{DoxyCode}
+\hypertarget{incodefinitions_incoitemname}{}\section{Definition of the Item\+Path}\label{incodefinitions_incoitemname}
+\begin{DoxyVerb}<inco path> = <inco item path>
+            | <inco item path> "!" <property name>
+            | <inco item path> ":" <bit number>
+            | <inco item path> "[" <array index> "]"
+\end{DoxyVerb}
+ \begin{DoxyVerb}<inco item path> = <inco item name> {"." <inco item name>}
+\end{DoxyVerb}
+ \begin{DoxyVerb}<inco item name> = <nonempty sequence of alphanumeric ASCII characters, spaces, underscores (_), hyphen-minuses (-), and backslash-escaped periods (\.)>
+\end{DoxyVerb}
+ Periods in I\+N\+CO item names are only allowed if they are preceded by a backslash. Backslashes are only allowed if they are followed by a period. Unescaped periods are always considered as path separators, and non-\/period-\/escaping backslashes as target separators.
+
+The path to the timer variable of the target\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} ItemPath[] = \textcolor{stringliteral}{"Target.Prop.Timer"};
+\end{DoxyCode}
+\hypertarget{incodefinitions_callproceduresyntax}{}\section{Definition of the Call\+Procedure(\+Ex) syntax}\label{incodefinitions_callproceduresyntax}
+\begin{DoxyVerb}<callprocedure> = <inco item path> {whitespace} "(" [<value> {"," <value>}] ")"
+\end{DoxyVerb}
+
+
+\label{incodefinitions_incovaluesyntax}%
+\Hypertarget{incodefinitions_incovaluesyntax}%
+\begin{DoxyVerb}<value> = {whitespace} <trimmed value> {whitespace}
+\end{DoxyVerb}
+ \begin{DoxyVerb}<trimmed value> = <number> { {whitespace} ("+"|"-") {whitespace} <number> }
+                | <string literal> { {whitespace} <string literal> }
+\end{DoxyVerb}
+ \begin{DoxyVerb}<number> = ("0x"|"0X") <hexadecimal integer> ":" ("l"|"f"|"d"|"L"|"F"|"D")
+         | <decimal integer> [":" ("l"|"L")]
+         | <decimal real number> [":" ("f"|"d"|"F"|"D")]
+\end{DoxyVerb}
+ \begin{DoxyVerb}<string literal> = """ <string contents with " and \ escaped as \" and \\, optionally LF as \n> """
+\end{DoxyVerb}
+ Decimal numbers without a type suffix are accepted and interpreted as {\itshape float} values for backwards compatibility, but should be avoided in new applications.
+
+Multiple adjacent string literals are concatenated into one string.
+
+Joining multiple numbers with \char`\"{}+\char`\"{} or \char`\"{}-\/\char`\"{} computes the respective sum or difference. The type of the result is determined as follows\+: If any summand is a double, the result is a double. Else, if any summand is a float, the result is a float. Else, if any summand is a signed integer, the result is a signed integer. Else (i.\+e. if all summands are unsigned integers), the result is an unsigned integer.
+
+A function that takes no arguments\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.Cmd.Reset()"};
+\end{DoxyCode}
+ A function taking one uint32 argument (decimal and hex notation)\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.MyFunction(12345:l)"};
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.MyFunction(0xabcd:l)"};
+\end{DoxyCode}
+ A function taking a negative number\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.MyFunction(-1234:l)"};
+\end{DoxyCode}
+ A function taking one a string argument\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.MyStringFunction(\(\backslash\)"The string argument value\(\backslash\)")"};
+\end{DoxyCode}
+ A function taking one double argument\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.MyFunction(1.23456789:d)"};
+\end{DoxyCode}
+ A function taking one float argument\+: 
+\begin{DoxyCode}
+\textcolor{keywordtype}{char} CallProcedure[] = \textcolor{stringliteral}{"Target.MyFunction(1.2345:f)"};
+\end{DoxyCode}
+ 

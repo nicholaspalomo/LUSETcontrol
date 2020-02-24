@@ -1,0 +1,47 @@
+\hypertarget{LusetControl_8hpp}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/include/luset\+\_\+control\+\_\+pkg/\+Luset\+Control.hpp File Reference}
+\label{LusetControl_8hpp}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/include/luset\+\_\+control\+\_\+pkg/\+Luset\+Control.\+hpp@{/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+control\+\_\+pkg/include/luset\+\_\+control\+\_\+pkg/\+Luset\+Control.\+hpp}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$math.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+{\ttfamily \#include $<$time.\+h$>$}\newline
+{\ttfamily \#include $<$vector$>$}\newline
+{\ttfamily \#include $<$iostream$>$}\newline
+{\ttfamily \#include \char`\"{}ros/ros.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$ros/callback\+\_\+queue.\+h$>$}\newline
+{\ttfamily \#include $<$ros/subscription\+\_\+queue.\+h$>$}\newline
+{\ttfamily \#include $<$ros/spinner.\+h$>$}\newline
+{\ttfamily \#include $<$sensor\+\_\+msgs/\+Joint\+State.\+h$>$}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Contacts\+State.\+h$>$}\newline
+{\ttfamily \#include $<$gazebo\+\_\+msgs/\+Contact\+State.\+h$>$}\newline
+{\ttfamily \#include $<$std\+\_\+msgs/\+Float64.\+h$>$}\newline
+{\ttfamily \#include \char`\"{}luset\+\_\+state\+\_\+pkg/\+Actuator\+Orientation.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}luset\+\_\+state\+\_\+pkg/\+Displacement\+Force\+Struct.\+h\char`\"{}}\newline
+{\ttfamily \#include \char`\"{}luset\+\_\+state\+\_\+pkg/\+Luset\+State.\+h\char`\"{}}\newline
+Include dependency graph for Luset\+Control.\+hpp\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LusetControl_8hpp__incl}
+\end{center}
+\end{figure}
+This graph shows which files directly or indirectly include this file\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{LusetControl_8hpp__dep__incl}
+\end{center}
+\end{figure}
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+class \hyperlink{classlusetcontrolnamespace_1_1LusetControl}{lusetcontrolnamespace\+::\+Luset\+Control}
+\item 
+class \hyperlink{classlusetcontrolnamespace_1_1LusetCollision}{lusetcontrolnamespace\+::\+Luset\+Collision}
+\begin{DoxyCompactList}\small\item\em This class subscribes to /\+Luset\+State and publishes the cylinder strokes to the correct cylinders in the Gazebo simulation using information from the parameter server regarding which actuators are connected to the corresponding axes/valves. The values on the parameter server are loaded from /luset\+\_\+control\+\_\+pkg/config/luset\+\_\+valve\+\_\+config\+\_\+standard.yaml. This class also subscribes to the contact sensors in Gazebo publishing on the sensor\+\_\+state topics and only publishes a message to /\+Luset\+Contacts if two components actually collide in the simulation. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Namespaces}
+\begin{DoxyCompactItemize}
+\item 
+ \hyperlink{namespacelusetcontrolnamespace}{lusetcontrolnamespace}
+\begin{DoxyCompactList}\small\item\em $<$ Used as a stream of Input and Output. \end{DoxyCompactList}\end{DoxyCompactItemize}

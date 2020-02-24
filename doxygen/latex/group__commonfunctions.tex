@@ -1,0 +1,660 @@
+\hypertarget{group__commonfunctions}{}\section{Commonly used functions for target communication.}
+\label{group__commonfunctions}\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsection*{I\+N\+CO variable reading and writing}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga5a35fc7cdfb6037cb755ed8409a8f300}{Get\+Variable} (const char $\ast$Target\+Path, const char $\ast$Item\+Path, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\begin{DoxyCompactList}\small\item\em Remote I\+N\+CO variable read. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gac50fba25dcc47ea6f6f54c0141e34563}{Put\+Variable} (const char $\ast$Target\+Path, const char $\ast$Item\+Path, const void $\ast$Value, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\begin{DoxyCompactList}\small\item\em Remote I\+N\+CO variable write. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Remote I\+N\+CO procedure call (R\+PC)}
+\label{_amgrp66fd2a7eb6c0f71a4c172de68a1997e4}%
+(see also syncasync) \begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure} (const char $\ast$Target\+Path, const char $\ast$Call\+Procedure, double $\ast$Result)
+\begin{DoxyCompactList}\small\item\em Remote procedure call. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex} (const char $\ast$Target\+Path, const char $\ast$\hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure}, double $\ast$Sync\+Result)
+\begin{DoxyCompactList}\small\item\em Remote procedure call (extended). \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}{Call\+Procedure\+Ex\+Sync} (const char $\ast$Target\+Path, const char $\ast$\hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure}, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Type\+Flags)
+\begin{DoxyCompactList}\small\item\em Remote procedure call (extended). If the procedure has an asynchronous part, the function will wait for it to complete. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Type\+Flags, char $\ast$Result\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Result\+Name\+Buf\+Size)
+\begin{DoxyCompactList}\small\item\em Get the next asynchronous result (or application error) of a remote procedure call (Call\+Procedure\+Ex). \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}{Call\+Procedure\+Ex\+Result\+By\+Name} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, const char $\ast$Result\+Name, void $\ast$Result, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Buffer\+Size, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Type\+Flags)
+\begin{DoxyCompactList}\small\item\em Get the next asynchronous named result (or application error) of a remote procedure call (Call\+Procedure\+Ex). \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Ticket, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} Timeout\+Ms)
+\begin{DoxyCompactList}\small\item\em Wait for the asynchronous part of a remote procedure call (Call\+Procedure\+Ex) to finish (optionally with timeout). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Raw target memory access functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}{Put\+Block8} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 8 byte chunks to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}{Get\+Block8} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Reads raw data in 8 byte chunks from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga385128fec8e3c887078779f2d8deb0fb}{Put\+Block16} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 16 bytes chungs to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gae507b3a868c5004a2142190a48958d79}{Get\+Block16} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Read raw data in 16 bytes chungs from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga51c1743c005a868b73e6af8e96eb9d4e}{Put\+Block32} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 32 bytes chungs to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga25d9fc255f93000f56d0414339ac53e6}{Get\+Block32} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Read raw data in 32 bytes chungs from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gaa67eff1b4ca61c6c9f1587bafa6e0a54}{Put\+Block64} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Dest\+Address, const \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Write raw data in 64 bytes chungs to the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga0dd1bf74ec3dd28ae6d784db54339802}{Get\+Block64} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em Read raw data in 64 bytes chungs from the target. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gae156a8a2456bc41746e3452c609ee2fd}{Get\+Block8\+Real} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Source\+Address, \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$Data, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Number)
+\begin{DoxyCompactList}\small\item\em For Indel internal use\+: Read 8 byte chunks of data from target by resolving breakpoints. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{I\+N\+CO error information}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}{Get\+Error\+Description} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Error, char $\ast$Description, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\begin{DoxyCompactList}\small\item\em Convert an I\+N\+CO error (see also incoreturn\+\_\+inco\+\_\+errors) to human readable string. \end{DoxyCompactList}\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gae35d1b67b8052ac2411a9c899141854f}{Get\+Mc\+Message} (const char $\ast$Target\+Path, const char $\ast$Message\+Handler\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Error, char $\ast$Message, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} Length)
+\end{DoxyCompactItemize}
+\subsection*{I\+N\+C\+O32 version information}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{group__commonfunctions_gaae80abf7f7bc82fa98428b67da68a366}{Get\+Revisions} (const char $\ast$Target\+Path, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Server\+Revision, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$Dll\+Revision)
+\begin{DoxyCompactList}\small\item\em Function to get the I\+N\+C\+O\+Server and libinco\+\_\+32 revisions. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}\label{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Call\+Procedure@{Call\+Procedure}}
+\index{Call\+Procedure@{Call\+Procedure}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Call\+Procedure()}{CallProcedure()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Call\+Procedure (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Call\+Procedure,  }\item[{double $\ast$}]{Result }\end{DoxyParamCaption})}
+
+
+
+Remote procedure call. 
+
+Calls procedure {\itshape Item\+Path} on target {\itshape Target\+Path} and stores the return value, cast to a {\ttfamily double}, in {\itshape $\ast$\+Result}. \begin{DoxyNote}{Note}
+This function can not properly handle R\+P\+Cs with asynchronous actions, because it can\textquotesingle{}t wait for its asynchronous part. Use Call\+Procedure\+Ex if asynchronously executing procedures needs to be called. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Call\+Procedure} & \hyperlink{incodefinitions_callproceduresyntax}{Definition of the Call\+Procedure(\+Ex) syntax} \\
+\hline
+{\em Result} & Pointer to a {\ttfamily double} into which the function writes the value returned by the remote procedure \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}\label{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Call\+Procedure\+Ex@{Call\+Procedure\+Ex}}
+\index{Call\+Procedure\+Ex@{Call\+Procedure\+Ex}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Call\+Procedure\+Ex()}{CallProcedureEx()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} W\+I\+N\+A\+PI Call\+Procedure\+Ex (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Call\+Procedure,  }\item[{double $\ast$}]{Sync\+Result = {\ttfamily NULL} }\end{DoxyParamCaption})}
+
+
+
+Remote procedure call (extended). 
+
+Replaces \hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure()} and adds support for asynchronous procedures. Calls procedure {\itshape Call\+Procedure} on target {\itshape Target\+Path} and stores any return value, cast to a {\ttfamily double}, in {\itshape $\ast$\+Sync\+Result}. If the called procedure is asynchronous, this function returns before the asynchronous part of the procedure action has completed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Call\+Procedure} & \hyperlink{incodefinitions_incoitemname}{Definition of the Item\+Path} \\
+\hline
+{\em Sync\+Result} & Will be set to the return value of synchronously executing procedures. If N\+U\+LL is passed (default), the result will be ignored. If {\itshape Call\+Procedure} is an asynchronous procedure, then {\itshape Sync\+Result} will not be altered (because such a function does not return any synchronous result). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A ticket (negative number) or an error (see page\+\_\+inco32errors).
+\end{DoxyReturn}
+Typical use case\+: \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} is a perfect replacement for \hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure()}. Therefore, whenever \hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure()} can be used, you may prefer using \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()}. In some certain use cases, it may be more straight-\/forward to use \hyperlink{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}{Call\+Procedure\+Ex\+Sync()}.
+
+\begin{DoxySeeAlso}{See also}
+page\+\_\+callprocedure\+\_\+usecase\+\_\+syncprocedure~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withoutresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withnamedresults 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}\label{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Call\+Procedure\+Ex\+Result@{Call\+Procedure\+Ex\+Result}}
+\index{Call\+Procedure\+Ex\+Result@{Call\+Procedure\+Ex\+Result}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Call\+Procedure\+Ex\+Result()}{CallProcedureExResult()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Call\+Procedure\+Ex\+Result (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket,  }\item[{void $\ast$}]{Result = {\ttfamily NULL},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Buffer\+Size = {\ttfamily 8},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Type\+Flags = {\ttfamily \hyperlink{indeldefs_8h_a0f27c7a63f462a5f51c285c85d7a5cac}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+V\+A\+L\+UE}},  }\item[{char $\ast$}]{Result\+Name = {\ttfamily NULL},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Result\+Name\+Buf\+Size = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Get the next asynchronous result (or application error) of a remote procedure call (Call\+Procedure\+Ex). 
+
+Get the next available (means\+: not yet gotten) result that was returned by the asynchronous part of the procedure that returned {\itshape Ticket}. The function implicitly waits indefinitely for the asynchronous part of the procedure to complete. The caller task will therefore be blocked until the async part has finished. (Note that in the case of process-\/internal calls ({\itshape Target\+Path} is \char`\"{}.\char`\"{}), this may be dangerous! See \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait()} for details.)
+
+There are two pieces of information that are considered \char`\"{}results\char`\"{}, both returned by the asynchronous part of a procedure\+:
+
+
+\begin{DoxyItemize}
+\item Zero or one application error (if any)
+\item Zero or multiple results (or named results)
+\end{DoxyItemize}
+
+The function is used to get these results. The results can either be get as \char`\"{}number values\char`\"{} cast to a double (by passing \hyperlink{indeldefs_8h_a0f27c7a63f462a5f51c285c85d7a5cac}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+V\+A\+L\+UE} for {\itshape Type\+Flags}) or as \char`\"{}type safe\char`\"{} values by passing one of the other supported types (see $<$\hyperlink{indeldefs_8h}{inco\+\_\+32/indeldefs.\+h}$>$).
+
+The same result can exactly be read once. This is the case because the result will be removed from the internal buffer after being read. Result values that are not explicitly removed from libinco\+\_\+32\textquotesingle{}s storage by calling this funtion will eventually be dropped anyway if required to free up space for the results of newer asynchronous procedure calls.
+
+To mention it explictly\+: To check whether a asynchronous call which does not return any results (such as the C\+I\+N\+O\+S\+Mc\+Robot\+::\+Off command) returned an application error, you need to call this function with {\itshape Result} set to N\+U\+LL.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path}. The name of the target to which {\itshape Ticket} belongs. Must exactly match the target name that was passed to the \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} call that produced {\itshape Ticket}, behavior is undefined if different names that refer to the same target are used (with/without server name, with / or \textbackslash{} as separator, aliases, etc.). \\
+\hline
+{\em Ticket} & The ticket that belongs to the asynchronous part of the procedure of which this function returns the next result. The value of {\itshape Ticket} is usually returned by \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()}. \\
+\hline
+{\em Result} & If not N\+U\+LL (N\+U\+LL is default), then the result value will be written to the memory pointed to by {\itshape Result}. Note that the function writes at most {\itshape Buffer\+Size} \mbox{[}Bytes\mbox{]}. If the result is a string, it will always be zero-\/terminated (even if truncated). Truncation is indicated by returning \hyperlink{errinco_8h_ab5b953eefe05fafee644e883efea54bf}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+B\+U\+F\+F\+E\+R\+\_\+\+T\+O\+\_\+\+S\+M\+A\+LL}, and in this case the result will not be removed from storage, so that another call with a sufficiently sized buffer can get its entire value. \\
+\hline
+{\em Buffer\+Size} & Memory size in \mbox{[}Bytes\mbox{]} where {\itshape Result} points to. The function will at most write this amount of data to {\itshape Result} \\
+\hline
+{\em Type\+Flags} & Any supported type (D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+$\ast$) as defined in $<$\hyperlink{indeldefs_8h}{inco\+\_\+32/indeldefs.\+h}$>$ can be passed. The function expects the passed type to match the type of the result. Example\+: If the asynchronous part of an I\+N\+OS procedure uses p\+Msg-\/$>$Add\+Result((uint8)77), then the caller must pass \hyperlink{indeldefs_8h_a67196d1983cb3ffd3eead24d2070402e}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+U\+I\+N\+T8}~\newline
+There\textquotesingle{}s an exception to the rule above\+: Any number value (except (u)int64) can automatically be converted to a double by passing \hyperlink{indeldefs_8h_a0f27c7a63f462a5f51c285c85d7a5cac}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+V\+A\+L\+UE}.~\newline
+Alternatively, pass \hyperlink{indeldefs_8h_a2ced59a9816ac78eecb66761e6c56aa8}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+F\+L\+A\+G\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+T\+Y\+PE} to get the type (as defined in $<$\hyperlink{indeldefs_8h}{inco\+\_\+32/indeldefs.\+h}$>$) of the result, instead of its value. Pass \hyperlink{indeldefs_8h_a38b4f4618d6964e94b19df39dc340af5}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+F\+L\+A\+G\+\_\+\+G\+E\+T\+\_\+\+R\+E\+S\+U\+L\+T\+\_\+\+L\+E\+N\+G\+TH} to get its length in bytes (mainly used for strings, where it includes the terminating zero). In these two cases, {\itshape Result} must be a pointer to a {\ttfamily uint32} and {\itshape Buffer\+Size} must be {\ttfamily sizeof(uint32)} = 4, and the result will (of course) not be removed from the internal buffer and thus the caller can get the actual result by a subsequent call to this function. \\
+\hline
+{\em Result\+Name} & \mbox{[}out\mbox{]} Optional pointer to a string buffer that will take the result name, if any. The name will not be set if the pointer is N\+U\+LL (default). \\
+\hline
+{\em Result\+Name\+Buf\+Size} & Buffer size (= string length + 1) in \mbox{[}Bytes\mbox{]} of the available buffer {\itshape Result\+Name}. The function will at most write {\itshape Result\+Name\+Buf\+Size} -\/ 1 Bytes of the result name and will ensure that the string in {\itshape Result\+Name} will be zero-\/terminated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+On success\+: \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} 
+
+If the procedure returned no results and no application error, only an indication that it is done (only for calls to external targets)\+: \hyperlink{errinco_8h_a8d818cdfabc610635069cde0387cf43a}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+N\+O\+\_\+\+R\+E\+T\+U\+R\+N\+\_\+\+V\+A\+L\+UE} 
+
+If all results (or completion indication or application error) have already been retrieved or were dropped to free up space because they were not retrieved in time (or no results were returned for process-\/internal calls)\+: \hyperlink{errinco_8h_a0cb9cbd56f7aa78ac186c79f03aa9c32}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+U\+N\+K\+N\+O\+W\+N\+\_\+\+T\+I\+C\+K\+ET} 
+
+On I\+N\+CO failure\+: Any I\+N\+CO error, as defined in $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ 
+
+If the procedure was interrupted by a target reset\+: \hyperlink{errinco_8h_a7d44ee063ff87c44112580cc6042872d}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+ED}. No results are available in that case. 
+
+Application error\+: If the asynchronous part of the procedure encountered any problem, the application error will be returned on the first call to this function for a given ticket. See incoreturn\+\_\+application\+\_\+erros. Additional results may still be available after that.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+page\+\_\+callprocedure\+\_\+usecase\+\_\+syncprocedure~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withoutresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withnamedresults~\newline
+ syncasyncretval in syncasync 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}\label{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Call\+Procedure\+Ex\+Result\+By\+Name@{Call\+Procedure\+Ex\+Result\+By\+Name}}
+\index{Call\+Procedure\+Ex\+Result\+By\+Name@{Call\+Procedure\+Ex\+Result\+By\+Name}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Call\+Procedure\+Ex\+Result\+By\+Name()}{CallProcedureExResultByName()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Call\+Procedure\+Ex\+Result\+By\+Name (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket,  }\item[{const char $\ast$}]{Result\+Name,  }\item[{void $\ast$}]{Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Buffer\+Size = {\ttfamily 8},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Type\+Flags = {\ttfamily \hyperlink{indeldefs_8h_a0f27c7a63f462a5f51c285c85d7a5cac}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+V\+A\+L\+UE}} }\end{DoxyParamCaption})}
+
+
+
+Get the next asynchronous named result (or application error) of a remote procedure call (Call\+Procedure\+Ex). 
+
+This function is very similar to \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result()}. The only difference is that this function does not return the \textquotesingle{}next result\textquotesingle{} but the result with the name referred to by Result\+Name. Similar to \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result()}, once a certain result has been read, it can\textquotesingle{}t be read again. This is true independently of whether you use \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result()} or \hyperlink{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}{Call\+Procedure\+Ex\+Result\+By\+Name()} the second time.
+
+Lets make an example to clarify this\+: Assume there are three results for a certain ticket. Assume they have the name \char`\"{}\+Result1\char`\"{}, \char`\"{}\+Result2\char`\"{} and \char`\"{}\+Result3\char`\"{}. If the caller performs the following code (pseudocode)\+: 
+\begin{DoxyCode}
+\hyperlink{group__commonfunctions_ga569a93aeed06c2745365c881be5e7828}{CallProcedureExResultByName}(..., \textcolor{stringliteral}{"Result2"}, ...);
+\end{DoxyCode}
+ Then the following is true\+: 
+\begin{DoxyCode}
+\hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{CallProcedureExResult}(...); \textcolor{comment}{// return the value of "Result1"}
+\hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{CallProcedureExResult}(...); \textcolor{comment}{// return the value of "Result3"}
+\end{DoxyCode}
+
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Result\+Name} & Zero terminated string of the result name\\
+\hline
+\end{DoxyParams}
+\begin{DoxySeeAlso}{See also}
+page\+\_\+callprocedure\+\_\+usecase\+\_\+syncprocedure~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withoutresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withnamedresults 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}\label{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Call\+Procedure\+Ex\+Sync@{Call\+Procedure\+Ex\+Sync}}
+\index{Call\+Procedure\+Ex\+Sync@{Call\+Procedure\+Ex\+Sync}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Call\+Procedure\+Ex\+Sync()}{CallProcedureExSync()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Call\+Procedure\+Ex\+Sync (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Call\+Procedure,  }\item[{void $\ast$}]{Result = {\ttfamily NULL},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Buffer\+Size = {\ttfamily 8},  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Type\+Flags = {\ttfamily \hyperlink{indeldefs_8h_a0f27c7a63f462a5f51c285c85d7a5cac}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+V\+A\+L\+UE}} }\end{DoxyParamCaption})}
+
+
+
+Remote procedure call (extended). If the procedure has an asynchronous part, the function will wait for it to complete. 
+
+Calls procedure {\itshape Call\+Procedure} on target {\itshape Target\+Path}. If the called procedure is asynchronous, this function implicitly waits for the asynchronous part of the procedure action to complete.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Call\+Procedure} & \hyperlink{incodefinitions_incoitemname}{Definition of the Item\+Path} \\
+\hline
+{\em Result} & If not N\+U\+LL (default) and the procedure has no asynchronous part, then the synchronous result value will be set and {\itshape Result} is expected to be of type {\ttfamily double$\ast$} (and accordingly {\itshape Buffer\+Size} = {\ttfamily sizeof(double)} = 8 and {\itshape Type\+Flags} = \hyperlink{indeldefs_8h_a0f27c7a63f462a5f51c285c85d7a5cac}{D\+F\+\_\+\+I\+N\+C\+O\+\_\+\+T\+Y\+P\+E\+\_\+\+N\+U\+M\+B\+E\+R\+\_\+\+V\+A\+L\+UE}). If the procedure has an asynchronous part and the asynchronous part returns at least one result, this function will return the first result and write it to {\itshape Result} (if it\textquotesingle{}s not N\+U\+LL). Note that all results (except the first one) are lost, because the caller doesn\textquotesingle{}t get the ticket. Use \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} if you want to get more than one result.\\
+\hline
+\end{DoxyParams}
+Typical use case\+: Using \hyperlink{group__commonfunctions_ga7ea052077eebe514aa0cb1756c595189}{Call\+Procedure\+Ex\+Sync()} makes sense if the programmer knows that the remote procedure does either have no asynchronous part, or it has an asynchronous part and returns zero or one result.
+
+Note that for process-\/internal calls ({\itshape Target\+Path} = \char`\"{}.\char`\"{}), the included waiting may carry a risk of deadlocking -\/ see \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait()} for details.
+
+\begin{DoxySeeAlso}{See also}
+page\+\_\+callprocedure\+\_\+usecase\+\_\+syncprocedure for a code exmaple. 
+\end{DoxySeeAlso}
+\mbox{\Hypertarget{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}\label{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Call\+Procedure\+Ex\+Wait@{Call\+Procedure\+Ex\+Wait}}
+\index{Call\+Procedure\+Ex\+Wait@{Call\+Procedure\+Ex\+Wait}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Call\+Procedure\+Ex\+Wait()}{CallProcedureExWait()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Call\+Procedure\+Ex\+Wait (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Ticket,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32}}]{Timeout\+Ms = {\ttfamily -\/1} }\end{DoxyParamCaption})}
+
+
+
+Wait for the asynchronous part of a remote procedure call (Call\+Procedure\+Ex) to finish (optionally with timeout). 
+
+This function is usually used waiting for the asynchronous part shouldn\textquotesingle{}t be done infinitely. If waiting infinitely is ok, it\textquotesingle{}s slightly more efficiently to use Call\+Procedure\+Ex\+Result directly.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path}. The name of the target to which {\itshape Ticket} belongs. Must exactly match the target name that was passed to the \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} call that produced {\itshape Ticket}, behavior is undefined if different names that refer to the same target are used (with/without server name, with / or \textbackslash{} as separator, aliases, etc.). \\
+\hline
+{\em Ticket} & Should be a valid ticket previously returned by \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} \\
+\hline
+{\em Timeout\+Ms} & Timeout used while waiting for the asynchronous part in \mbox{[}ms\mbox{]}. If -\/1 is passed, then the call will block forever, until the asynchronous part completed, or an error occurs. If 0 is passed, then the function will not wait but instead just check whether the asynchronous part has already completed and will return immediately. This can be used for \char`\"{}polling\char`\"{}. Note that, depending on the used OS (Windows vs. Linux), the smallest applicable timeout may be around 10ms. Thus, even if you pass 1ms here, it\textquotesingle{}ll probably result in 10ms. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+N\+O\+\_\+\+E\+R\+R\+OR} if the async part referred to by {\itshape Ticket} has completed, or the I\+N\+C\+O\+Server has detected that it was interrupted by a target reset (check for return value \hyperlink{errinco_8h_a7d44ee063ff87c44112580cc6042872d}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+I\+N\+T\+E\+R\+R\+U\+P\+T\+ED} from \hyperlink{group__commonfunctions_ga293b3f14ba486519c29ac9abfd0471e3}{Call\+Procedure\+Ex\+Result()} to detect the latter situation). 
+
+\hyperlink{errinco_8h_a31a88ed7f6d5320d8e7c7f82eca0abd5}{E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+R\+P\+C\+\_\+\+W\+A\+I\+T\+\_\+\+T\+I\+M\+E\+O\+UT} if the async part has not yet completed and waiting for it has timed out (or there was no waiting because {\itshape Timeout\+Ms} = 0). 
+
+An I\+N\+CO error code (see $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$) in case of I\+N\+CO communication problems (e.\+g. I\+N\+C\+O\+Server not running). Note that this function does not return application errors, therefore, it can\textquotesingle{}t be used to check whether an async part has completed with success or error. Instead, it can just be used to check whether the async part has finished. 
+
+This function does N\+OT return application errors and reply codes (i.\+e. the errors set by Msg\+Error \& co in Mc\+Robot). Always use Call\+Procedure\+Ex\+Result for that purpose.
+\end{DoxyReturn}
+\begin{DoxySeeAlso}{See also}
+page\+\_\+callprocedure\+\_\+usecase\+\_\+syncprocedure~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withoutresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withresults~\newline
+ page\+\_\+callprocedureex\+\_\+usecase\+\_\+withnamedresults
+\end{DoxySeeAlso}
+Typical use case\+: \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait()} is usually only used if the programmer wants to wait with a timeout. For all other cases, Call\+Procedure\+Ex\+Result is the preferred way to wait for the completion for the asynchronous procedure becuase it does not only wait, but also return any occurred application error.
+
+No guarantees are made about the accuracy of the timeout duration. The given number is a lower bound, but the total execution time of the function may be longer than that, since various parts of its internal implementation are not counted against the total.
+
+If the called procedure is not in the same process, but the call goes to an external target via I\+N\+C\+O\+Server (i.\+e. {\itshape Target\+Path} is not {\ttfamily \char`\"{}.\char`\"{}}), this function must only be called by the same thread that made the original \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{Call\+Procedure\+Ex()} call. For calls within a process, no such restriction exists and any number of threads can wait.
+
+For process-\/internal calls, be careful when using this function, particularly with infinite timeout\+: Make sure that by waiting, you are not inadvertently blocking the action that you are waiting for, causing a deadlock. In particular, this can happen in the following two situations\+:
+\begin{DoxyItemize}
+\item The asynchronous action waited for is queued to be executed in the same thread that calls \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait()}. Putting that thread to sleep now means that it never gets to attend its queue.
+\item The thread that calls \hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{Call\+Procedure\+Ex\+Wait()} is holding some lock that the thread running the asynchronous action needs to acquire before or during the action.
+\end{DoxyItemize}
+
+Within another I\+N\+CO procedure in particular, a better solution than 
+\begin{DoxyCode}
+\hyperlink{group__commonfunctions_ga1b55ca711acd0dcc672e5fefe5cff27e}{CallProcedureExWait}(\textcolor{stringliteral}{"."}, \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{CallProcedureEx}(\textcolor{stringliteral}{"."}, \textcolor{stringliteral}{"Cmd.Proc()"}));
+\end{DoxyCode}
+ is usually 
+\begin{DoxyCode}
+\hyperlink{inco__32_8h_a6777f042962e0af6ecd414a5bf409343}{ReturnAsyncCallTicketAfterCallHasFinished}(
+    \hyperlink{inco__32_8h_a4d9e4e45113399ec8110d78e27e16faf}{CheckoutAsyncCallTicket}(),
+    \hyperlink{group__commonfunctions_ga6b9c6b3f22614e8a2072f8c490402131}{CallProcedureEx}(\textcolor{stringliteral}{"."}, \textcolor{stringliteral}{"Cmd.Proc()"})
+);
+\end{DoxyCode}
+
+
+See also syncasyncwithin \mbox{\Hypertarget{group__commonfunctions_gae507b3a868c5004a2142190a48958d79}\label{group__commonfunctions_gae507b3a868c5004a2142190a48958d79}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Block16@{Get\+Block16}}
+\index{Get\+Block16@{Get\+Block16}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Block16()}{GetBlock16()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Block16 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Source\+Address,  }\item[{\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Read raw data in 16 bytes chungs from the target. 
+
+Same as \hyperlink{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}{Get\+Block8}, but reads {\itshape Number} times 16 byte of data. This function automatically changes endianness of the data if the target and host endiannes are different. 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Source\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data to which the read data should be written \\
+\hline
+{\em Number} & Number of 16 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_ga25d9fc255f93000f56d0414339ac53e6}\label{group__commonfunctions_ga25d9fc255f93000f56d0414339ac53e6}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Block32@{Get\+Block32}}
+\index{Get\+Block32@{Get\+Block32}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Block32()}{GetBlock32()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Block32 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Source\+Address,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Read raw data in 32 bytes chungs from the target. 
+
+Same as \hyperlink{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}{Get\+Block8}, but reads {\itshape Number} times 32 byte of data. This function automatically changes endianness of the data if the target and host endiannes are different. 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Source\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data to which the read data should be written \\
+\hline
+{\em Number} & Number of 32 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_ga0dd1bf74ec3dd28ae6d784db54339802}\label{group__commonfunctions_ga0dd1bf74ec3dd28ae6d784db54339802}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Block64@{Get\+Block64}}
+\index{Get\+Block64@{Get\+Block64}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Block64()}{GetBlock64()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Block64 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Source\+Address,  }\item[{\hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Read raw data in 64 bytes chungs from the target. 
+
+Same as \hyperlink{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}{Get\+Block8}, but reads {\itshape Number} times 64 byte of data. This function automatically changes endianness of the data if the target and host endiannes are different. 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Source\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data to which the read data should be written \\
+\hline
+{\em Number} & Number of 64 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}\label{group__commonfunctions_gab25d23eaf697606036d12356f94fc675}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Block8@{Get\+Block8}}
+\index{Get\+Block8@{Get\+Block8}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Block8()}{GetBlock8()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Block8 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Source\+Address,  }\item[{\hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Reads raw data in 8 byte chunks from the target. 
+
+Reads {\itshape Number} of bytes of data from the memory at {\itshape Source\+Address} in the I\+N\+CO target {\itshape Target\+Path} and copies that data into the buffer pointed to by {\itshape Data}. The function assumes that {\itshape Data} is at least as big as {\itshape Number} bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Source\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data to which the read data should be written \\
+\hline
+{\em Number} & Number of 8 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_gae156a8a2456bc41746e3452c609ee2fd}\label{group__commonfunctions_gae156a8a2456bc41746e3452c609ee2fd}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Block8\+Real@{Get\+Block8\+Real}}
+\index{Get\+Block8\+Real@{Get\+Block8\+Real}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Block8\+Real()}{GetBlock8Real()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Block8\+Real (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Source\+Address,  }\item[{\hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+For Indel internal use\+: Read 8 byte chunks of data from target by resolving breakpoints. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Source\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data to which the read data should be written \\
+\hline
+{\em Number} & Number of 8 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}\label{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Error\+Description@{Get\+Error\+Description}}
+\index{Get\+Error\+Description@{Get\+Error\+Description}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Error\+Description()}{GetErrorDescription()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Error\+Description (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Error,  }\item[{char $\ast$}]{Description,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Length }\end{DoxyParamCaption})}
+
+
+
+Convert an I\+N\+CO error (see also incoreturn\+\_\+inco\+\_\+errors) to human readable string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path}. The name of the slave/target for which a previous call failed \\
+\hline
+{\em Error} & The error code that was previously returned by an I\+N\+CO function, such as \hyperlink{group__commonfunctions_gaa2b02d8d33d22482538bd936792904b1}{Call\+Procedure()}, \hyperlink{group__commonfunctions_ga5a35fc7cdfb6037cb755ed8409a8f300}{Get\+Variable()}, \hyperlink{group__commonfunctions_gac50fba25dcc47ea6f6f54c0141e34563}{Put\+Variable()}, etc. \\
+\hline
+{\em Description} & If {\itshape Length} is unequal 0, this parameter should point to a string buffer. The function copies the error text into that buffer.~\newline
+ If {\itshape Length} is 0, then {\itshape Description} should point to a long. \\
+\hline
+{\em Length} & If {\itshape Length} is unequal 0, then its value is the maximum allowed string length (not buffer size!). Internally, the function call \textquotesingle{}strncpy(Description, \{The\+Error\+Text\}, Length);\textquotesingle{}.~\newline
+ If {\itshape Length} is 0, then the function assumes that {\itshape Description} points to a \textquotesingle{}long\textquotesingle{} value and the function writes the required buffer size (not string length!) to it.\\
+\hline
+\end{DoxyParams}
+Trivial example (complicated)\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Create a buffer that's huge enough:}
+\textcolor{keywordtype}{char} cErrorMsg[512];
+\textcolor{keywordflow}{if}( \hyperlink{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}{GetErrorDescription}(\textcolor{stringliteral}{"TargetName"}, uError, cErrorMsg, \textcolor{keyword}{sizeof}(cErrorMsg)-1) == 
+      \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{ER\_INCO\_NO\_ERROR} ) \{
+    cout << \textcolor{stringliteral}{"Error occurred: "} << cErrorMsg << endl;
+\}
+\end{DoxyCode}
+
+
+Example (complicated)\+: 
+\begin{DoxyCode}
+\textcolor{comment}{// Get the required buffer size:}
+\textcolor{keywordtype}{long} iRequiredBufferSize;
+\textcolor{keywordflow}{if}( \hyperlink{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}{GetErrorDescription}(\textcolor{stringliteral}{"TargetName"}, uError, &iRequiredBufferSize, 0) == 
+      \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{ER\_INCO\_NO\_ERROR} ) \{
+    \textcolor{keywordtype}{char} pErrorText = \textcolor{keyword}{new} \textcolor{keywordtype}{char}[iRequiredBufferSize];
+    \textcolor{comment}{// get the actual error text:}
+    \textcolor{keywordflow}{if}( \hyperlink{group__commonfunctions_ga2ce71629197df864b4ca9121feaff795}{GetErrorDescription}(\textcolor{stringliteral}{"TargetName"}, uError, pErrorText, iRequiredBufferSize-1) == 
+      \hyperlink{errinco_8h_ac806a12a2f08c29e901360403c9e239e}{ER\_INCO\_NO\_ERROR} ) \{
+        cout << \textcolor{stringliteral}{"Error occurred: "} << pErrorText << endl;
+        \textcolor{keyword}{delete} [] pErrorText;
+    \}
+\}
+\end{DoxyCode}
+ \mbox{\Hypertarget{group__commonfunctions_gae35d1b67b8052ac2411a9c899141854f}\label{group__commonfunctions_gae35d1b67b8052ac2411a9c899141854f}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Mc\+Message@{Get\+Mc\+Message}}
+\index{Get\+Mc\+Message@{Get\+Mc\+Message}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Mc\+Message()}{GetMcMessage()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Mc\+Message (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Message\+Handler\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Error,  }\item[{char $\ast$}]{Message,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Length }\end{DoxyParamCaption})}
+
+Gets the error message of a Mc\+Robot message container. Usually, a Mc\+Robot based machine has 1 message handler, often located at \char`\"{}\+Machine.\+Msg\char`\"{} 
+\begin{DoxyParams}{Parameters}
+{\em Message\+Path} & I\+N\+CO Path to the message handler. Usually, this path is \char`\"{}\+Machine.\+Msg\char`\"{} \\
+\hline
+{\em Error} & The I\+N\+CO error code as returned from e.\+g. Call\+Procedure. Note that this function will care about \textquotesingle{}reply codes\textquotesingle{} by masking them off the error). If the error is not a \char`\"{}\+Mc\+Robot error code\char`\"{} (Mc\+Robot errors have the bits set defined by E\+R\+\_\+\+A\+P\+P\+E\+R\+R\+O\+R\+\_\+\+B\+A\+SE (0x40000000) or E\+R\+\_\+\+A\+P\+P\+E\+R\+R\+O\+R\+\_\+\+C\+U\+S\+T\+O\+M\+ER (0x80000000)), this function returns E\+R\+\_\+\+I\+N\+C\+O\+\_\+\+V\+A\+R\+\_\+\+N\+O\+T\+\_\+\+F\+O\+U\+ND. \\
+\hline
+{\em Message} & Pointer to the buffer were the message text will be copied \\
+\hline
+{\em Length} & Size of the buffer defined by Message in \mbox{[}Bytes\mbox{]} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Technically, this function tries to resolve the error passed by param \char`\"{}\+Error\char`\"{} by accessing the target with Get\+Variable. Therefore, this function may reutrn any error that may occur by a Get\+Variable. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_gaae80abf7f7bc82fa98428b67da68a366}\label{group__commonfunctions_gaae80abf7f7bc82fa98428b67da68a366}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Revisions@{Get\+Revisions}}
+\index{Get\+Revisions@{Get\+Revisions}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Revisions()}{GetRevisions()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Revisions (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Server\+Revision,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Dll\+Revision }\end{DoxyParamCaption})}
+
+
+
+Function to get the I\+N\+C\+O\+Server and libinco\+\_\+32 revisions. 
+
+\mbox{\Hypertarget{group__commonfunctions_ga5a35fc7cdfb6037cb755ed8409a8f300}\label{group__commonfunctions_ga5a35fc7cdfb6037cb755ed8409a8f300}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Get\+Variable@{Get\+Variable}}
+\index{Get\+Variable@{Get\+Variable}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Get\+Variable()}{GetVariable()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Get\+Variable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Item\+Path,  }\item[{void $\ast$}]{Result,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Length = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Remote I\+N\+CO variable read. 
+
+Reads variable {\itshape Item\+Path} on target {\itshape Target\+Path} and stores the return value, cast to a {\ttfamily double} if {\itshape Length} is 0 or cast to a sequence of {\ttfamily char}s if length is unequal 0, in {\itshape $\ast$\+Result}. If the variable must be read asynchronously, this function waits for the asynchronous reading to complete. Caution\+: this waiting means that asynchronous variable getters must be implemented carefully to avoid deadlocks! 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Item\+Path} & \hyperlink{incodefinitions_incoitemname}{Definition of the Item\+Path} \\
+\hline
+{\em Result} & Pointer to the buffer to which the value will be written to. Must be a {\ttfamily double} in {\itshape Length} is 0 or a {\ttfamily char$\ast$} of at least {\itshape Length} size. \\
+\hline
+{\em Length} & A value of 0 means that a {\ttfamily double} (or any other number item) should be read. A value $>$ 0 means to read a data buffer (usually a char$\ast$) of size {\itshape Length} \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors).
+\end{DoxyReturn}
+See also syncasync \mbox{\Hypertarget{group__commonfunctions_ga385128fec8e3c887078779f2d8deb0fb}\label{group__commonfunctions_ga385128fec8e3c887078779f2d8deb0fb}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Put\+Block16@{Put\+Block16}}
+\index{Put\+Block16@{Put\+Block16}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Put\+Block16()}{PutBlock16()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Block16 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Dest\+Address,  }\item[{const \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Write raw data in 16 bytes chungs to the target. 
+
+Same as \hyperlink{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}{Put\+Block8}, but writes {\itshape Number} times 16 byte of data. This function automatically changes endianness of the data if the target and host endiannes are different.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Dest\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data that should be written to the target \\
+\hline
+{\em Number} & Number of 16 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_ga51c1743c005a868b73e6af8e96eb9d4e}\label{group__commonfunctions_ga51c1743c005a868b73e6af8e96eb9d4e}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Put\+Block32@{Put\+Block32}}
+\index{Put\+Block32@{Put\+Block32}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Put\+Block32()}{PutBlock32()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Block32 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Dest\+Address,  }\item[{const \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Write raw data in 32 bytes chungs to the target. 
+
+Same as \hyperlink{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}{Put\+Block8}, but writes {\itshape Number} times 32 byte of data. This function automatically changes endianness of the data if the target and host endiannes are different. 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Dest\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data that should be written to the target \\
+\hline
+{\em Number} & Number of 32 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_gaa67eff1b4ca61c6c9f1587bafa6e0a54}\label{group__commonfunctions_gaa67eff1b4ca61c6c9f1587bafa6e0a54}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Put\+Block64@{Put\+Block64}}
+\index{Put\+Block64@{Put\+Block64}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Put\+Block64()}{PutBlock64()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Block64 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Dest\+Address,  }\item[{const \hyperlink{indeltypes_8h_ac6afe794ed283c11fb63426a58188e5e}{uint64} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Write raw data in 64 bytes chungs to the target. 
+
+Same as \hyperlink{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}{Put\+Block8}, but writes {\itshape Number} times 64 byte of data. This function automatically changes endianness of the data if the target and host endiannes are different. 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Dest\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data that should be written to the target \\
+\hline
+{\em Number} & Number of 64 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}\label{group__commonfunctions_ga7b0fc73de1e81c47c9ee82db36ea7d35}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Put\+Block8@{Put\+Block8}}
+\index{Put\+Block8@{Put\+Block8}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Put\+Block8()}{PutBlock8()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Block8 (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Dest\+Address,  }\item[{const \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} $\ast$}]{Data,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Number }\end{DoxyParamCaption})}
+
+
+
+Write raw data in 8 byte chunks to the target. 
+
+Writes {\itshape Number} bytes of the data pointed to by {\itshape Data} to the address {\itshape Dest\+Address} in the I\+N\+CO target {\itshape Target\+Path}. {\itshape Dest\+Address} may by any address available at the target. Note that the target does usually allow arbitrary memory writes -\/ even if modifying the data will cause target crashes. Therefore, using this function is only recommended in rare cases. The function assumes that {\itshape Data} is at least as big as {\itshape Number} bytes.
+
+
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Dest\+Address} & The 32 bit memory address (target side) \\
+\hline
+{\em Data} & Pointer to the data that should be written to the target \\
+\hline
+{\em Number} & Number of 8 byte chunks to transfer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}
+\mbox{\Hypertarget{group__commonfunctions_gac50fba25dcc47ea6f6f54c0141e34563}\label{group__commonfunctions_gac50fba25dcc47ea6f6f54c0141e34563}} 
+\index{Commonly used functions for target communication.@{Commonly used functions for target communication.}!Put\+Variable@{Put\+Variable}}
+\index{Put\+Variable@{Put\+Variable}!Commonly used functions for target communication.@{Commonly used functions for target communication.}}
+\subsubsection{\texorpdfstring{Put\+Variable()}{PutVariable()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Put\+Variable (\begin{DoxyParamCaption}\item[{const char $\ast$}]{Target\+Path,  }\item[{const char $\ast$}]{Item\+Path,  }\item[{const void $\ast$}]{Value,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{Length = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+Remote I\+N\+CO variable write. 
+
+Writes the data pointed to by {\itshape Value} to the I\+N\+CO variable {\itshape Item\+Path} on target {\itshape Target\+Path}. The data type to which {\itshape Value} points to depends on the value of {\itshape Length} and must either be a {\ttfamily char$\ast$} ({\itshape Length} $>$ 0) or a {\ttfamily double} ({\itshape Length} 0). 
+\begin{DoxyParams}{Parameters}
+{\em Target\+Path} & \hyperlink{incodefinitions_targetpath}{Definition of the Target\+Path} \\
+\hline
+{\em Item\+Path} & \hyperlink{incodefinitions_incoitemname}{Definition of the Item\+Path} \\
+\hline
+{\em Value} & Pointer to the value that should be written. If {\itshape Length} is 0, {\itshape Value} is expected to point to a {\ttfamily double}. Otherwise a {\ttfamily char$\ast$}. \\
+\hline
+{\em Length} & If 0, then {\itshape Value} must point to a {\ttfamily double}. If $>$ 0, this function writes as many bytes as defined by {\itshape Length} to {\itshape Item\+Path}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+An error code from $<$\hyperlink{errinco_8h}{inco\+\_\+32/errinco.\+h}$>$ (see page\+\_\+inco32errors). 
+\end{DoxyReturn}

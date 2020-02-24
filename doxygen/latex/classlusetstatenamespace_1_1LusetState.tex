@@ -1,0 +1,322 @@
+\hypertarget{classlusetstatenamespace_1_1LusetState}{}\section{lusetstatenamespace\+:\+:Luset\+State Class Reference}
+\label{classlusetstatenamespace_1_1LusetState}\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+
+
+This class parses the Luset\+State\+Array obtained by subscribing to the /\+Indel\+Update topic and publishes a message structure containing all the sensor data acquired from the low-\/level controller.  
+
+
+
+
+{\ttfamily \#include $<$Luset\+State.\+hpp$>$}
+
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}
+\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{classlusetstatenamespace_1_1LusetState_a56014a12eb93b94767ff6100eae715f1}{Luset\+State} ()
+\begin{DoxyCompactList}\small\item\em Construct a new Luset State object. \end{DoxyCompactList}\item 
+void \hyperlink{classlusetstatenamespace_1_1LusetState_a47cade12b97053f9c4432cc629300299}{update} (const indel\+\_\+update\+\_\+pkg\+::\+Luset\+State\+Array\+::\+Const\+Ptr \&msg)
+\begin{DoxyCompactList}\small\item\em This function parses the Luset\+State\+Array message obtained from the /\+Indel\+Update topic. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a977acdb1439507d42bc21c2c8722b711}{Cylinder\+Position} \{std\+::vector$<$double$>$(100,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Cylinder stroke (100 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_af9d0d5b3b032a3741076dd8634f5d94e}{Load\+Pin\+Forces} \{std\+::vector$<$double$>$(100,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Load pin forces (100 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a0abcd02e8f1c180bc12c1ede94374c74}{PressureA} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Valve pressure A (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a2801e7d85681d309b947e5285674fcb7}{PressureB} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Valve pressure B (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a571d0cb66524884ec5efb50ca0ebc778}{Angle\+XZ} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Yoke angle w.\+r.\+t. global X-\/Z plane (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a4820051aac72f4156e44862d401e70b0}{Angle\+YZ} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Yoke angle w.\+r.\+t. global Y-\/Z plane (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ std\+::vector$<$ double $>$ $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a1b0b2630a42f90e950042e13dfd43684}{Cylinder\+Direction}
+\begin{DoxyCompactList}\small\item\em Cylinder directions (100 x 3 vectors) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a08916e5165dd24321d7fa25b8f57e34b}{Axis\+Position\+Ist} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Axis/valve current position value (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a56c2fd580cf37edb27331fd0f2c2c568}{Axis\+Position\+Set\+Point} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Axis/valve set point position value (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a1871b78843b041cfd08bfb169b1cea96}{Axis\+Force\+Ist} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Axis/valve current force value (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a75356fce66c36244a1483860a2fd539e}{Axis\+Force\+Set\+Point} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em Axis/valve set point force value (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a8e499f28768eb59644ac6a000d6b9422}{V\+C\+Set\+Point} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em VC set point value (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_afc512c3c96a1c7adb8b6d185d308fce7}{V\+C\+Current\+Ist\+Value} \{std\+::vector$<$double$>$(20,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em VC current value (20 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ double $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a18efadf7bae2bb68d539952cd05dec45}{A\+D\+C\+\_\+\+From328\+To335} \{std\+::vector$<$double$>$(8,0.\+0)\}
+\begin{DoxyCompactList}\small\item\em A\+DC from 328 to 335 value (8 x 1 vector) \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_abeb4a528a04de04fb13a5012d23fb9fd}{BY} = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}
+\begin{DoxyCompactList}\small\item\em Declare for the bottom side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a457bc98481c1c2e653dc63df35586836}{NY} = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}
+\begin{DoxyCompactList}\small\item\em Declare for the north side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a492da5d53a18a795c781cefb3ceb98c9}{TY} = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}
+\begin{DoxyCompactList}\small\item\em Declare for the top side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) \end{DoxyCompactList}\item 
+std\+::vector$<$ \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} $>$ \hyperlink{classlusetstatenamespace_1_1LusetState_a2cc7ce891b92ece12b0d5679dba5728c}{SY} = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}
+\begin{DoxyCompactList}\small\item\em Declare for the south side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+This class parses the Luset\+State\+Array obtained by subscribing to the /\+Indel\+Update topic and publishes a message structure containing all the sensor data acquired from the low-\/level controller. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a56014a12eb93b94767ff6100eae715f1}\label{classlusetstatenamespace_1_1LusetState_a56014a12eb93b94767ff6100eae715f1}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Luset\+State@{Luset\+State}}
+\index{Luset\+State@{Luset\+State}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Luset\+State()}{LusetState()}}
+{\footnotesize\ttfamily lusetstatenamespace\+::\+Luset\+State\+::\+Luset\+State (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Construct a new Luset State object. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a47cade12b97053f9c4432cc629300299}\label{classlusetstatenamespace_1_1LusetState_a47cade12b97053f9c4432cc629300299}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!update@{update}}
+\index{update@{update}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily void lusetstatenamespace\+::\+Luset\+State\+::update (\begin{DoxyParamCaption}\item[{const indel\+\_\+update\+\_\+pkg\+::\+Luset\+State\+Array\+::\+Const\+Ptr \&}]{msg }\end{DoxyParamCaption})}
+
+
+
+This function parses the Luset\+State\+Array message obtained from the /\+Indel\+Update topic. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em msg} & const indel\+\_\+update\+\_\+pkg\+::\+Luset\+State\+Array\+::\+Const\+Ptr\& Reference to a Luset\+State\+Array message pointer \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void No output 
+\end{DoxyReturn}
+Populate the Cylinder\+Position and Load\+Pin\+Forces members
+
+Populate the PressureA, PressureB, Angle\+XZ, Angle\+YZ members
+
+Populate the translation, Euler angles members for the bottom yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the translation, Euler angles members for the north yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the translation, Euler angles members for the top yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the translation, Euler angles members for the south yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the force, moment members for the bottom yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the force, moment members for the north yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the force, moment members for the top yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the force, moment members for the south yoke. Yoke kinematics for the rotations changed to local coordinates yokes.
+
+Populate the Cylinder\+Direction member for each actuator
+
+Populate the Axis\+Position\+Ist (actual) member for each axis/valve
+
+Populate the Axis\+Position\+Set\+Point member for each axis/valve
+
+Populate the Axis\+Force\+Ist member for each axis/valve
+
+Populate the Axis\+Force\+Set\+Point member for each axis/valve
+
+Populate the V\+C\+Current\+Ist\+Value member for each axis/valve
+
+Populate the V\+C\+Set\+Point member for each axis/valve
+
+Populate the A\+D\+C\+\_\+\+From328\+To335 member
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a18efadf7bae2bb68d539952cd05dec45}\label{classlusetstatenamespace_1_1LusetState_a18efadf7bae2bb68d539952cd05dec45}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!A\+D\+C\+\_\+\+From328\+To335@{A\+D\+C\+\_\+\+From328\+To335}}
+\index{A\+D\+C\+\_\+\+From328\+To335@{A\+D\+C\+\_\+\+From328\+To335}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{A\+D\+C\+\_\+\+From328\+To335}{ADC\_From328To335}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+A\+D\+C\+\_\+\+From328\+To335 \{std\+::vector$<$double$>$(8,0.\+0)\}}
+
+
+
+A\+DC from 328 to 335 value (8 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a571d0cb66524884ec5efb50ca0ebc778}\label{classlusetstatenamespace_1_1LusetState_a571d0cb66524884ec5efb50ca0ebc778}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Angle\+XZ@{Angle\+XZ}}
+\index{Angle\+XZ@{Angle\+XZ}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Angle\+XZ}{AngleXZ}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Angle\+XZ \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Yoke angle w.\+r.\+t. global X-\/Z plane (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a4820051aac72f4156e44862d401e70b0}\label{classlusetstatenamespace_1_1LusetState_a4820051aac72f4156e44862d401e70b0}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Angle\+YZ@{Angle\+YZ}}
+\index{Angle\+YZ@{Angle\+YZ}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Angle\+YZ}{AngleYZ}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Angle\+YZ \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Yoke angle w.\+r.\+t. global Y-\/Z plane (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a1871b78843b041cfd08bfb169b1cea96}\label{classlusetstatenamespace_1_1LusetState_a1871b78843b041cfd08bfb169b1cea96}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Axis\+Force\+Ist@{Axis\+Force\+Ist}}
+\index{Axis\+Force\+Ist@{Axis\+Force\+Ist}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Axis\+Force\+Ist}{AxisForceIst}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Axis\+Force\+Ist \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Axis/valve current force value (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a75356fce66c36244a1483860a2fd539e}\label{classlusetstatenamespace_1_1LusetState_a75356fce66c36244a1483860a2fd539e}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Axis\+Force\+Set\+Point@{Axis\+Force\+Set\+Point}}
+\index{Axis\+Force\+Set\+Point@{Axis\+Force\+Set\+Point}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Axis\+Force\+Set\+Point}{AxisForceSetPoint}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Axis\+Force\+Set\+Point \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Axis/valve set point force value (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a08916e5165dd24321d7fa25b8f57e34b}\label{classlusetstatenamespace_1_1LusetState_a08916e5165dd24321d7fa25b8f57e34b}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Axis\+Position\+Ist@{Axis\+Position\+Ist}}
+\index{Axis\+Position\+Ist@{Axis\+Position\+Ist}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Axis\+Position\+Ist}{AxisPositionIst}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Axis\+Position\+Ist \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Axis/valve current position value (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a56c2fd580cf37edb27331fd0f2c2c568}\label{classlusetstatenamespace_1_1LusetState_a56c2fd580cf37edb27331fd0f2c2c568}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Axis\+Position\+Set\+Point@{Axis\+Position\+Set\+Point}}
+\index{Axis\+Position\+Set\+Point@{Axis\+Position\+Set\+Point}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Axis\+Position\+Set\+Point}{AxisPositionSetPoint}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Axis\+Position\+Set\+Point \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Axis/valve set point position value (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_abeb4a528a04de04fb13a5012d23fb9fd}\label{classlusetstatenamespace_1_1LusetState_abeb4a528a04de04fb13a5012d23fb9fd}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!BY@{BY}}
+\index{BY@{BY}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{BY}{BY}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}$>$ lusetstatenamespace\+::\+Luset\+State\+::\+BY = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}}
+
+
+
+Declare for the bottom side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a1b0b2630a42f90e950042e13dfd43684}\label{classlusetstatenamespace_1_1LusetState_a1b0b2630a42f90e950042e13dfd43684}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Cylinder\+Direction@{Cylinder\+Direction}}
+\index{Cylinder\+Direction@{Cylinder\+Direction}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Cylinder\+Direction}{CylinderDirection}}
+{\footnotesize\ttfamily std\+::vector$<$std\+::vector$<$double$>$ $>$ lusetstatenamespace\+::\+Luset\+State\+::\+Cylinder\+Direction}
+
+
+
+Cylinder directions (100 x 3 vectors) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a977acdb1439507d42bc21c2c8722b711}\label{classlusetstatenamespace_1_1LusetState_a977acdb1439507d42bc21c2c8722b711}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Cylinder\+Position@{Cylinder\+Position}}
+\index{Cylinder\+Position@{Cylinder\+Position}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Cylinder\+Position}{CylinderPosition}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Cylinder\+Position \{std\+::vector$<$double$>$(100,0.\+0)\}}
+
+
+
+Cylinder stroke (100 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_af9d0d5b3b032a3741076dd8634f5d94e}\label{classlusetstatenamespace_1_1LusetState_af9d0d5b3b032a3741076dd8634f5d94e}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!Load\+Pin\+Forces@{Load\+Pin\+Forces}}
+\index{Load\+Pin\+Forces@{Load\+Pin\+Forces}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{Load\+Pin\+Forces}{LoadPinForces}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+Load\+Pin\+Forces \{std\+::vector$<$double$>$(100,0.\+0)\}}
+
+
+
+Load pin forces (100 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a457bc98481c1c2e653dc63df35586836}\label{classlusetstatenamespace_1_1LusetState_a457bc98481c1c2e653dc63df35586836}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!NY@{NY}}
+\index{NY@{NY}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{NY}{NY}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}$>$ lusetstatenamespace\+::\+Luset\+State\+::\+NY = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}}
+
+
+
+Declare for the north side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a0abcd02e8f1c180bc12c1ede94374c74}\label{classlusetstatenamespace_1_1LusetState_a0abcd02e8f1c180bc12c1ede94374c74}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!PressureA@{PressureA}}
+\index{PressureA@{PressureA}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{PressureA}{PressureA}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+PressureA \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Valve pressure A (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a2801e7d85681d309b947e5285674fcb7}\label{classlusetstatenamespace_1_1LusetState_a2801e7d85681d309b947e5285674fcb7}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!PressureB@{PressureB}}
+\index{PressureB@{PressureB}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{PressureB}{PressureB}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+PressureB \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+Valve pressure B (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a2cc7ce891b92ece12b0d5679dba5728c}\label{classlusetstatenamespace_1_1LusetState_a2cc7ce891b92ece12b0d5679dba5728c}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!SY@{SY}}
+\index{SY@{SY}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{SY}{SY}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}$>$ lusetstatenamespace\+::\+Luset\+State\+::\+SY = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}}
+
+
+
+Declare for the south side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a492da5d53a18a795c781cefb3ceb98c9}\label{classlusetstatenamespace_1_1LusetState_a492da5d53a18a795c781cefb3ceb98c9}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!TY@{TY}}
+\index{TY@{TY}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{TY}{TY}}
+{\footnotesize\ttfamily std\+::vector$<$\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}$>$ lusetstatenamespace\+::\+Luset\+State\+::\+TY = \{\hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}(), \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force}()\}}
+
+
+
+Declare for the top side of L\+U\+S\+ET a vector of 5 \hyperlink{structlusetstatenamespace_1_1LusetState_1_1DisplacementForce}{Displacement\+Force} structs (one corresponding to each yoke) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_afc512c3c96a1c7adb8b6d185d308fce7}\label{classlusetstatenamespace_1_1LusetState_afc512c3c96a1c7adb8b6d185d308fce7}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!V\+C\+Current\+Ist\+Value@{V\+C\+Current\+Ist\+Value}}
+\index{V\+C\+Current\+Ist\+Value@{V\+C\+Current\+Ist\+Value}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{V\+C\+Current\+Ist\+Value}{VCCurrentIstValue}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+V\+C\+Current\+Ist\+Value \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+VC current value (20 x 1 vector) 
+
+\mbox{\Hypertarget{classlusetstatenamespace_1_1LusetState_a8e499f28768eb59644ac6a000d6b9422}\label{classlusetstatenamespace_1_1LusetState_a8e499f28768eb59644ac6a000d6b9422}} 
+\index{lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}!V\+C\+Set\+Point@{V\+C\+Set\+Point}}
+\index{V\+C\+Set\+Point@{V\+C\+Set\+Point}!lusetstatenamespace\+::\+Luset\+State@{lusetstatenamespace\+::\+Luset\+State}}
+\subsubsection{\texorpdfstring{V\+C\+Set\+Point}{VCSetPoint}}
+{\footnotesize\ttfamily std\+::vector$<$double$>$ lusetstatenamespace\+::\+Luset\+State\+::\+V\+C\+Set\+Point \{std\+::vector$<$double$>$(20,0.\+0)\}}
+
+
+
+VC set point value (20 x 1 vector) 
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+state\+\_\+pkg/include/luset\+\_\+state\+\_\+pkg/\hyperlink{LusetState_8hpp}{Luset\+State.\+hpp}\item 
+/home/nico/luset-\/control/luset\+\_\+ws/src/luset\+\_\+state\+\_\+pkg/src/luset\+\_\+state\+\_\+package/\hyperlink{LusetState_8cpp}{Luset\+State.\+cpp}\end{DoxyCompactItemize}

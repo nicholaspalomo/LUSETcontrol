@@ -1,0 +1,431 @@
+\hypertarget{inco__evt_8h}{}\section{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/inco\+\_\+evt.h File Reference}
+\label{inco__evt_8h}\index{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/inco\+\_\+evt.\+h@{/home/nico/luset-\/control/luset\+\_\+ws/src/indel\+\_\+update\+\_\+pkg/include/inco\+\_\+32/inco\+\_\+evt.\+h}}
+
+
+Eventlog A\+PI for inco\+\_\+32 applications.  
+
+
+{\ttfamily \#include $<$inco\+\_\+32/inco\+\_\+32.\+h$>$}\newline
+Include dependency graph for inco\+\_\+evt.\+h\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{inco__evt_8h__incl}
+\end{center}
+\end{figure}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}(au\+Bit\+Number,  au\+Fct\+Name,  au\+Color,  a\+Log\+Text)
+\item 
+\#define \hyperlink{inco__evt_8h_a6cf61a9aeb23897a55a9256639732cbd}{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR}(au\+Fct\+Name,  a\+Stream)
+\item 
+\#define \hyperlink{inco__evt_8h_acbc6e49d25287ccb9cfb7fb9ff8e096b}{I\+N\+I\+X\+\_\+\+E\+R\+R\+OR}(au\+Fct\+Name,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}{e\+Error}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa4521e0fa8e750c19f71f4cc88088837b}{e\+Color\+Red}, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_a2c59b609e0a270ec336620524ac58c06}{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG}(au\+Fct\+Name,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}{e\+Warning}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa205e203eaaa2f6f777e94e66323e3d44}{e\+Color\+Yellow}, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_afa53d6ae2c64e9321379f29e71ae1d53}{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE}(au\+Fct\+Name,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}{e\+Message}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa6b23b08f002810d273b308bf620de676}{e\+Color\+Blue}, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_aeb38d73b2fe425dd81058b4db1811550}{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE}(au\+Fct\+Name,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}{e\+Verbose}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}{e\+Color\+Std}, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_a3992f8b7c0b0a1f98a4e40839c011f31}{I\+N\+I\+X\+\_\+\+T\+R\+A\+CE}(au\+Bit\+Number,  au\+Fct\+Name,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( au\+Bit\+Number, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}{e\+Color\+Std}, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_a62575c3444d6c9031ef1a9bf59f34c72}{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}(au\+Fct\+Name,  au\+Color,  a\+Stream)
+\item 
+\#define \hyperlink{inco__evt_8h_ab249db61d01fa3d83202fe15d8194c15}{I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}(au\+Fct\+Name,  au\+Color,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}{e\+Error}, au\+Fct\+Name, au\+Color, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_af69d58aa04ac76b2a37ec113725a0275}{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR}(au\+Fct\+Name,  au\+Color,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}{e\+Warning}, au\+Fct\+Name, au\+Color, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_aedb3e5f806d41dd01a2b8614b437bdd0}{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR}(au\+Fct\+Name,  au\+Color,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}{e\+Message}, au\+Fct\+Name, au\+Color, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_a24975246d8c9c5153630ad29ac98c997}{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR}(au\+Fct\+Name,  au\+Color,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}{e\+Verbose}, au\+Fct\+Name, au\+Color, a\+Stream )
+\item 
+\#define \hyperlink{inco__evt_8h_a51f09e08b4fa7211da086f92157ff384}{I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR}(au\+Fct\+Name,  au\+Color,  au\+Bit\+Number,  a\+Stream)~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( au\+Bit\+Number, au\+Fct\+Name, au\+Color, a\+Stream )
+\end{DoxyCompactItemize}
+\subsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ \hyperlink{inco__evt_8h_a7f8594a700d0675b308097f8fe81fa5f}{t\+Logging\+Callback}) (\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+Bit\+Number, const char $\ast$ap\+Fct\+Name, const char $\ast$ap\+File\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Line\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Font\+Color, const char $\ast$ap\+Log\+Text)
+\item 
+typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ \hyperlink{inco__evt_8h_ab3e62e3e192b1c44c80b9d5fc96d1623}{t\+Logging\+Level\+Callback}) (\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+Bit\+Number)
+\item 
+typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ \hyperlink{inco__evt_8h_a8da5b566a61b91a51f0ef8eb02820814}{t\+Logging\+Create\+Level\+Callback}) (const char $\ast$ap\+Level\+Name, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} $\ast$ap\+Bit\+Number)
+\end{DoxyCompactItemize}
+\subsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887f}{E\+Colors} \{ \newline
+\hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}{e\+Color\+Std} = 0, 
+\hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa4521e0fa8e750c19f71f4cc88088837b}{e\+Color\+Red} = 0x000000ff, 
+\hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fae33686c7364023a92b1d51275ed9f262}{e\+Color\+Green} = 0x0000c000, 
+\hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa205e203eaaa2f6f777e94e66323e3d44}{e\+Color\+Yellow} = 0x00005266, 
+\newline
+\hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa6b23b08f002810d273b308bf620de676}{e\+Color\+Blue} = 0x00ff0000, 
+\hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faa90369a5c20bc9867f02880f9bcaf2c0}{e\+Color\+White} = 0x00ffffff
+ \}
+\item 
+enum \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3}{E\+Predefined\+Log\+Levels} \{ \newline
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a23e5779d5a8b76861346f484b0a458ef}{e\+Fatal\+Error} = 0, 
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}{e\+Error} = 1, 
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}{e\+Warning} = 2, 
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}{e\+Message} = 3, 
+\newline
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}{e\+Verbose} = 4, 
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a799b0cbf0bd98680c28da76f27cba0fe}{e\+Server\+Frames} = 5, 
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a3ec77e6a99cb1fdfd88d06fd2cf96c35}{e\+In\+Process\+Frames} = 6, 
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3ad0cb3cc7c3bddbd7ea2b70d1443b87d0}{e\+Call\+Procedure\+Ex} = 7, 
+\newline
+\hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a43f3f0152ee32f67d8d47173c3a55079}{e\+First\+User\+Specific} = 10
+ \}
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__evt_8h_ababff9314cecd98b42d12b10171154a6}{Log\+Init} (\hyperlink{inco__evt_8h_a7f8594a700d0675b308097f8fe81fa5f}{t\+Logging\+Callback} ap\+Callback, \hyperlink{inco__evt_8h_ab3e62e3e192b1c44c80b9d5fc96d1623}{t\+Logging\+Level\+Callback} ap\+Level\+Callback, \hyperlink{inco__evt_8h_a8da5b566a61b91a51f0ef8eb02820814}{t\+Logging\+Create\+Level\+Callback} ap\+Create\+Level\+Callback)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__evt_8h_a8dbc6d863e95d6d40425c6dc18f749ef}{Log\+Level\+Active} (\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Bit\+Number)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__evt_8h_ad77d9090ef62d3349d4bd652d469c447}{Log\+Create\+Level} (const char $\ast$ap\+Level\+Name, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} $\ast$ap\+Bit\+Number)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__evt_8h_a1657a0d3b9fc2b0a9c267451a7f83577}{Log\+Message} (\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+Bit\+Number, const char $\ast$ap\+Fct\+Name, const char $\ast$ap\+File\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Line\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Font\+Color, const char $\ast$ap\+Log\+Text)
+\item 
+\hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI \hyperlink{inco__evt_8h_aabc0a573051be50b3cebcfa80adc4477}{Log\+Activate\+Levels} (\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+From, \hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+To, \hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8} ab\+Active)
+\begin{DoxyCompactList}\small\item\em activates or deactivates specific log levels \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Eventlog A\+PI for inco\+\_\+32 applications. 
+
+\begin{DoxyAuthor}{Author}
+Raphael Zulliger \href{mailto:zulliger@indel.ch}{\tt zulliger@indel.\+ch}, \copyright{} I\+N\+D\+EL AG 
+\end{DoxyAuthor}
+\begin{DoxyVersion}{Version}
+\begin{DoxyVerb}2397, 2007-12-24 16:04:14 +0100 (Mo, 24 Dez 2007), zulliger
++ Initially added the standard-Indel header to the files and thereby making
+  the files icommit ready
+
+2398, 2007-12-24 16:07:03 +0100 (Mo, 24 Dez 2007), zulliger
++ Initially added the standard-Indel header to the files and thereby making
+  the files icommit ready
+
+2447, 2008-01-29 11:45:20 +0100 (Di, 29 Jan 2008), walther
+! Disable logging on Windows CE since it doesn't have <sstream>.
+
+2618, 2008-02-27 15:46:42 +0100 (Wed, 27 Feb 2008), walther
+! Set svn:eol-style property where appropriate and svn:ignore a generated
+  file. [25 files]
+
+2629, 2008-02-29 15:30:15 +0100 (Fr, 29 Feb 2008), walther
+! Just noticed that I made a bit of a mess in the changelogs in r2618. Not
+  sure what happened - cleaning this up...
+
+3838, 2009-12-14 14:40:59 +0100 (Mon, 14 Dec 2009), walther
+! eColorYellow, used for warnings in event logs, was hard to read on light
+  backgrounds, and besides, not remotely yellow - changed.
+
+5880, 2013-12-19 15:23:25 +0100 (Thu, 19 Dec 2013), zulliger
++ Added possibility to adjust log levels of traces generated by libinco_32
+  itself by a new API call that doesn't require a callback to be installed.
+  This is especially important for languages (such as .Net) for which
+  calling a 'callback' for each log message is expensive.
+
+$LastChangedRevision: 5883 $ $Date: 2013-12-20 07:46:20 +0100 (Fri, 20 Dec 2013) $ $Author: zulliger $
+! Completely reworked libinco_32 tracing: The library is now using the
+  INIX-trace mechanism as well (INIX_ERROR, INIX_WARNING, ...). All traces
+  to stderr have been removed. Thanks to this change, INIX apps (as well as
+  customer applications, such as HMIs) are easily able to get all logs
+  generated by libinco_32 (such as error messages which are generated when
+  async results are dropped).
+
+$Comment$
+
+u = unreleased
++ = new feature
+! = change, bugfix
+- = removed\end{DoxyVerb}
+
+\end{DoxyVersion}
+\begin{DoxyRemark}{Remarks}
+\begin{DoxyVerb}project         : incoserver
+language        : C++
+system          : Linux, Windows - x86/PPC
+\end{DoxyVerb}
+ 
+\end{DoxyRemark}
+
+
+\subsection{Macro Definition Documentation}
+\mbox{\Hypertarget{inco__evt_8h_acbc6e49d25287ccb9cfb7fb9ff8e096b}\label{inco__evt_8h_acbc6e49d25287ccb9cfb7fb9ff8e096b}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+E\+R\+R\+OR@{I\+N\+I\+X\+\_\+\+E\+R\+R\+OR}}
+\index{I\+N\+I\+X\+\_\+\+E\+R\+R\+OR@{I\+N\+I\+X\+\_\+\+E\+R\+R\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+E\+R\+R\+OR}{INIX\_ERROR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}{e\+Error}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa4521e0fa8e750c19f71f4cc88088837b}{e\+Color\+Red}, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_ab249db61d01fa3d83202fe15d8194c15}\label{inco__evt_8h_ab249db61d01fa3d83202fe15d8194c15}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}}
+\index{I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}{INIX\_ERROR\_COLOR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}{e\+Error}, au\+Fct\+Name, au\+Color, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_a6cf61a9aeb23897a55a9256639732cbd}\label{inco__evt_8h_a6cf61a9aeb23897a55a9256639732cbd}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR@{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR}}
+\index{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR@{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR}{INIX\_FATALERROR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{InternLog}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a23e5779d5a8b76861346f484b0a458ef}{eFatalError}, auFctName, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa4521e0fa8e750c19f71f4cc88088837b}{eColorRed}, aStream ) \(\backslash\)
+    wxASSERT(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{inco__evt_8h_a62575c3444d6c9031ef1a9bf59f34c72}\label{inco__evt_8h_a62575c3444d6c9031ef1a9bf59f34c72}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}}
+\index{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR}{INIX\_FATALERROR\_COLOR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+F\+A\+T\+A\+L\+E\+R\+R\+O\+R\+\_\+\+C\+O\+L\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{InternLog}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a23e5779d5a8b76861346f484b0a458ef}{eFatalError}, auFctName, auColor,  \(\backslash\)
+            aStream ) \(\backslash\)
+    wxASSERT(0)
+\end{DoxyCode}
+\mbox{\Hypertarget{inco__evt_8h_afa53d6ae2c64e9321379f29e71ae1d53}\label{inco__evt_8h_afa53d6ae2c64e9321379f29e71ae1d53}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE@{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE}}
+\index{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE@{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE}{INIX\_MESSAGE}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+GE(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}{e\+Message}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa6b23b08f002810d273b308bf620de676}{e\+Color\+Blue}, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_aedb3e5f806d41dd01a2b8614b437bdd0}\label{inco__evt_8h_aedb3e5f806d41dd01a2b8614b437bdd0}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR}}
+\index{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR}{INIX\_MESSAGE\_COLOR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+M\+E\+S\+S\+A\+G\+E\+\_\+\+C\+O\+L\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}{e\+Message}, au\+Fct\+Name, au\+Color, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_a3992f8b7c0b0a1f98a4e40839c011f31}\label{inco__evt_8h_a3992f8b7c0b0a1f98a4e40839c011f31}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+T\+R\+A\+CE@{I\+N\+I\+X\+\_\+\+T\+R\+A\+CE}}
+\index{I\+N\+I\+X\+\_\+\+T\+R\+A\+CE@{I\+N\+I\+X\+\_\+\+T\+R\+A\+CE}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+T\+R\+A\+CE}{INIX\_TRACE}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+T\+R\+A\+CE(\begin{DoxyParamCaption}\item[{}]{au\+Bit\+Number,  }\item[{}]{au\+Fct\+Name,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( au\+Bit\+Number, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}{e\+Color\+Std}, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_a51f09e08b4fa7211da086f92157ff384}\label{inco__evt_8h_a51f09e08b4fa7211da086f92157ff384}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR}}
+\index{I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR}{INIX\_TRACE\_COLOR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+T\+R\+A\+C\+E\+\_\+\+C\+O\+L\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{au\+Bit\+Number,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( au\+Bit\+Number, au\+Fct\+Name, au\+Color, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_aeb38d73b2fe425dd81058b4db1811550}\label{inco__evt_8h_aeb38d73b2fe425dd81058b4db1811550}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE@{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE}}
+\index{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE@{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE}{INIX\_VERBOSE}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+SE(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}{e\+Verbose}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}{e\+Color\+Std}, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_a24975246d8c9c5153630ad29ac98c997}\label{inco__evt_8h_a24975246d8c9c5153630ad29ac98c997}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR}}
+\index{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR}{INIX\_VERBOSE\_COLOR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+V\+E\+R\+B\+O\+S\+E\+\_\+\+C\+O\+L\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}{e\+Verbose}, au\+Fct\+Name, au\+Color, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_a2c59b609e0a270ec336620524ac58c06}\label{inco__evt_8h_a2c59b609e0a270ec336620524ac58c06}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG@{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG}}
+\index{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG@{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG}{INIX\_WARNING}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}{e\+Warning}, au\+Fct\+Name, \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa205e203eaaa2f6f777e94e66323e3d44}{e\+Color\+Yellow}, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_af69d58aa04ac76b2a37ec113725a0275}\label{inco__evt_8h_af69d58aa04ac76b2a37ec113725a0275}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR}}
+\index{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR@{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR}{INIX\_WARNING\_COLOR}}
+{\footnotesize\ttfamily \#define I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+N\+G\+\_\+\+C\+O\+L\+OR(\begin{DoxyParamCaption}\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{a\+Stream }\end{DoxyParamCaption})~\hyperlink{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}{Intern\+Log}( \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}{e\+Warning}, au\+Fct\+Name, au\+Color, a\+Stream )}
+
+\mbox{\Hypertarget{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}\label{inco__evt_8h_a69a9ff88d56a0b5c3219dc50a36cb109}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!Intern\+Log@{Intern\+Log}}
+\index{Intern\+Log@{Intern\+Log}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{Intern\+Log}{InternLog}}
+{\footnotesize\ttfamily \#define Intern\+Log(\begin{DoxyParamCaption}\item[{}]{au\+Bit\+Number,  }\item[{}]{au\+Fct\+Name,  }\item[{}]{au\+Color,  }\item[{}]{a\+Log\+Text }\end{DoxyParamCaption})}
+
+{\bfseries Value\+:}
+\begin{DoxyCode}
+\textcolor{keywordflow}{if}( \hyperlink{inco__evt_8h_a8dbc6d863e95d6d40425c6dc18f749ef}{LogLevelActive}(auBitNumber) == 
+      \hyperlink{errinco_8h_a6a9b824e853028ed31684c34faef6773}{DF\_ER\_INIX\_LOGGER\_LEVEL\_IS\_ACTIVE} ) \(\backslash\)
+        \{ \(\backslash\)
+            do \(\backslash\)
+            \{ \(\backslash\)
+                using \textcolor{keyword}{namespace }std; \(\backslash\)
+                ostringstream Text; \(\backslash\)
+                Text << aLogText; \(\backslash\)
+                LogMessage( auBitNumber, \(\backslash\)
+                auFctName, \(\backslash\)
+                \_\_FILE\_\_, \(\backslash\)
+                \_\_LINE\_\_, \(\backslash\)
+                auColor, \(\backslash\)
+                Text.str().c\_str() ); \(\backslash\)
+            \} \textcolor{keywordflow}{while}(0); \(\backslash\)
+        \}
+\end{DoxyCode}
+
+
+\subsection{Typedef Documentation}
+\mbox{\Hypertarget{inco__evt_8h_a7f8594a700d0675b308097f8fe81fa5f}\label{inco__evt_8h_a7f8594a700d0675b308097f8fe81fa5f}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!t\+Logging\+Callback@{t\+Logging\+Callback}}
+\index{t\+Logging\+Callback@{t\+Logging\+Callback}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{t\+Logging\+Callback}{tLoggingCallback}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ t\+Logging\+Callback) (\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+Bit\+Number, const char $\ast$ap\+Fct\+Name, const char $\ast$ap\+File\+Name, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Line\+Number, \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} au\+Font\+Color, const char $\ast$ap\+Log\+Text)}
+
+\mbox{\Hypertarget{inco__evt_8h_a8da5b566a61b91a51f0ef8eb02820814}\label{inco__evt_8h_a8da5b566a61b91a51f0ef8eb02820814}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!t\+Logging\+Create\+Level\+Callback@{t\+Logging\+Create\+Level\+Callback}}
+\index{t\+Logging\+Create\+Level\+Callback@{t\+Logging\+Create\+Level\+Callback}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{t\+Logging\+Create\+Level\+Callback}{tLoggingCreateLevelCallback}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ t\+Logging\+Create\+Level\+Callback) (const char $\ast$ap\+Level\+Name, \hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} $\ast$ap\+Bit\+Number)}
+
+\mbox{\Hypertarget{inco__evt_8h_ab3e62e3e192b1c44c80b9d5fc96d1623}\label{inco__evt_8h_ab3e62e3e192b1c44c80b9d5fc96d1623}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!t\+Logging\+Level\+Callback@{t\+Logging\+Level\+Callback}}
+\index{t\+Logging\+Level\+Callback@{t\+Logging\+Level\+Callback}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{t\+Logging\+Level\+Callback}{tLoggingLevelCallback}}
+{\footnotesize\ttfamily typedef \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}(W\+I\+N\+A\+PI $\ast$ t\+Logging\+Level\+Callback) (\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16} au\+Bit\+Number)}
+
+
+
+\subsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887f}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887f}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!E\+Colors@{E\+Colors}}
+\index{E\+Colors@{E\+Colors}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{E\+Colors}{EColors}}
+{\footnotesize\ttfamily enum \hyperlink{inco__evt_8h_a1b7e02f0358006e161d007c562bc887f}{E\+Colors}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Std@{e\+Color\+Std}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Color\+Std@{e\+Color\+Std}}}\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faf3f63eb6d4dc4ec9c3bd2396169c137f}} 
+e\+Color\+Std&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Red@{e\+Color\+Red}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Color\+Red@{e\+Color\+Red}}}\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa4521e0fa8e750c19f71f4cc88088837b}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa4521e0fa8e750c19f71f4cc88088837b}} 
+e\+Color\+Red&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Green@{e\+Color\+Green}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Color\+Green@{e\+Color\+Green}}}\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fae33686c7364023a92b1d51275ed9f262}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fae33686c7364023a92b1d51275ed9f262}} 
+e\+Color\+Green&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Yellow@{e\+Color\+Yellow}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Color\+Yellow@{e\+Color\+Yellow}}}\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa205e203eaaa2f6f777e94e66323e3d44}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa205e203eaaa2f6f777e94e66323e3d44}} 
+e\+Color\+Yellow&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+Blue@{e\+Color\+Blue}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Color\+Blue@{e\+Color\+Blue}}}\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa6b23b08f002810d273b308bf620de676}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887fa6b23b08f002810d273b308bf620de676}} 
+e\+Color\+Blue&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Color\+White@{e\+Color\+White}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Color\+White@{e\+Color\+White}}}\mbox{\Hypertarget{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faa90369a5c20bc9867f02880f9bcaf2c0}\label{inco__evt_8h_a1b7e02f0358006e161d007c562bc887faa90369a5c20bc9867f02880f9bcaf2c0}} 
+e\+Color\+White&\\
+\hline
+
+\end{DoxyEnumFields}
+\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!E\+Predefined\+Log\+Levels@{E\+Predefined\+Log\+Levels}}
+\index{E\+Predefined\+Log\+Levels@{E\+Predefined\+Log\+Levels}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{E\+Predefined\+Log\+Levels}{EPredefinedLogLevels}}
+{\footnotesize\ttfamily enum \hyperlink{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3}{E\+Predefined\+Log\+Levels}}
+
+\begin{DoxyEnumFields}{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Fatal\+Error@{e\+Fatal\+Error}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Fatal\+Error@{e\+Fatal\+Error}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a23e5779d5a8b76861346f484b0a458ef}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a23e5779d5a8b76861346f484b0a458ef}} 
+e\+Fatal\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Error@{e\+Error}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Error@{e\+Error}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3acf549d649bed14d54f8b7e48014fb313}} 
+e\+Error&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Warning@{e\+Warning}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Warning@{e\+Warning}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a908397b670ff128bbed94ca4ccef13fd}} 
+e\+Warning&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Message@{e\+Message}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Message@{e\+Message}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3af465c6399d6e2912476078256750972b}} 
+e\+Message&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Verbose@{e\+Verbose}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Verbose@{e\+Verbose}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a2ac987b765a787bdedc9febc26216c45}} 
+e\+Verbose&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Server\+Frames@{e\+Server\+Frames}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Server\+Frames@{e\+Server\+Frames}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a799b0cbf0bd98680c28da76f27cba0fe}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a799b0cbf0bd98680c28da76f27cba0fe}} 
+e\+Server\+Frames&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+In\+Process\+Frames@{e\+In\+Process\+Frames}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+In\+Process\+Frames@{e\+In\+Process\+Frames}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a3ec77e6a99cb1fdfd88d06fd2cf96c35}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a3ec77e6a99cb1fdfd88d06fd2cf96c35}} 
+e\+In\+Process\+Frames&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+Call\+Procedure\+Ex@{e\+Call\+Procedure\+Ex}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+Call\+Procedure\+Ex@{e\+Call\+Procedure\+Ex}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3ad0cb3cc7c3bddbd7ea2b70d1443b87d0}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3ad0cb3cc7c3bddbd7ea2b70d1443b87d0}} 
+e\+Call\+Procedure\+Ex&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{e\+First\+User\+Specific@{e\+First\+User\+Specific}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!e\+First\+User\+Specific@{e\+First\+User\+Specific}}}\mbox{\Hypertarget{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a43f3f0152ee32f67d8d47173c3a55079}\label{inco__evt_8h_aadb111d2e2fb704ea4ce64a670acc6e3a43f3f0152ee32f67d8d47173c3a55079}} 
+e\+First\+User\+Specific&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{inco__evt_8h_aabc0a573051be50b3cebcfa80adc4477}\label{inco__evt_8h_aabc0a573051be50b3cebcfa80adc4477}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!Log\+Activate\+Levels@{Log\+Activate\+Levels}}
+\index{Log\+Activate\+Levels@{Log\+Activate\+Levels}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{Log\+Activate\+Levels()}{LogActivateLevels()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Log\+Activate\+Levels (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16}}]{au\+From,  }\item[{\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16}}]{au\+To,  }\item[{\hyperlink{indeltypes_8h_adde6aaee8457bee49c2a92621fe22b79}{uint8}}]{ab\+Active }\end{DoxyParamCaption})}
+
+
+
+activates or deactivates specific log levels 
+
+
+\begin{DoxyParams}{Parameters}
+{\em au\+From} & the first bitnumber that should be modified \\
+\hline
+{\em au\+To} & the last bitnumber that should be modified (if only one specific bit should be modified, au\+To has the same value as au\+From). Note\+: au\+To will also be modified! \\
+\hline
+{\em ab\+Active} & specifies, if the given bit(s) should be activated (in the case of ab\+Active != 0) or deactivated. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyNote}{Note}
+au\+From and au\+To are uint16, although uint8 would be sufficient but for easier handling in the function (see code) in the case where the maximal levels are set to 256, these args are uint16 
+\end{DoxyNote}
+\mbox{\Hypertarget{inco__evt_8h_ad77d9090ef62d3349d4bd652d469c447}\label{inco__evt_8h_ad77d9090ef62d3349d4bd652d469c447}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!Log\+Create\+Level@{Log\+Create\+Level}}
+\index{Log\+Create\+Level@{Log\+Create\+Level}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{Log\+Create\+Level()}{LogCreateLevel()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Log\+Create\+Level (\begin{DoxyParamCaption}\item[{const char $\ast$}]{ap\+Level\+Name,  }\item[{\hyperlink{indeltypes_8h_ac44d0188f4f50fd9b03031c1a06bd0a9}{int32} $\ast$}]{ap\+Bit\+Number }\end{DoxyParamCaption})}
+
+Used by applications, such as inix.\+exe, to create additional log levels used to generate application specific log messsages. \mbox{\Hypertarget{inco__evt_8h_ababff9314cecd98b42d12b10171154a6}\label{inco__evt_8h_ababff9314cecd98b42d12b10171154a6}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!Log\+Init@{Log\+Init}}
+\index{Log\+Init@{Log\+Init}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{Log\+Init()}{LogInit()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Log\+Init (\begin{DoxyParamCaption}\item[{\hyperlink{inco__evt_8h_a7f8594a700d0675b308097f8fe81fa5f}{t\+Logging\+Callback}}]{ap\+Callback,  }\item[{\hyperlink{inco__evt_8h_ab3e62e3e192b1c44c80b9d5fc96d1623}{t\+Logging\+Level\+Callback}}]{ap\+Level\+Callback,  }\item[{\hyperlink{inco__evt_8h_a8da5b566a61b91a51f0ef8eb02820814}{t\+Logging\+Create\+Level\+Callback}}]{ap\+Create\+Level\+Callback }\end{DoxyParamCaption})}
+
+Initializes the logging framework used by this \char`\"{}\+I\+N\+C\+O library\char`\"{} and, optionally, also by applications that link to this library (e.\+g. I\+N\+IX uses it). 
+\begin{DoxyParams}{Parameters}
+{\em ap\+Callback} & The callback to the function that takes the actual log message. \\
+\hline
+{\em ap\+Level\+Callback} & The callback to the function that is called to detect whether a specific log level is active \\
+\hline
+{\em ap\+Create\+Level\+Callback} & The callback used to create an additional log level (e.\+g. used by inix.\+exe to create log levels). Note that there exist certain predefined log levels, see E\+Predefined\+Log\+Levels\\
+\hline
+\end{DoxyParams}
+There are two common use cases how this logging framework is used\+:
+
+
+\begin{DoxyItemize}
+\item An application sets all callbacks\+: Then the application has a \char`\"{}managment
+      facility\char`\"{} to create log levels and also to manage whether they\textquotesingle{}re active or not. This is how inix.\+exe uses the logging facility. inix.\+exe does create its own log levels and uses the logging A\+PI for its own log information.
+\item An application just wants to receive logs created by this I\+N\+CO library in order to have useful information in case of misbehavior. In this use case, it makes sense to register the ap\+Callback (to receive the log message) but you usually don\textquotesingle{}t set ap\+Level\+Callback (used to decide whether a level is active or not). Instead, the application may prefer to leave the ap\+Level\+Callback N\+U\+LL and use Log\+Activate\+Levels to activate/deactivate certain levels. See E\+Predefined\+Log\+Levels for a list of available levels 
+\end{DoxyItemize}\mbox{\Hypertarget{inco__evt_8h_a8dbc6d863e95d6d40425c6dc18f749ef}\label{inco__evt_8h_a8dbc6d863e95d6d40425c6dc18f749ef}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!Log\+Level\+Active@{Log\+Level\+Active}}
+\index{Log\+Level\+Active@{Log\+Level\+Active}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{Log\+Level\+Active()}{LogLevelActive()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Log\+Level\+Active (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Bit\+Number }\end{DoxyParamCaption})}
+
+Used by the log system to check whether a certain log level is active. See e.\+g. I\+N\+I\+X\+\_\+\+E\+R\+R\+OR, I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG, etc. to see how its used. \mbox{\Hypertarget{inco__evt_8h_a1657a0d3b9fc2b0a9c267451a7f83577}\label{inco__evt_8h_a1657a0d3b9fc2b0a9c267451a7f83577}} 
+\index{inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}!Log\+Message@{Log\+Message}}
+\index{Log\+Message@{Log\+Message}!inco\+\_\+evt.\+h@{inco\+\_\+evt.\+h}}
+\subsubsection{\texorpdfstring{Log\+Message()}{LogMessage()}}
+{\footnotesize\ttfamily \hyperlink{inco__32_8h_a09505cad5bbb66fc36750a4fbca0444b}{I\+N\+C\+O32\+\_\+\+E\+X\+P\+O\+RT} \hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32} W\+I\+N\+A\+PI Log\+Message (\begin{DoxyParamCaption}\item[{\hyperlink{indeltypes_8h_a05f6b0ae8f6a6e135b0e290c25fe0e4e}{uint16}}]{au\+Bit\+Number,  }\item[{const char $\ast$}]{ap\+Fct\+Name,  }\item[{const char $\ast$}]{ap\+File\+Name,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Line\+Number,  }\item[{\hyperlink{indeltypes_8h_a4b435a49c74bb91f284f075e63416cb6}{uint32}}]{au\+Font\+Color,  }\item[{const char $\ast$}]{ap\+Log\+Text }\end{DoxyParamCaption})}
+
+Used by the log system to actually create a log entry. See e.\+g. I\+N\+I\+X\+\_\+\+E\+R\+R\+OR, I\+N\+I\+X\+\_\+\+W\+A\+R\+N\+I\+NG, etc. to see how its used. This function should only be called when Log\+Level\+Active returned that the level is \textquotesingle{}active\textquotesingle{}. If that rule is not followed, the message will be logged anyway. 
