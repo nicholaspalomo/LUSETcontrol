@@ -1,7 +1,7 @@
 <!-- This template was taken from:
 https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46#file-samplereadme-md -->
 
-<a href="https://ethz.ch/en.html"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://ethz.ch/en.html"><img src="https://github.com/nicholaspalomo/LUSETcontrol/blob/master/docs/eth_zurich_logo.jpg&s=200" title="ETH Zurich" alt="ETH Zurich"></a>
 
 <!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
 
