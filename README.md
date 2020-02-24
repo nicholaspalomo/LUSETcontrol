@@ -100,7 +100,7 @@ let generateProject = project => {
 
 ### Clone
 
-- Clone this repo to your local machine using 
+- Clone this repo to your local machine using `git clone https://github.com/nicholaspalomo/LUSETcontrol.git`. The instructions that follow assume that you have cloned the repo to your home directory, `/home/username` or `~/` (Linux).
 - Install Eigen by entering the following in a terminal:
 ```
 ~/LUSETcontrol
