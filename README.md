@@ -1,19 +1,23 @@
 <!-- This template was taken from:
 https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46#file-samplereadme-md -->
 
-<!-- <img src="https://github.com/nicholaspalomo/LUSETcontrol/blob/master/docs/eth_zurich_logo.jpg"> -->
+<a href="https://ethz.ch/en.html"><img src="/docs/eth_zurich_logo.jpg" title="ETH Zurich" alt="ETH Zurich" width="20%"></a> <a href="https://ibk.ethz.ch/"><img src="/docs/ibk_logo.jpg" title="ETH Zurich IBK" alt="ETH Zurich IBK" width="15%"></a>
 
-<!-- [<img src="docs/eth_zurich_logo.jpg">](http://ethz.ch/en.html) -->
-
-<a href="https://ethz.ch/en.html"><img src="/docs/eth_zurich_logo.jpg" title="ETH Zurich" alt="ETH Zurich" width="40%"></a>
-
-***INSERT GRAPHIC HERE (include hyperlink in image)***
+<!-- ***INSERT GRAPHIC HERE (include hyperlink in image)*** -->
 
 # LUSET Control and Collision Detection ROS C++/Gazebo Project
 
-> This is the ROS implementation in C++ with a Gazebo simulation for the software-side of LUSET project at ETH Zurich, Switzerland. This project replaces the original control system, which was programmed in MATLAB.
+> **Author: Nicholas Palomo**
 
-> For more information on the LUSET project, go to https://kaufmann.ibk.ethz.ch/research/LUSET.html. Also check out this informational video (in German) featuring Professor Walter Kaufmann, head of the Structural Engineering Institute (IBK) at ETH, explaining the LUSET project: https://vimeo.com/355932476.
+> **Email: npalomo@student.ethz.ch**
+
+> **LinkedIn: https://www.linkedin.com/in/nicholaspalomo/**
+
+> **GitHub: https://github.com/nicholaspalomo/**
+
+This is the ROS implementation in C++ with a Gazebo simulation for the software-side of LUSET project at ETH Zurich, Switzerland. This project replaces the original control system, which was programmed in MATLAB.
+
+For more information on the LUSET project, go to https://kaufmann.ibk.ethz.ch/research/LUSET.html. Also check out this informational video (in German) featuring Professor Walter Kaufmann, head of the Structural Engineering Institute (IBK) at ETH, explaining the LUSET project: https://vimeo.com/355932476.
 
 <!-- > include terms/tags that can be searched -->
 
@@ -36,9 +40,9 @@ https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46#file-samplereadme-md
 
 <!-- - For more on these wonderful ~~badgers~~ badges, refer to <a href="http://badges.github.io/badgerbadgerbadger/" target="_blank">`badgerbadgerbadger`</a>. -->
 
-***INSERT ANOTHER GRAPHIC HERE***
+<!-- ***INSERT ANOTHER GRAPHIC HERE*** -->
 
-[![INSERT YOUR GRAPHIC HERE](http://i.imgur.com/dt8AUb6.png)]()
+<img src="/docs/luset_gazebo_animation.gif" title="LUSET Gazebo simulation" alt="LUSET Gazebo simulation" width="100%"></a>
 
 <!-- - Most people will glance at your `README`, *maybe* stare it, and leave
 - Ergo, people should understand instantly what your project is about based on your repo
@@ -71,7 +75,6 @@ https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46#file-samplereadme-md
 - [Installation](#installation)
 - [Features](#features)
 - [Contributing](#contributing)
-- [Team](#team)
 - [FAQ](#faq)
 - [Support](#support)
 - [License](#license)
@@ -104,7 +107,7 @@ let generateProject = project => {
 git clone https://gitlab.com/libeigen/eigen.git
 ```
 
-### Setup
+### Setup and Usage
 
 - To run the simulation with dummy inputs, open a new terminal and navigate to the catkin workspace where this repo has been cloned.
 ```
@@ -132,6 +135,7 @@ to get print statements to the terminal every time a collision occurs between tw
 ### Tested and working features
 
 - Run a Gazebo simulation with actuator inputs supplied by the `/IndelUpdate` rostopic. These messages are routed to the `/LusetControl` node via the `/LusetState` node.
+- The `/LusetContacts` topic will alert the user if a collision is imminent between the actuators or yokes.
 - Use `rqt_graph` to visualize the network or ros topics, subscriptions, publications, and nodes.
 
 ### Pending features
@@ -141,8 +145,6 @@ to get print statements to the terminal every time a collision occurs between tw
 - Troubleshooting the multithreaded ROS subscriptions, particularly in the `luset_control_pkg_node`
 - Add custom plots in `rqt_plot` for visualizing (graphically) the messages being passed between the nodes
 
----
-## Usage
 ---
 ## Documentation
 
@@ -164,7 +166,7 @@ All of the code is documented. You can find the Doxygen documentation in the `~/
     - 🍴 Fork this repo!
 
 - **Option 2**
-    - 👯‍♂️ Clone this repo to your local machine using `git clone`
+    - 👯‍♂️ Clone this repo to your local machine using `git clone https://github.com/nicholaspalomo/LUSETcontrol.git`
 
 ### Step 2
 
@@ -175,15 +177,6 @@ All of the code is documented. You can find the Doxygen documentation in the `~/
 - 🔃 Raise an issue, assign some tags, and create a new branch (with the issue number in the title) for new features to be added or for bugs to be fixed. Submit a pull request once the issue has been fixed and thoroughly tested.
 
 <!-- - 🔃 Create a new pull request using <a href="https://github.com/joanaz/HireDot2/compare/" target="_blank">`https://github.com/joanaz/HireDot2/compare/`</a>. -->
-
----
-
-## Contributors
-
-| <a href="http://fvcproductions.com" target="_blank">**Nicholas Palomo**</a> |
-| :---: |
-| [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com)    |
-| <a href="http://github.com/fvcproductions" target="_blank">`github.com/fvcproductions`</a> |
 
 ---
 
@@ -215,8 +208,10 @@ All of the code is documented. You can find the Doxygen documentation in the `~/
       }
   }
 ```
-    - Save and close `tasks.json`. In the same directory, open `launch.json`.
-    - Add the following block:
+
+  - Save and close `tasks.json`. In the same directory, open `launch.json`.
+  - Add the following block:
+    
 ```json
   {
       "name": "(gdb) Launch",
@@ -238,9 +233,10 @@ All of the code is documented. You can find the Doxygen documentation in the `~/
       ]
   }
 ```
-    - You can replace the value of the `"program"` tag to that of another node executable, e.g. `"${workspaceFolder}/devel/lib/luset_state_pkg/luset_state_pkg_node"`, etc., in order to debug that node instead.
-    - To begin debugging the node, place a breakpoint in the source code of the node.
-    - Open the debugging tab on the left-hand side of the VS Code editor, select `(gdb) Launch` from the dropdown menu and click `Run` to start debugging the code. The call stack will be executed up until the breakpoint at which point execution is paused.
+
+  - You can replace the value of the `"program"` tag to that of another node executable, e.g. `"${workspaceFolder}/devel/lib/luset_state_pkg/luset_state_pkg_node"`, etc., in order to debug that node instead.
+  - To begin debugging the node, place a breakpoint in the source code of the node.
+  - Open the debugging tab on the left-hand side of the VS Code editor, select `(gdb) Launch` from the dropdown menu and click `Run` to start debugging the code. The call stack will be executed up until the breakpoint at which point execution is paused.
 
 - **I want to change the valve configuration that is loaded to the parameter server. How do I load my new YAML file?**
 
