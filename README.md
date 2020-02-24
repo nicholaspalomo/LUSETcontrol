@@ -1,7 +1,7 @@
 <!-- This template was taken from:
 https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46#file-samplereadme-md -->
 
-<a href="http://fvcproductions.com"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
+<a href="https://ethz.ch/en.html"><img src="https://avatars1.githubusercontent.com/u/4284691?v=3&s=200" title="FVCproductions" alt="FVCproductions"></a>
 
 <!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
 
@@ -98,7 +98,7 @@ let generateProject = project => {
 - Clone this repo to your local machine using 
 - Install Eigen by entering the following in a terminal:
 ```
-~/luset_ws
+~/LUSETcontrol
 git clone https://gitlab.com/libeigen/eigen.git
 ```
 
@@ -106,7 +106,7 @@ git clone https://gitlab.com/libeigen/eigen.git
 
 - To run the simulation with dummy inputs, open a new terminal and navigate to the catkin workspace where this repo has been cloned.
 ```
-cd ~/luset_ws
+cd ~/LUSETcontrol
 ```
 - Build and launch the project.
 ```
@@ -117,7 +117,7 @@ The Gazebo simulation will open in a new window. In the toolbar at the top, you 
 
 - Open a new terminal and type
 ```
-cd ~/luset_ws
+cd ~/LUSETcontrol
 source devel/setup.bash
 rostopic echo /LusetContacts
 ```
@@ -140,11 +140,11 @@ to get print statements to the terminal every time a collision occurs between tw
 - Add custom plots in `rqt_plot` for visualizing (graphically) the messages being passed between the nodes
 
 ---
-## Usage (Optional)
+## Usage
 ---
 ## Documentation
 
-All of the code is documented. You can find the Doxygen documentation in the `~/luset_ws/doxygen` folder (C++ only). For more information about Doxygen, visit http://www.doxygen.nl/.
+All of the code is documented. You can find the Doxygen documentation in the `~/LUSETcontrol/doxygen` folder (C++ only). For more information about Doxygen, visit http://www.doxygen.nl/.
 
 <!-- ## Tests (Optional)
 
