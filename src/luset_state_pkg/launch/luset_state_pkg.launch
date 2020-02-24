@@ -1,0 +1,5 @@
+<launch>
+    <!-- Node that provides us with the LusetState information -->
+    <node name="LusetState" pkg="luset_state_pkg" type="luset_state_pkg_node" />
+
+</launch>

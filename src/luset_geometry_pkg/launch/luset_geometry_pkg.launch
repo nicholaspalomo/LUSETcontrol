@@ -1,0 +1,170 @@
+<launch>
+    <!-- This launch file handles launching each of the 20 yoke/5-cylinder models in the Gazebo world simulation environment -->
+
+    <include file="$(find luset_geometry_pkg)/launch/custom_empty_world.launch" />
+
+    <!-- No namespace here as we will share this description. Access with slash at the beginning -->
+    <param name="robot_description"
+      command="xacro $(find luset_geometry_pkg)/urdf/luset_geometry_pkg.urdf.xacro" />
+  
+    <group ns="T1">
+      <param name="tf_prefix" value="T1_tf" />
+      <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+        <arg name="init_pose" value="-x 0 -y 0 -z 3 -R 0 -P 0 -Y 0" />
+        <arg name="robot_name"  value="T1" />
+      </include>
+    </group>
+  
+    <group ns="T2">
+      <param name="tf_prefix" value="T2_tf" />
+      <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+        <arg name="init_pose" value="-x -0.45 -y 0 -z 3 -R 0 -P 0 -Y 0" />
+        <arg name="robot_name"  value="T2" />
+      </include>
+    </group>
+
+    <group ns="T3">
+        <param name="tf_prefix" value="T3_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.90 -y 0 -z 3 -R 0 -P 0 -Y 0" />
+          <arg name="robot_name"  value="T3" />
+        </include>
+    </group>
+
+    <group ns="T4">
+        <param name="tf_prefix" value="T4_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.35 -y 0 -z 3 -R 0 -P 0 -Y 0" />
+          <arg name="robot_name"  value="T4" />
+        </include>
+    </group>
+
+    <group ns="T5">
+        <param name="tf_prefix" value="T5_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.80 -y 0 -z 3 -R 0 -P 0 -Y 0" />
+          <arg name="robot_name"  value="T5" />
+        </include>
+    </group>
+
+    <group ns="S1">
+        <param name="tf_prefix" value="S1_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.30 -y 0 -z 4.55 -R 0 -P -1.570796 -Y 0" />
+          <arg name="robot_name"  value="S1" />
+        </include>
+    </group>
+
+    <group ns="S2">
+        <param name="tf_prefix" value="S2_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.30 -y 0 -z 4.10 -R 0 -P -1.570796 -Y 0" />
+          <arg name="robot_name"  value="S2" />
+        </include>
+    </group>
+
+    <group ns="S3">
+        <param name="tf_prefix" value="S3_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.30 -y 0 -z 3.65 -R 0 -P -1.570796 -Y 0" />
+          <arg name="robot_name"  value="S3" />
+        </include>
+    </group>
+
+    <group ns="S4">
+        <param name="tf_prefix" value="S4_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.30 -y 0 -z 3.20 -R 0 -P -1.570796 -Y 0" />
+          <arg name="robot_name"  value="S4" />
+        </include>
+    </group>
+
+    <group ns="S5">
+        <param name="tf_prefix" value="S5_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.30 -y 0 -z 2.75 -R 0 -P -1.570796 -Y 0" />
+          <arg name="robot_name"  value="S5" />
+        </include>
+    </group>
+
+    <group ns="B1">
+        <param name="tf_prefix" value="B1_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x 0 -y 0 -z 4.25 -R 0 -P -3.14159 -Y 0" />
+          <arg name="robot_name"  value="B1" />
+        </include>
+    </group>
+
+    <group ns="B2">
+        <param name="tf_prefix" value="B2_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.45 -y 0 -z 4.25 -R 0 -P -3.14159 -Y 0" />
+          <arg name="robot_name"  value="B2" />
+        </include>
+    </group>
+
+    <group ns="B3">
+        <param name="tf_prefix" value="B3_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -0.90 -y 0 -z 4.25 -R 0 -P -3.14159 -Y 0" />
+          <arg name="robot_name"  value="B3" />
+        </include>
+    </group>
+
+    <group ns="B4">
+        <param name="tf_prefix" value="B4_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.35 -y 0 -z 4.25 -R 0 -P -3.14159 -Y 0" />
+          <arg name="robot_name"  value="B4" />
+        </include>
+    </group>
+
+    <group ns="B5">
+        <param name="tf_prefix" value="B5_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.80 -y 0 -z 4.25 -R 0 -P -3.14159 -Y 0" />
+          <arg name="robot_name"  value="B5" />
+        </include>
+    </group>
+
+    <group ns="N1">
+        <param name="tf_prefix" value="N1_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.50 -y 0 -z 4.55 -R 0 -P 1.570796 -Y 0" />
+          <arg name="robot_name"  value="N1" />
+        </include>
+    </group>
+
+    <group ns="N2">
+        <param name="tf_prefix" value="N2_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.50 -y 0 -z 4.10 -R 0 -P 1.570796 -Y 0" />
+          <arg name="robot_name"  value="N2" />
+        </include>
+    </group>
+
+    <group ns="N3">
+        <param name="tf_prefix" value="N3_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.50 -y 0 -z 3.65 -R 0 -P 1.570796 -Y 0" />
+          <arg name="robot_name"  value="N3" />
+        </include>
+    </group>
+
+    <group ns="N4">
+        <param name="tf_prefix" value="N4_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.50 -y 0 -z 3.20 -R 0 -P 1.570796 -Y 0" />
+          <arg name="robot_name"  value="N4" />
+        </include>
+    </group>
+
+    <group ns="N5">
+        <param name="tf_prefix" value="N5_tf" />
+        <include file="$(find luset_geometry_pkg)/launch/gazebo.launch" >
+          <arg name="init_pose" value="-x -1.50 -y 0 -z 2.75 -R 0 -P 1.570796 -Y 0" />
+          <arg name="robot_name"  value="N5" />
+        </include>
+    </group>
+
+</launch>

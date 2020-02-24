@@ -1,0 +1,38 @@
+<launch>
+  <!-- Launch file for launch one yoke/5 actuators in gazebo simulation environment -->
+  <arg name="robot_name" />
+  <arg name="init_pose" />
+
+  <!-- Spawn the yoke and its actuators -->
+  <node
+    name="spawn_$(arg robot_name)"
+    pkg="gazebo_ros"
+    type="spawn_model"
+    args="$(arg init_pose) -urdf -param /robot_description -model $(arg robot_name)"
+    respawn="false"
+    output="screen" />
+
+  <!-- Start the robot state publisher node -->
+  <node
+    pkg="robot_state_publisher"
+    type="robot_state_publisher" 
+    name="robot_state_publisher_$(arg robot_name)"
+    output="screen">
+    <remap from="/joint_states" to="/$(arg robot_name)/joint_states" />
+  </node>
+
+  <!-- Publish coordinate transformations -->
+  <node
+    name="tf_footprint_base_$(arg robot_name)"
+    pkg="tf"
+    type="static_transform_publisher"
+    args="0 0 0 0 0 0 base_link base_footprint 40" />
+
+  <!-- Start fake joint calibration node -->
+  <node
+    name="fake_joint_calibration_$(arg robot_name)"
+    pkg="rostopic"
+    type="rostopic"
+    args="pub /calibrated std_msgs/Bool true" />
+
+</launch>

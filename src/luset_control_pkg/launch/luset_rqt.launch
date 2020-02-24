@@ -1,0 +1,7 @@
+<launch>
+
+    <!-- Load RQT with a pre-setup GUI for Baxter controls from a perspective file  -->
+    <node name="luset_rqt" pkg="rqt_gui" type="rqt_gui" respawn="false"
+      output="screen" args="--perspective-file $(find luset_control_pkg)/launch/luset_rqt.perspective"/>
+  
+  </launch>

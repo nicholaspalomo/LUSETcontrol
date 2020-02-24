@@ -1,0 +1,26 @@
+# Use this file to specify the A-matrix entries for your experiment
+luset_A_matrix:
+    Bending_X: {
+        T100: 1,
+        T200: 1,
+        T300: -1,
+        T400: -1,
+        T500: 1,
+        B100: 1,
+        B200: 1,
+        B300: -1,
+        B400: -1,
+        B500: 1
+    }
+    Bending_Y: {
+        N100: 1,
+        N200: 1,
+        N300: -1,
+        N400: -1,
+        N500: 1,
+        S100: 1,
+        S200: 1,
+        S300: -1,
+        S400: -1,
+        S500: 1
+    }

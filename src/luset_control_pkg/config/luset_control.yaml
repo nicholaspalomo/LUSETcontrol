@@ -1,0 +1,563 @@
+# This YAML parameter file contains all the information for the PID joint controllers (one for each actuator)
+# http://gazebosim.org/tutorials/?tut=ros_control
+T1:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+T2:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+T3:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+T4:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+T5:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+S1:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+S2:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+S3:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+S4:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+S5:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+B1:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+B2:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+B3:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+B4:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+B5:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+N1:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+N2:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+N3:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+N4:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+N5:
+    # Publish all joint states ------------------------------------------
+    joint_state_controller:
+        type: joint_state_controller/JointStateController
+        publish_rate: 50
+
+    # Position controllers ----------------------------------------------
+    cylinderPiston10_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston10
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston20_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston20
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston30_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston30
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston40_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston40
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+    cylinderPiston50_position_controller:
+        type: effort_controllers/JointPositionController
+        joint: cylinderPiston50
+        pid: {p: 10.0, i: 10.0, d: 0.0}
+
+# `` rosrun rqt_gui rqt_gui '' to visualize results and change setpoint

@@ -1,0 +1,14 @@
+<launch>
+    <!-- Node that calls the library from Indel to give us an array of sensor data that is parsed by LusetState -->
+    <node name="IndelUpdate" pkg="indel_update_pkg" type="indel_update_pkg_node" />
+
+    <!-- Include the launch file for luset_state_pkg so that we can launch its node(s) at the same time as indel_update_pkg node -->
+    <include file="$(find luset_state_pkg)/launch/luset_state_pkg.launch" />
+
+    <!-- Include the launch file for luset_geometry_pkg so that we can launch its node(s) at the same time as indel_update_pkg node -->
+    <include file="$(find luset_geometry_pkg)/launch/luset_geometry_pkg.launch" />
+
+    <!-- Include the launch file for luset_control_pkg so that we can launch its node(s) at the same time as indel_update_pkg node -->
+    <include file="$(find luset_control_pkg)/launch/luset_control_pkg.launch" />
+
+</launch>

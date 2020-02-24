@@ -1,0 +1,1889 @@
+<?xml version="1.0"?>
+<!-- Nicholas Palomo npalomo@student.ethz.ch -->
+<!-- This code was partially generated using the URDF Exporter for SolidWorks -->
+<!-- A few key modifications had to be made to get this to work: -->
+<!-- 1. You must add at the end of this file the list of joints that are fixed to the world frame. These are given between the <gazebo> tags which are only interpreted by Gazebo once this file is converted to an SDF -->
+<!-- 2. To form the ball joints, delete all the properties under the ballJoint <link> declarations EXCEPT for the mass and inertia, which should be set to something small (e.g. mass=0.025, ixx=5e-5, etc). This is important because Gazebo ignores massless joints. -->
+<!-- 3. Three revolute/continuous joints chained together must each spin about a mutually orthogonal axis, e.g. [1 0 0], [0 1 0], [0 0 1] in order to get the right behavior for the ball joint. This can be specified here (by editing the axis tag) or in SolidWorks (by adding reference geometry to the model). -->
+<robot
+  xmlns:xacro="http://www.ros.org/wiki/xacro" name="luset_geometry_pkg">
+
+  <!-- <xacro:arg name="T1" default="true" />
+  <xacro:arg name="T2" default="false" />
+  <xacro:arg name="T3" default="false" />
+  <xacro:arg name="T4" default="false" />
+  <xacro:arg name="T5" default="false" />
+  <xacro:arg name="N1" default="false" />
+  <xacro:arg name="N2" default="false" />
+  <xacro:arg name="N3" default="false" />
+  <xacro:arg name="N4" default="false" />
+  <xacro:arg name="N5" default="false" />
+  <xacro:arg name="S1" default="false" />
+  <xacro:arg name="S2" default="false" />
+  <xacro:arg name="S3" default="false" />
+  <xacro:arg name="S4" default="false" />
+  <xacro:arg name="S5" default="false" />
+  <xacro:arg name="B1" default="false" />
+  <xacro:arg name="B2" default="false" />
+  <xacro:arg name="B3" default="false" />
+  <xacro:arg name="B4" default="false" />
+  <xacro:arg name="B5" default="false" />
+
+  <xacro:property name="_SIDE" value="T" />
+  <xacro:property name="_YOKE" value="1" />
+
+  <xacro:if value="$(arg T1)" >
+    <xacro:property name="_SIDE" value="T" />
+    <xacro:property name="_YOKE" value="1" />
+  </xacro:if>
+
+  <xacro:if value="$(arg T2)" >
+    <xacro:property name="_SIDE" value="T" />
+    <xacro:property name="_YOKE" value="2" />
+  </xacro:if>
+
+  <xacro:if value="$(arg T3)" >
+    <xacro:property name="_SIDE" value="T" />
+    <xacro:property name="_YOKE" value="3" />
+  </xacro:if>
+
+  <xacro:if value="$(arg T4)" >
+    <xacro:property name="_SIDE" value="T" />
+    <xacro:property name="_YOKE" value="4" />
+  </xacro:if>
+
+  <xacro:if value="$(arg T5)" >
+    <xacro:property name="_SIDE" value="T" />
+    <xacro:property name="_YOKE" value="5" />
+  </xacro:if>
+
+  <xacro:if value="$(arg N1)" >
+    <xacro:property name="_SIDE" value="N" />
+    <xacro:property name="_YOKE" value="1" />
+  </xacro:if>
+
+  <xacro:if value="$(arg N2)" >
+    <xacro:property name="_SIDE" value="N" />
+    <xacro:property name="_YOKE" value="2" />
+  </xacro:if>
+
+  <xacro:if value="$(arg N3)" >
+    <xacro:property name="_SIDE" value="N" />
+    <xacro:property name="_YOKE" value="3" />
+  </xacro:if>
+
+  <xacro:if value="$(arg N4)" >
+    <xacro:property name="_SIDE" value="N" />
+    <xacro:property name="_YOKE" value="4" />
+  </xacro:if>
+
+  <xacro:if value="$(arg N5)" >
+    <xacro:property name="_SIDE" value="N" />
+    <xacro:property name="_YOKE" value="5" />
+  </xacro:if>
+
+  <xacro:if value="$(arg S1)" >
+    <xacro:property name="_SIDE" value="S" />
+    <xacro:property name="_YOKE" value="1" />
+  </xacro:if>
+
+  <xacro:if value="$(arg S2)" >
+    <xacro:property name="_SIDE" value="S" />
+    <xacro:property name="_YOKE" value="2" />
+  </xacro:if>
+
+  <xacro:if value="$(arg S3)" >
+    <xacro:property name="_SIDE" value="S" />
+    <xacro:property name="_YOKE" value="3" />
+  </xacro:if>
+
+  <xacro:if value="$(arg S4)" >
+    <xacro:property name="_SIDE" value="S" />
+    <xacro:property name="_YOKE" value="4" />
+  </xacro:if>
+
+  <xacro:if value="$(arg S5)" >
+    <xacro:property name="_SIDE" value="S" />
+    <xacro:property name="_YOKE" value="5" />
+  </xacro:if>
+
+  <xacro:if value="$(arg B1)" >
+    <xacro:property name="_SIDE" value="B" />
+    <xacro:property name="_YOKE" value="1" />
+  </xacro:if>
+
+  <xacro:if value="$(arg B2)" >
+    <xacro:property name="_SIDE" value="B" />
+    <xacro:property name="_YOKE" value="2" />
+  </xacro:if>
+
+  <xacro:if value="$(arg B3)" >
+    <xacro:property name="_SIDE" value="B" />
+    <xacro:property name="_YOKE" value="3" />
+  </xacro:if>
+
+  <xacro:if value="$(arg B4)" >
+    <xacro:property name="_SIDE" value="B" />
+    <xacro:property name="_YOKE" value="4" />
+  </xacro:if>
+
+  <xacro:if value="$(arg B5)" >
+    <xacro:property name="_SIDE" value="B" />
+    <xacro:property name="_YOKE" value="5" />
+  </xacro:if> -->
+
+  <!-- Add ROS control plugin for Gazebo -->
+  <gazebo>
+    <plugin name="gazebo_ros_control" filename="libgazebo_ros_control.so">
+      <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+    </plugin>
+  </gazebo>
+
+  <xacro:property name="MAX_CYLINDER_STROKE" value="0.3" />
+
+  <!-- Specify the robot geometry -->
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.00417664514579752 -0.0345926307738655 1.90883395946716"
+        rpy="0 0 0" />
+      <mass
+        value="0.100857780478233" />
+      <inertia
+        ixx="0.0193997071410896"
+        ixy="-1.386395613245E-06"
+        ixz="-7.2836230945982E-05"
+        iyy="0.00419135348918456"
+        iyz="-0.00050336832901916"
+        izz="0.0197331689607486" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/yoke.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/yoke.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="ballJoint1">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint1_rev"
+    type="revolute">
+    <origin
+      xyz="-0.270420574498966 0.55 2.18057876976818"
+      rpy="0 -1.10714871774307 -3.14159265358978" />
+    <parent
+      link="base_link" />
+    <child
+      link="ballJoint1" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint6">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint6_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint1" />
+    <child
+      link="ballJoint6" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="piston10">
+    <inertial>
+      <origin
+        xyz="0.422524127096701 5.67323610312087E-08 -1.08910764851089E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207470803961392" />
+      <inertia
+        ixx="0.00012986884264524"
+        ixy="2.82945234121532E-10"
+        ixz="-5.68707169573164E-11"
+        iyy="0.00160899467779264"
+        iyz="-6.9488421569623E-12"
+        izz="0.00159853005885189" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT101.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT101.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="pistonDummy10"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint6" />
+    <child
+      link="piston10" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="cylinder10">
+    <inertial>
+      <origin
+        xyz="0.644466334055455 0.000266411515881915 1.72696377811477E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280448341425693" />
+      <inertia
+        ixx="0.000481993236507492"
+        ixy="-2.92812318817301E-07"
+        ixz="-1.88214736281199E-07"
+        iyy="0.00198376587089049"
+        iyz="4.5892024658982E-08"
+        izz="0.00197270438651911" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT101.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT101.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinderPiston10"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="piston10" />
+    <child
+      link="cylinder10" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="${MAX_CYLINDER_STROKE}"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint11">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint11_rev"
+    type="revolute">
+    <origin
+      xyz="1.05 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder10" />
+    <child
+      link="ballJoint11" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint16">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint16_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint11" />
+    <child
+      link="ballJoint16" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="tab10">
+    <inertial>
+      <origin
+        xyz="-0.885891803803761 1.1832255489643 0.397075050265953"
+        rpy="0 0 0" />
+      <mass
+        value="0.325160100660068" />
+      <inertia
+        ixx="0.444477114199378"
+        ixy="0.149002486341855"
+        ixz="-0.192177926459087"
+        iyy="0.586714874904888"
+        iyz="0.0745014312998626"
+        izz="0.732704931911868" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT401.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT401.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="tabDummy10"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint16" />
+    <child
+      link="tab10" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint2">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint2_rev"
+    type="revolute">
+    <origin
+      xyz="0.270420574501119 0.180266396919769 2.18057876976819"
+      rpy="0 -1.1071487177431 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ballJoint2" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint7">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint7_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint2" />
+    <child
+      link="ballJoint7" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="piston20">
+    <inertial>
+      <origin
+        xyz="0.4225241270967 5.67323689693033E-08 -1.08891656802612E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207470803961392" />
+      <inertia
+        ixx="0.00012986884264524"
+        ixy="2.82945208123454E-10"
+        ixz="-5.68706758457258E-11"
+        iyy="0.00160899467779264"
+        iyz="-6.94884210053457E-12"
+        izz="0.0015985300588519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT201.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT201.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="pistonDummy20"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint7" />
+    <child
+      link="piston20" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="cylinder20">
+    <inertial>
+      <origin
+        xyz="0.644464299848453 -0.000266303740154572 -2.34533739285059E-06"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280447202489593" />
+      <inertia
+        ixx="0.000481993649085836"
+        ixy="2.93093852779458E-07"
+        ixz="1.89343090660341E-07"
+        iyy="0.00198376563329325"
+        iyz="4.92460431453616E-08"
+        izz="0.00197270481330129" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT201.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT201.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinderPiston20"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="piston20" />
+    <child
+      link="cylinder20" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="${MAX_CYLINDER_STROKE}"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint12">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint12_rev"
+    type="revolute">
+    <origin
+      xyz="1.05 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder20" />
+    <child
+      link="ballJoint12" />
+    <axis
+      xyz="0 0 1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint17">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint17_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint12" />
+    <child
+      link="ballJoint17" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="tab20">
+    <inertial>
+      <origin
+        xyz="0.0552875090424507 -5.10491540706148E-09 -0.000741494208233773"
+        rpy="0 0 0" />
+      <mass
+        value="0.00481853834378233" />
+      <inertia
+        ixx="2.69042398361297E-05"
+        ixy="-1.43548231757332E-12"
+        ixz="5.23810229256607E-07"
+        iyy="4.20879186652963E-05"
+        iyz="4.8546130328391E-13"
+        izz="6.50216569346707E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT201.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT201.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="tabDummy20"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint17" />
+    <child
+      link="tab20" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint3">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint3_rev"
+    type="revolute">
+    <origin
+      xyz="0.27042 -0.17 2.1806"
+      rpy="0 -1.1071 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="ballJoint3" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint8">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint8_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint3" />
+    <child
+      link="ballJoint8" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="piston30">
+    <inertial>
+      <origin
+        xyz="0.422524127096702 5.67323559519384E-08 -1.08891639039044E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207470803961393" />
+      <inertia
+        ixx="0.00012986884264524"
+        ixy="2.82945253446188E-10"
+        ixz="-5.68706761506578E-11"
+        iyy="0.00160899467779265"
+        iyz="-6.94884214385106E-12"
+        izz="0.0015985300588519" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT301.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT301.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="pistonDummy30"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint8" />
+    <child
+      link="piston30" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="cylinder30">
+    <inertial>
+      <origin
+        xyz="0.644466333167981 0.000266410919937343 1.72695944052892E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280448340157479" />
+      <inertia
+        ixx="0.000481993235189697"
+        ixy="-2.92809037698004E-07"
+        ixz="-1.88214559484008E-07"
+        iyy="0.00198376586601136"
+        iyz="4.58922620633012E-08"
+        izz="0.00197270437995843" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT301.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT301.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinderPiston30"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="piston30" />
+    <child
+      link="cylinder30" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="${MAX_CYLINDER_STROKE}"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint13">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint13_rev"
+    type="revolute">
+    <origin
+      xyz="1.05 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder30" />
+    <child
+      link="ballJoint13" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint18">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint18_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint13" />
+    <child
+      link="ballJoint18" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="tab30">
+    <inertial>
+      <origin
+        xyz="0.0552875093001255 -4.87185569664206E-09 -0.000741494309249191"
+        rpy="0 0 0" />
+      <mass
+        value="0.00481853832759055" />
+      <inertia
+        ixx="2.69042398075619E-05"
+        ixy="-1.39540711010256E-12"
+        ixz="5.23810189728763E-07"
+        iyy="4.20879185735454E-05"
+        iyz="4.70090820868787E-13"
+        izz="6.50216568412495E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT301.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT301.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="tabDummy30"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint18" />
+    <child
+      link="tab30" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint4">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint4_rev"
+    type="revolute">
+    <origin
+      xyz="-0.270420574498966 -0.54 2.18057876976818"
+      rpy="0 -1.10714871774307 3.14159265358975" />
+    <parent
+      link="base_link" />
+    <child
+      link="ballJoint4" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint9">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint9_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint4" />
+    <child
+      link="ballJoint9" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="piston40">
+    <inertial>
+      <origin
+        xyz="0.4225241270967 -0.000266343272644742 -1.08910751528413E-08"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207470803961392" />
+      <inertia
+        ixx="0.00012986884264524"
+        ixy="2.82945193900149E-10"
+        ixz="-5.68707227781273E-11"
+        iyy="0.00160899467779264"
+        iyz="-6.94884217588363E-12"
+        izz="0.00159853005885189" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT401.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT401.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="pistonDummy40"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint9" />
+    <child
+      link="piston40" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="cylinder40">
+    <inertial>
+      <origin
+        xyz="0.644466334055455 1.1510882025334E-08 1.72696377833681E-05"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280448341425692" />
+      <inertia
+        ixx="0.00048199323650749"
+        ixy="-2.92812318857791E-07"
+        ixz="-1.88214736283042E-07"
+        iyy="0.0019837658708905"
+        iyz="4.58920246597498E-08"
+        izz="0.00197270438651911" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT401.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT401.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinderPiston40"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="piston40" />
+    <child
+      link="cylinder40" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="${MAX_CYLINDER_STROKE}"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint14">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint14_rev"
+    type="revolute">
+    <origin
+      xyz="1.05 -0.0002664 0"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder40" />
+    <child
+      link="ballJoint14" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint19">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint19_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint14" />
+    <child
+      link="ballJoint19" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="tab40">
+    <inertial>
+      <origin
+        xyz="0.0552875090427003 -5.11218944954095E-09 -0.0007414941927264"
+        rpy="0 0 0" />
+      <mass
+        value="0.00481853834378234" />
+      <inertia
+        ixx="2.69042398361291E-05"
+        ixy="-1.43548256624405E-12"
+        ixz="5.23810229255844E-07"
+        iyy="4.20879186652964E-05"
+        iyz="4.85461466228051E-13"
+        izz="6.50216569346702E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT401.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT401.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="tabDummy40"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint19" />
+    <child
+      link="tab40" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint5">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint5_rev"
+    type="revolute">
+    <origin
+      xyz="0 -0.870000000000001 1.76500000000003"
+      rpy="0 0 -1.5707963267949" />
+    <parent
+      link="base_link" />
+    <child
+      link="ballJoint5" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint10">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint10_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint5" />
+    <child
+      link="ballJoint10" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="piston50">
+    <inertial>
+      <origin
+        xyz="0.422524126312602 5.4266843019235E-08 0.00499998928739398"
+        rpy="0 0 0" />
+      <mass
+        value="0.0207470805260532" />
+      <inertia
+        ixx="0.000129868836931996"
+        ixy="2.72964910855424E-10"
+        ixz="-5.50269991311345E-11"
+        iyy="0.00160899468108333"
+        iyz="-8.48543054222349E-12"
+        izz="0.00159853005272267" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT501.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/pistonT501.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="pistonDummy50"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint10" />
+    <child
+      link="piston50" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="cylinder50">
+    <inertial>
+      <origin
+        xyz="0.644465584144597 0.000266335024620368 0.00501730592073768"
+        rpy="0 0 0" />
+      <mass
+        value="0.0280448078435427" />
+      <inertia
+        ixx="0.000481993614013711"
+        ixy="-2.92832567935788E-07"
+        ixz="-1.88623126231725E-07"
+        iyy="0.00198376791382812"
+        iyz="4.59359936242508E-08"
+        izz="0.00197270664415018" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT501.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/cylinderT501.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="cylinderPiston50"
+    type="prismatic">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="piston50" />
+    <child
+      link="cylinder50" />
+    <axis
+      xyz="1 0 0" />
+    <limit
+      lower="0"
+      upper="${MAX_CYLINDER_STROKE}"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint15">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint15_rev"
+    type="revolute">
+    <origin
+      xyz="1.04999999999999 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="cylinder50" />
+    <child
+      link="ballJoint15" />
+    <axis
+      xyz="0 0 -1" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="ballJoint20">
+    <inertial>
+      <mass
+        value="0.025" />
+      <inertia
+        ixx="5.8083e-4"
+        ixy="0"
+        ixz="0"
+        iyy="5.8083e-4"
+        iyz="0"
+        izz="5.8083e-4" />
+    </inertial>
+  </link>
+  <joint
+    name="ballJoint20_rev"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint15" />
+    <child
+      link="ballJoint20" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+  <link
+    name="tab50">
+    <inertial>
+      <origin
+        xyz="0.055287510658244 -4.99737662362776E-09 0.00425850653077964"
+        rpy="0 0 0" />
+      <mass
+        value="0.00481853837088001" />
+      <inertia
+        ixx="2.69042398492897E-05"
+        ixy="-1.36413373589327E-12"
+        ixz="5.2381040075364E-07"
+        iyy="4.2087918022161E-05"
+        iyz="5.42050295859157E-13"
+        izz="6.50216562975431E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT501.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 0 0 1" />
+      </material>
+    </visual>
+    <!-- <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://luset_geometry_pkg/meshes/tabT501.STL" />
+      </geometry>
+    </collision> -->
+  </link>
+  <joint
+    name="tabDummy50"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="ballJoint20" />
+    <child
+      link="tab50" />
+    <axis
+      xyz="-1 0 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1e6"
+      velocity="1e6" />
+  </joint>
+
+  <gazebo>
+
+    <joint name='fixed0' type='fixed'>
+      <parent>world</parent>
+      <child>tab10</child>
+    </joint>
+
+    <joint name='fixed1' type='fixed'>
+      <parent>world</parent>
+      <child>tab20</child>
+    </joint>
+
+    <joint name='fixed2' type='fixed'>
+      <parent>world</parent>
+      <child>tab30</child>
+    </joint>
+
+    <joint name='fixed3' type='fixed'>
+      <parent>world</parent>
+      <child>tab40</child>
+    </joint>
+
+    <joint name='fixed4' type='fixed'>
+      <parent>world</parent>
+      <child>tab50</child>
+    </joint>
+  </gazebo>
+
+  <!-- Add transmission blocks for the 5 actuators -->
+  <!-- See http://docs.ros.org/indigo/api/hardware_interface/html/c++/joint__command__interface_8h_source.html for a list of joint command interfaces -->
+  <transmission name="transmission10">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="cylinderPiston10">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator10">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="transmission20">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="cylinderPiston20">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator20">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="transmission30">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="cylinderPiston30">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator30">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="transmission40">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="cylinderPiston40">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator40">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <transmission name="transmission50">
+    <type>transmission_interface/SimpleTransmission</type>
+    <joint name="cylinderPiston50">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+    </joint>
+    <actuator name="actuator50">
+      <hardwareInterface>hardware_interface/EffortJointInterface</hardwareInterface>
+      <mechanicalReduction>1</mechanicalReduction>
+    </actuator>
+  </transmission>
+
+  <gazebo reference="cylinder10">
+    <selfCollide>true</selfCollide>
+    <sensor name="cylinder10_sensor" type="contact">
+        <always_on>true</always_on>
+        <update_rate>1.0</update_rate>
+        <contact>
+           <collision>cylinder10_collision</collision>
+        </contact>
+        <plugin name="cylinder10_plugin" filename="libgazebo_ros_bumper.so">
+            <alwaysOn>true</alwaysOn>
+            <updateRate>1.0</updateRate>   
+            <bumperTopicName>cylinder10_sensor_state</bumperTopicName>
+            <frameName>cylinder10</frameName>
+            <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+        </plugin>
+      </sensor>
+    </gazebo>
+
+  <gazebo reference="cylinder20">
+      <selfCollide>true</selfCollide>
+      <sensor name="cylinder20_sensor" type="contact">
+          <always_on>true</always_on>
+          <update_rate>1.0</update_rate>
+          <contact>
+             <collision>cylinder20_collision</collision>
+          </contact>
+          <plugin name="cylinder20_plugin" filename="libgazebo_ros_bumper.so">
+              <alwaysOn>true</alwaysOn>
+              <updateRate>1.0</updateRate>   
+              <bumperTopicName>cylinder20_sensor_state</bumperTopicName>
+              <frameName>cylinder20</frameName>
+              <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+          </plugin>
+        </sensor>
+    </gazebo>
+
+  <gazebo reference="cylinder30">
+      <selfCollide>true</selfCollide>
+      <sensor name="cylinder30_sensor" type="contact">
+          <always_on>true</always_on>
+          <update_rate>1.0</update_rate>
+          <contact>
+              <collision>cylinder30_collision</collision>
+          </contact>
+          <plugin name="cylinder30_plugin" filename="libgazebo_ros_bumper.so">
+              <alwaysOn>true</alwaysOn>
+              <updateRate>1.0</updateRate>   
+              <bumperTopicName>cylinder30_sensor_state</bumperTopicName>
+              <frameName>cylinder30</frameName>
+              <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+          </plugin>
+      </sensor>
+    </gazebo>
+
+    <gazebo reference="cylinder40">
+      <selfCollide>true</selfCollide>
+      <sensor name="cylinder40_sensor" type="contact">
+          <always_on>true</always_on>
+          <update_rate>1.0</update_rate>
+          <contact>
+              <collision>cylinder40_collision</collision>
+          </contact>
+          <plugin name="cylinder40_plugin" filename="libgazebo_ros_bumper.so">
+              <alwaysOn>true</alwaysOn>
+              <updateRate>1.0</updateRate>   
+              <bumperTopicName>cylinder40_sensor_state</bumperTopicName>
+              <frameName>cylinder40</frameName>
+              <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+          </plugin>
+      </sensor>
+    </gazebo>
+
+    <gazebo reference="cylinder50">
+      <selfCollide>true</selfCollide>
+      <sensor name="cylinder50_sensor" type="contact">
+          <always_on>true</always_on>
+          <update_rate>1.0</update_rate>
+          <contact>
+              <collision>cylinder50_collision</collision>
+          </contact>
+          <plugin name="cylinder50_plugin" filename="libgazebo_ros_bumper.so">
+              <alwaysOn>true</alwaysOn>
+              <updateRate>1.0</updateRate>   
+              <bumperTopicName>cylinder50_sensor_state</bumperTopicName>
+              <frameName>cylinder50</frameName>
+              <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+          </plugin>
+      </sensor>
+    </gazebo>
+
+    <gazebo reference="base_link">
+      <selfCollide>true</selfCollide>
+      <sensor name="base_link_sensor" type="contact">
+          <always_on>true</always_on>
+          <update_rate>1.0</update_rate>
+          <contact>
+              <collision>base_link_collision</collision>
+          </contact>
+          <plugin name="base_link_plugin" filename="libgazebo_ros_bumper.so">
+              <alwaysOn>true</alwaysOn>
+              <updateRate>1.0</updateRate>   
+              <bumperTopicName>yoke_sensor_state</bumperTopicName>
+              <frameName>base_link</frameName>
+              <!-- <robotNamespace>/luset_geometry_pkg</robotNamespace> -->
+          </plugin>
+      </sensor>
+    </gazebo>
+          
+</robot>

@@ -1,0 +1,1 @@
+float64[1000] ArrayValue # Vector data retrieved from the low-level controller via GetBlock64 and published to the /IndelUpdate topic

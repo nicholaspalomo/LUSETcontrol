@@ -1,0 +1,1 @@
+float64[3] ActuatorOrientation # Vector specifying orientation of primary axis of actuator
