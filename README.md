@@ -1,9 +1,11 @@
 <!-- This template was taken from:
 https://gist.github.com/fvcproductions/1bfc2d4aecb01a834b46#file-samplereadme-md -->
 
-<a href="https://ethz.ch/en.html"><img src="https://github.com/nicholaspalomo/LUSETcontrol/blob/master/docs/eth_zurich_logo.jpg&s=200" title="ETH Zurich" alt="ETH Zurich"></a>
+<!-- <img src="https://github.com/nicholaspalomo/LUSETcontrol/blob/master/docs/eth_zurich_logo.jpg"> -->
 
-<!-- [![FVCproductions](https://avatars1.githubusercontent.com/u/4284691?v=3&s=200)](http://fvcproductions.com) -->
+<!-- [<img src="docs/eth_zurich_logo.jpg">](http://ethz.ch/en.html) -->
+
+<a href="https://ethz.ch/en.html"><img src="/docs/eth_zurich_logo.jpg" title="ETH Zurich" alt="ETH Zurich" width="40%"></a>
 
 ***INSERT GRAPHIC HERE (include hyperlink in image)***
 
