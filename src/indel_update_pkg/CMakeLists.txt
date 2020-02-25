@@ -141,6 +141,9 @@ include_directories(
 ## either from message generation or dynamic reconfigure
 # add_dependencies(${PROJECT_NAME} ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
+## Tell CMake where to find additional libraries
+link_directories(${CMAKE_CURRENT_SOURCE_DIR}/include/inco_32/lib)
+
 ## Declare a C++ executable
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
@@ -148,6 +151,12 @@ add_executable(${PROJECT_NAME}_node
   src/indel_update_pkg/node.cpp
   src/indel_update_pkg/IndelUpdate.cpp
   src/indel_update_pkg/IndelUpdatePub.cpp
+)
+
+## Specify libraries to link a library or executable target against
+target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES}
+  inco_32 # Link the directory where libinco_32.so is
 )
 
 ## Rename C++ executable without prefix
@@ -159,12 +168,6 @@ add_executable(${PROJECT_NAME}_node
 ## Add cmake target dependencies of the executable
 ## same as for the library above
 add_dependencies(${PROJECT_NAME}_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
-
-## Specify libraries to link a library or executable target against
-target_link_libraries(${PROJECT_NAME}_node
-  ${catkin_LIBRARIES}
-  -L/${CMAKE_CURRENT_SOURCE_DIR}/lib # Link the directory where libinco_32.so is
-)
 
 #############
 ## Install ##

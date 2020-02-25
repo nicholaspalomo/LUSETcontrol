@@ -20,14 +20,14 @@ void indelupdatenamespace::IndelUpdate::update(void){
     // uint32_t ulong = GetVariable(this->device, this->AddressString, &this->value, 0); ///< Get the address of the data from the low-level controller
 
     // if(ulong == 0){
-    //     uint32_t BufferSize = 1000; ///< Specify a large buffer size to store data from low-level controller
-    //     double result[BufferSize]; ///< Create an array to hold the information from the data stream
+    //     uint32 BufferSize = 1000; ///< Specify a large buffer size to store data from low-level controller
+    //     uint64 result[BufferSize]; ///< Create an array to hold the information from the data stream
     //     // Cast the address to a 32-bit value
     //     uint32_t addr = (uint32_t)this->value; 
 
-    //     ulong = GetBlock64(device, addr, &result, BufferSize); ///< Populate result[] array given the supplied device and address member variables
+    //     ulong = GetBlock64(this->device, addr, result, BufferSize); ///< Populate result[] array given the supplied device and address member variables
     //     if(ulong == 0){
-    //         memcpy(&this->ArrayValue, &(double)result, sizeof(this->ArrayValue)); ///< Copy the result[] array to the ArrayValue[] member variable
+    //         std::copy(result, result + BufferSize, this->ArrayValue.begin()); ///< Copy the result[] array to the ArrayValue[] member variable
     //     }
     // }
 
